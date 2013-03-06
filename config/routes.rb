@@ -1,4 +1,6 @@
 Gameproject::Application.routes.draw do
+  get "forum/index"
+
   get "home/index"
 
   resources :posts do
@@ -39,6 +41,7 @@ Gameproject::Application.routes.draw do
   #   end
 
   # Sample resource route with more complex sub-resources
+  match '/forum' => "forum#index", :as => "forum"
   #   resources :products do
   #     resources :comments
   #     resources :sales do

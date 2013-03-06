@@ -86,3 +86,31 @@ footer {
     color: white;
     padding: 1% 1% 1% 1%;
 }
+
+article .post_even .post_odd{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    /* below ensures correct output for MFF*/
+    -moz-border-top-left-radius: 2px;
+    -moz-border-top-right-radius: 2px;
+    -moz-border-bottom-left-radius: 2px;
+    -moz-border-bottom-right-radius: 2px;
+    /* below is for safari */
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+
+}
+
+.post_odd {
+    background-color: #fdfffd;
+}
+.post_even {
+    background-color: #6fe984;
+}
+
+
+

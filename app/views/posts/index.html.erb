@@ -1,14 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<nav><%= link_to "Home", root_path %>|<%= link_to "Our Forum", posts_path %></nav>
-<section id="pagetitle"></section>
 <header><h1>Hurlers vs Monsters Forum</h1></header>
 <section>
   <table>
@@ -22,7 +11,7 @@
       <th></th>
     </tr>
 
-    <% @posts.each do |post| %>
+    <% @post.each do |post| %>
         <tr>
           <td><%= post.title %></td>
           <td><%= post.content %></td>
@@ -39,7 +28,4 @@
 </section>
 
 <%= link_to 'New Post', new_post_path %>
-<footer><p>Placeholder text remove this before publishing</p></footer>
-</body>
-</html>
 

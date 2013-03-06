@@ -1,16 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<nav><%= link_to "Home", root_path %>|<%= link_to "Our Forum", posts_path %></nav>
-<section id="pagetitle"></section>
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Title:</b>
   <%= @post.title %>
@@ -49,6 +36,4 @@
 <%= link_to 'Back', posts_path %>
 <br>
 <br>
-<footer><p>Placeholder text remove this before publishing</p></footer>
-</body>
-</html>
+

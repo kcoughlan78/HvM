@@ -1,0 +1,14 @@
+<header><h1>Forum</h1></header>
+<%=  form_tag "", :method => 'get' do %>
+    <p>
+      <%=  text_field_tag :search, params[:search] %>
+      <%=  submit_tag "Search", :title => nil %>
+    </p>
+<% end %>
+<% @posts.each do |post| %>
+    <article class="<%= cycle('post_odd', 'post_even') %>">
+      <h4><%= link_to post.title, post %></h4>
+      <p><%= truncate(strip_tags(post.content), length: 200) %></p>
+      <p><%= link_to 'Show', post %></p>
+    </article>
+<% end %>

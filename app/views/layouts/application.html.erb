@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav><%= link_to "Home", root_path %>|<%= link_to "Our Forum", :controller => "forum", :action => "index" %>
+  |<%=link_to "Create a Post", :controller => "posts", :action => "new" %></nav>
+<section id="pagetitle"></section>
+<p id="notice"><%= notice %></p>
+
 
 <%= yield %>
-
+<footer><p>Placeholder text remove this before publishing</p></footer>
 </body>
 </html>
