@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav><%= link_to "Home", root_path %>|<%= link_to "Our Forum", posts_path %></nav>
+<section id="pagetitle"></section>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @post.content %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @post.name %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @post.image_url %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= join_tags(@post) %>
+</p>
+
+<h2>Replies</h2>
+
+<%= render @post.replies %>
+
+
+<h2>Add a comment:</h2>
+<%= render "replies/form" %>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+<br>
+<br>
+<footer><p>Placeholder text remove this before publishing</p></footer>
+</body>
+</html>
