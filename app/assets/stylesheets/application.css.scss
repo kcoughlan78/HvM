@@ -1,0 +1,196 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, section, figure, article, figcaption, nav, object, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, h3, h4, h5, h6, sub, sup, tt, var, b, u, i, center, ol, ul, li, fieldset, form, label, legend, br, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark {
+  border-top-width:0;
+  border-right-width:0;
+  border-bottom-width:0;
+  border-left-width:0;
+  border-style:initial;
+  border-color:#000000;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline;
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: verdana, helvetica;
+  font-size: 100%;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+#wrap {
+  position: relative;
+  margin:0px auto 0px auto;
+  width: 960px;
+  max-width: 90%;
+  height: 100%;
+}
+
+nav {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+  bottom: 97%;
+  max-width: 100%;
+  height: 50px;
+  background-color: #b90a0f;
+  font-size: 70%;
+  color: white;
+  padding: 1% 1% 1% 1%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#pagetitle {
+  position: absolute;
+  top: 50px;
+  right: 0%;
+  bottom: 80%;
+  left: 0%;
+  background: white;
+  height: 100px;
+  width: 100%;
+  background-image: url(Titlepic.jpg);
+  background-repeat: no-repeat;
+}
+
+#indexandcontent {
+  position: absolute;
+  top: 150px;
+  right: 0%;
+  bottom: 2%;
+  left: 0%;
+}
+
+#main {
+  margin-left: 17em;
+  padding: 1em;
+  background: #000000;
+}
+
+#side {
+  position: absolute;
+  top: 0%;
+  right: 80%;
+  bottom: 0%;
+  left: 0%;
+  padding: 1em 2em;
+  width: 13em;
+  min-height: 60em;
+  height: 100%;
+  background: #b90a0f;
+  color: white;
+}
+
+
+
+.forumHeader {
+  position: relative;
+  margin: 2% 2% 2% 2%;
+  display: inline-block;
+  font-family: fantasy, sans-serif;
+  text-align: left;
+  color: #A60000;
+  text-transform: uppercase;
+  font-size: 150%;
+  transform: skew(-35deg) rotate(-18deg) translateZ(0);
+  white-space: nowrap;
+  border-top: solid 4px #A60000;
+  border-bottom: solid 4px #A60000;
+  z-index: 5;
+}
+
+#notice {
+  color: #fdfffd !important;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #000000;
+  font: bold smaller sans-serif;
+}
+
+
+
+h4 > a{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  /*text-decoration: ;*/
+}
+
+
+a:hover {
+
+}
+
+
+
+.post_odd {
+  padding: 2% 2% 2% 2%;
+  margin: 2% 2% 2% 2%;
+  background-color: #ff251e;
+  color: #000000;
+  border: #fdfffd;
+  border-style: solid;
+  border-top-left-radius: 5% 20%;
+  border-top-right-radius: 5% 20%;
+  border-bottom-left-radius: 5% 20%;
+  border-bottom-right-radius: 5% 20%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius: 5% 20%;
+  -moz-border-top-right-radius: 5% 20%;
+  -moz-border-bottom-left-radius: 5% 20%;
+  -moz-border-bottom-right-radius: 5% 20%;
+  /* below is for safari */
+  -webkit-border-top-left-radius: 5%;
+  -webkit-border-top-right-radius: 5%;
+  -webkit-border-bottom-left-radius: 5%;
+  -webkit-border-bottom-right-radius: 5%;
+}
+.post_even {
+  padding: 2% 2% 2% 2%;
+  margin: 2% 2% 2% 2%;
+  background-color: #a7e9b8;
+  color: #000000;
+  border: #fdfffd;
+  border-style: solid;
+  border-top-left-radius: 5% 20%;
+  border-top-right-radius: 5% 20%;
+  border-bottom-left-radius: 5% 20%;
+  border-bottom-right-radius: 5% 20%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius: 5% 20%;
+  -moz-border-top-right-radius: 5% 20%;
+  -moz-border-bottom-left-radius: 5% 20%;
+  -moz-border-bottom-right-radius: 5% 20%;
+  /* below is for safari */
+  -webkit-border-top-left-radius: 5%;
+  -webkit-border-top-right-radius: 5%;
+  -webkit-border-bottom-left-radius: 5%;
+  -webkit-border-bottom-right-radius: 5%;
+}
+
+.tags {
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  background-color: #f6ffc1;
+  border-top-left-radius: 5% 20%;
+  border-top-right-radius: 5% 20%;
+  border-bottom-left-radius: 5% 20%;
+  border-bottom-right-radius: 5% 20%;
+  -moz-border-top-left-radius: 5% 20%;
+  -moz-border-top-right-radius: 5% 20%;
+  -moz-border-bottom-left-radius: 5% 20%;
+  -moz-border-bottom-right-radius: 5% 20%;
+}
+
+
+

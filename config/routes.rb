@@ -1,7 +1,13 @@
 Gameproject::Application.routes.draw do
+  get "sessions/new"
+
+  resources :users
+
   get "forum/index"
 
   get "home/index"
+
+  resources :sessions
 
   resources :posts do
     resources :replies
@@ -42,6 +48,10 @@ Gameproject::Application.routes.draw do
 
   # Sample resource route with more complex sub-resources
   match '/forum' => "forum#index", :as => "forum"
+  match '/signup' => "users#new", :as => "signup"
+  match '/login' => "sessions#new", :as => "login"
+  match '/logout' => "sessions#destroy", :as => "logout"
+
   #   resources :products do
   #     resources :comments
   #     resources :sales do

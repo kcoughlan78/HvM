@@ -2,18 +2,29 @@
 <html>
 <head>
   <title>Gameproject</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<section id="wrap">
 <nav><%= link_to "Home", root_path %>|<%= link_to "Our Forum", :controller => "forum", :action => "index" %>
-  |<%=link_to "Create a Post", :controller => "posts", :action => "new" %></nav>
+  |<%=link_to "Create a Post", :controller => "posts", :action => "new" %>|<% if current_user %>Logged in as <%= current_user.email %>|
+      <%= link_to "Log out", logout_path %>
+  <% else %>
+      |<%= link_to "Sign up", signup_url %> or
+      <%= link_to "Log in", login_path %>|
+  <% end %></nav>
 <section id="pagetitle"></section>
-<p id="notice"><%= notice %></p>
+  <section id="indexandcontent">
+  <section id="side">
 
-
+</section>
+<section id="main">
+  <p id="notice"><%= notice %></p>
 <%= yield %>
-<footer><p>Placeholder text remove this before publishing</p></footer>
+</section>
+</section>
+</section>
 </body>
 </html>
