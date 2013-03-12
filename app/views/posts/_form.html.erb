@@ -11,9 +11,8 @@
           </ul>
         </div>
     <% end %>
-    <div class="field">
-      <%= post_form.label :name %><br />
-      <%= post_form.text_field :name %>
+    <div>
+      <p>Author: <%= current_user.email %></p>
     </div>
     <div class="field">
       <%= post_form.label :title %><br />

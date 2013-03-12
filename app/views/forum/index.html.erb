@@ -11,8 +11,9 @@
       <p><%= truncate(strip_tags(post.content), length: 200) %></p>
       <h4>Replies:</h4>
       <p><%= truncate(strip_tags(render post.replies), length: 200) %></p>
-      <p><%= link_to 'Show', post %></p>
       <h6>Tags:</h6>
       <p><span class="tags"><%= join_tags(post) %></span></p>
+      <h6>Author:</h6>
+      <p><%= post.user.email %></p>
     </article>
 <% end %>

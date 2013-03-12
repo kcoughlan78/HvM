@@ -10,7 +10,7 @@
 
 <p>
   <b>Name:</b>
-  <%= @post.name %>
+  <%= @post.user.email %>
 </p>
 
 <p>
@@ -27,13 +27,17 @@
 
 <%= render @post.replies %>
 
-
+<% if logged_in? %>
 <h2>Add a comment:</h2>
 <%= render "replies/form" %>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+<% else %>
+    <p>Want to join in? Click <%= link_to 'here',login_path %> to login</p>
+    <p>Haven't an account? <%= link_to 'Sign-up', signup_path %></p>
+<% end %>
 <br>
 <br>
 

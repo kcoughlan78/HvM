@@ -1,7 +1,11 @@
 class RepliesController < ApplicationController
+  before_filter :authenticate, :except => [:index, :show]
+
   def create
     @post = Post.find(params[:post_id])
-    @reply = @post.replies.create(params[:reply])
+    @reply = @post.replies.build(params[:reply])
+    @reply.user_email = current_user.email
+    @reply.save
     redirect_to post_path(@post)
   end
 

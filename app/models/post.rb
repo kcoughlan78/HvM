@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
-  attr_accessible :name, :content, :image_url, :title, :tags_attributes
+  attr_accessible :name, :content, :image_url, :title, :tags_attributes, :email
 
-  validates :name, :presence => true
+  #validates :name, :presence => true
 
   validates :content, :presence => true,
             :length => { :minimum => 10 }
@@ -14,6 +14,7 @@ class Post < ActiveRecord::Base
       message: 'image must be a gif/jpg/png/svg/dwg file type.'
   }
 
+  belongs_to :user
   has_many :replies, :dependent => :destroy
   has_many :tags
 

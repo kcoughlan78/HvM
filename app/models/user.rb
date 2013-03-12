@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
             :length => {:within => 6..20},
             :presence => true
 
+  has_many :posts
+  has_many :replies
+
   def encrypt_password
     if password.present?
     self.salted_password = BCrypt::Engine.generate_salt
