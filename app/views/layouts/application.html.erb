@@ -14,7 +14,10 @@
   <% else %>
       |<%= link_to "Sign up", signup_url %> or
       <%= link_to "Log in", login_path %>|
-  <% end %></nav>
+  <% end %>
+  <% if current_user && current_user.admin %>|<%= link_to "Users", users_url %>
+  <% end %>
+</nav>
 <section id="pagetitle"></section>
   <section id="indexandcontent">
   <section id="side">

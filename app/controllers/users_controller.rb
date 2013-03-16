@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :is_admin?
+
   def new
     @user = User.new
   end
@@ -36,6 +38,17 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.delete(params[:id])
+
+    respond_to do |format|
+      if @user.destroy
+
+        format.html { redirect_to(root_url, :notice => 'User was successfully deleted.') }
+        format.json { render :json => @user, :status => :created, :location => @user }
+      else
+        format.html { render :action => "new" }
+        format.json { render :json => @user.errors, :status => :unprocessable_entity }
+      end
+    end
   end
 
 end
