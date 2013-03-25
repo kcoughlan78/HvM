@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gameproject</title>
+  <%= yield :head %>
   <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "jquery" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+  </script>
 </head>
 <body>
-<section id="wrap">
-<nav><%= link_to "Home", root_path %>|<%= link_to "Our Forum", :controller => "forum", :action => "index" %>
-  |<%=link_to "Create a Post", :controller => "posts", :action => "new" %>|<% if current_user %>Logged in as <%= current_user.email %>|
-      <%= link_to "Log out", logout_path %>
-  <% else %>
-      |<%= link_to "Sign up", signup_url %> or
-      <%= link_to "Log in", login_path %>|
-  <% end %>
-  <% if current_user && current_user.admin %>|<%= link_to "Users", users_url %>
-  <% end %>
+<nav>
+  <header><h1>--Hurlers vs Monsters LOGO HERE--</h1></header>
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Our Forum", :controller => "forum", :action => "index" %></li>
+    <li><%=link_to "Create a Post", :controller => "posts", :action => "new" %></li>
+    <% if current_user %>
+        <li>Logged in as <%= current_user.email %></li>
+        <li><%= link_to "Log out", logout_path %></li>
+    <% else %>
+        <li><%= link_to "Sign up", signup_url %> or <%= link_to "Log in", login_path %></li>
+    <% end %>
+  </ul>
 </nav>
-<section id="pagetitle"></section>
-  <section id="indexandcontent">
-  <section id="side">
-
-</section>
-<section id="main">
-  <p id="notice"><%= notice %></p>
-<%= yield %>
-</section>
-</section>
-</section>
+<%= yield :article %>
+<p id="notice"><%= notice %></p>
+<div id="mid_bar"></div>
+<%= yield :section %>
+<footer>Hurlers vs Monsters copyright 2013</footer>
+<%= yield :script %>
 </body>
 </html>

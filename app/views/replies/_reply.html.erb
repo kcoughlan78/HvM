@@ -1,16 +1,9 @@
-<p>
-  <b>by:</b>
-  <%= reply.user_email %>
-</p>
+<div class="response">
+  <p><%= reply.user_email %> replied</p>
 
 <p>
-  <b>Response:</b>
   <%= reply.response %>
 </p>
-<% if current_user && current_user.admin %>
-<p>
-  <%= link_to 'Delete Reply', [reply.post, reply],
-              :confirm => 'Are you sure?',
-              :method => :delete %>
-</p>
-<% end %>
+</div>
+<br>
+<br>

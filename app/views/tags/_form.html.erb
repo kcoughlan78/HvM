@@ -1,6 +1,6 @@
 <%= form.fields_for :tags do |tag_form| %>
     <div class="field">
-      <%= tag_form.label :name, 'Tag:' %>
+      <p><span class="post_text"><%= tag_form.label :name, 'Tag:' %></span></p>
       <%= tag_form.text_field :name %>
     </div>
     <% unless tag_form.object.nil? || tag_form.object.new_record? %>

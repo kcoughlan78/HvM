@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :name, :content, :image_url, :title, :tags_attributes, :email
+  attr_accessible :name, :content, :image_url, :title, :tags_attributes, :user_email
 
   #validates :name, :presence => true
 

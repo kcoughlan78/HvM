@@ -1,8 +1,58 @@
-
-<h1>New post</h1>
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: New Post</title>
+    <%= stylesheet_link_tag "posts", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+<article id="upper_stage">
+  <div id="upper_col1">
+    <h1><span class="post_header">New post</span></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', posts_path %>
+   </div>
+   <div id="upper_col2">
+   <p><span class="post_header">--Advertising can go in this section--</span></p>
+   </div>
+</article>
+<% end %>
+<% content_for :section do %>
+        <section>
+          <header><h2>Join in</h2></header>
+          <div id="content">
+            <figure id="content_left">
+              <figcaption>
+                <h4 class="homeh4">Try the Game
+                </h4>
+                <div class="blog_desc">
+                  <p>Bored? Want to spend 5 minutes away from reality well click here</p>
+                </div>
+              </figcaption>
+            </figure>
+            <figure id="content_centre">
+              <figcaption>
+                <h4 class="homeh4">Sports Blog
+                </h4>
+                <div class="blog_desc">
+                  <p>Have something to say on the world of sport? Then click here.</p>
+                  <p>Start a debate, have thoughts on the current national team selection, or discuss and or promote more local sports.</p>
+                </div>
+              </figcaption>
+            </figure>
+            <figure id="content_right">
+              <figcaption>
+                <h4 class="homeh4">Tech Blog
+                </h4>
+                <div class="blog_desc">
+                  <p>Have something to say on the world of tech? Then click here.</p>
+                  <p>Start a debate whether its a comment on current events, your own opinion or you just want to join the general conversation</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+    <% end %>
+
+
+
 
 

@@ -1,43 +1,84 @@
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+<% content_for :head do %>
+    <title xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Hurlers vs Monsters: View Posts</title>
+    <%= stylesheet_link_tag "posts", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+<article id="upper_stage">
+    <div id="upper_col1">
+    <h2><span class="post_header">Title:
+    <%= @post.title %>
+    </span></h2>
+      <p>
+        <%= @post.image_url %>
+      </p>
+      <br>
+      <p>
+        <span class="post_text">posted by:
+        <%= @post.user.email %>
+      </span></p>
+    <br>
+    <p><span class="post_text">
+    <%= @post.content %>
+    </span></p>
 
-<p>
-  <b>Content:</b>
-  <%= @post.content %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @post.user.email %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%= @post.image_url %>
-</p>
-
-<p>
-  <b>Tags:</b>
-  <%= join_tags(@post) %>
-</p>
-
-<h2>Replies</h2>
-
-<%= render @post.replies %>
-
-<% if logged_in? %>
-<h2>Add a comment:</h2>
-<%= render "replies/form" %>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-<% else %>
-    <p>Want to join in? Click <%= link_to 'here',login_path %> to login</p>
-    <p>Haven't an account? <%= link_to 'Sign-up', signup_path %></p>
+    <br>
+    <p><span class="post_text">
+    # tags:
+    <%= join_tags(@post) %>
+    </span></p>
+    <br>
+    <br>
+    <h2><span class="post_header">Replies</span></h2>
+    <br>
+    <%= render @post.replies %>
+    </div>
+    <div id="upper_col2">
+    <% if logged_in? %>
+    <span class="post_header"><h2>Add a comment:</h2></span>
+    <br>
+    <%= render "replies/form" %>
+    <% else %>
+    <p><span class="post_text"> Want to join in? Click <%= link_to 'here',login_path %> to login</span></p>
+    <p><span class="post_text">Haven't an account? <%= link_to 'Sign-up', signup_path %></span></p>
+    <% end %>
+    </div>
+    </article>
 <% end %>
 <br>
-<br>
+<% content_for :section do %>
+    <section>
+      <header><h2>Join in</h2></header>
+      <div id="content">
+        <figure id="content_left">
+          <figcaption>
+            <h4 class="homeh4">Try the Game
+            </h4>
+            <div class="blog_desc">
+              <p>Bored? Want to spend 5 minutes away from reality well click here</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure id="content_centre">
+          <figcaption>
+            <h4 class="homeh4">Sports Blog
+            </h4>
+            <div class="blog_desc">
+              <p>Have something to say on the world of sport? Then click here.</p>
+              <p>Start a debate, have thoughts on the current national team selection, or discuss and or promote more local sports.</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure id="content_right">
+          <figcaption>
+            <h4 class="homeh4">Tech Blog
+            </h4>
+            <div class="blog_desc">
+              <p>Have something to say on the world of tech? Then click here.</p>
+              <p>Start a debate whether its a comment on current events, your own opinion or you just want to join the general conversation</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+<% end %>
 

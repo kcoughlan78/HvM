@@ -11,22 +11,25 @@
           </ul>
         </div>
     <% end %>
+    <br>
     <div>
-      <p>Author: <%= current_user.email %></p>
+      <p><span class="post_text">by: <%= current_user.email %></span> <span class="post_warning">if this isn't you follow <%= link_to "this link", logout_path %></span></p>
     </div>
+    <br>
     <div class="field">
-      <%= post_form.label :title %><br />
+      <p><span class="post_text"><%= post_form.label :title %></span></p><br>
       <%= post_form.text_field :title %>
     </div>
+    <br>
     <div class="field">
-      <%= post_form.label :content %><br />
-      <%= post_form.text_area :content %>
+      <p><span class="post_text"><%= post_form.label :content %></span></p><br>
+      <p class="content_box"><%= post_form.text_area :content %></p>
     </div>
     <div class="field">
-      <%= post_form.label :image_url %><br />
+      <p><span class="post_text"><%= post_form.label :image_url %></span></p><br />
       <%= post_form.text_field :image_url %>
     </div>
-    <h2>Tags</h2>
+    <br>
     <%= render :partial => 'tags/form',
                :locals => {:form => post_form} %>
 

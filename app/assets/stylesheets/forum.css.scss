@@ -1,8 +1,57 @@
 // Place all the styles related to the Forum controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url("application.css.scss");
 
-.forum {
 
+section > header h2 {
+  font-size: 110%;
+  font-weight: 700;
+  margin-left: 11%;
+}
 
+.post_odd {
+  padding: 2% 2% 2% 2%;
+  margin: 1% 10% 1% 10%;
+  background-color: #ff251e;
+  color: #000000;
+  border: #fdfffd;
+  border-style: solid;
+  border-top-left-radius: 5% 20%;
+  border-top-right-radius: 5% 20%;
+  border-bottom-left-radius: 5% 20%;
+  border-bottom-right-radius: 5% 20%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius: 5% 20%;
+  -moz-border-top-right-radius: 5% 20%;
+  -moz-border-bottom-left-radius: 5% 20%;
+  -moz-border-bottom-right-radius: 5% 20%;
+  /* below is for safari */
+  -webkit-border-top-left-radius: 5%;
+  -webkit-border-top-right-radius: 5%;
+  -webkit-border-bottom-left-radius: 5%;
+  -webkit-border-bottom-right-radius: 5%;
+}
+
+.post_even {
+  padding: 2% 2% 2% 2%;
+  margin: 1% 10% 1% 10%;
+  background-color: #a7e9b8;
+  color: #000000;
+  border: #fdfffd;
+  border-style: solid;
+  border-top-left-radius: 5% 20%;
+  border-top-right-radius: 5% 20%;
+  border-bottom-left-radius: 5% 20%;
+  border-bottom-right-radius: 5% 20%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius: 5% 20%;
+  -moz-border-top-right-radius: 5% 20%;
+  -moz-border-bottom-left-radius: 5% 20%;
+  -moz-border-bottom-right-radius: 5% 20%;
+  /* below is for safari */
+  -webkit-border-top-left-radius: 5%;
+  -webkit-border-top-right-radius: 5%;
+  -webkit-border-bottom-left-radius: 5%;
+  -webkit-border-bottom-right-radius: 5%;
 }

@@ -1,19 +1,29 @@
-<header class="forumHeader"><h1>Forum</h1></header>
-<%=  form_tag "", :method => 'get' do %>
-    <p>
-      <%=  text_field_tag :search, params[:search] %>
-      <%=  submit_tag "Search", :title => nil %>
-    </p>
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Forum</title>
+    <%= stylesheet_link_tag "forum", :media => "all" %>
+    <%= javascript_include_tag "home" %>
 <% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+      <header><h2>My Article</h2></header>
+      <h4>Riker Ipsum Rules!!</h4>
+      <p>Now we know what they mean by 'advanced' tactical training. Some days you get the bear, and some days the bear gets you.
+        Maybe if we felt any human loss as keenly as we feel one of those close to us, human history would be far less bloody.
+        Talk about going nowhere fast. We know you're dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf.
+        I think you've let your personal feelings cloud your judgement. Well, I'll say this for him - he's sure of himself.
+        This is not about revenge. This is about justice. Not if I weaken first. Ensign Babyface!</p>
+    </article>
+<% end %>
+<% content_for :section do %>
+<section>
+<header><h2>Forum</h2></header>
 <% @posts.each do |post| %>
     <article class="<%= cycle('post_odd', 'post_even') %>">
       <h4><%= link_to post.title, post %></h4>
       <p><%= truncate(strip_tags(post.content), length: 200) %></p>
-      <h4>Replies:</h4>
-      <p><%= truncate(strip_tags(render post.replies), length: 200) %></p>
       <h6>Tags:</h6>
       <p><span class="tags"><%= join_tags(post) %></span></p>
-      <h6>Author:</h6>
-      <p><%= post.user.email %></p>
     </article>
+<% end %>
+</section>
 <% end %>

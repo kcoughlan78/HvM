@@ -1,3 +1,19 @@
 // Place all the styles related to the Replies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.response {
+  color: #ff251e;
+  display: block;
+  background-color: whitesmoke;
+  border-style: solid;
+  border-top-left-radius: 2% 2%;
+  border-top-right-radius: 2% 2%;
+  border-bottom-left-radius: 2% 2%;
+  border-bottom-right-radius: 2% 2%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius: 2% 2%;
+  -moz-border-top-right-radius: 2% 2%;
+  -moz-border-bottom-left-radius: 2% 2%;
+  -moz-border-bottom-right-radius: 2% 2%;
+}

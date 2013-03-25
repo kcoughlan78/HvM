@@ -1,3 +1,135 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url("application.css.scss");
+/* this css is for home page, however tags in the section id
+will affect sign up, login, faq and forms */
+
+#upper_stage {
+  background-color: white;
+  height: 250px;
+}
+
+#pitch {
+  width: 600px;
+  height:	300px;
+  background:	transparent url(game_background.png) no-repeat top left;
+  z-index: 5;
+}
+
+#backdrop {
+  width: 600px;
+  height: 200px;
+  background: transparent url(crowd_scene.jpg) no-repeat top left;
+  z-index: 5;
+}
+
+#roof {
+  width: 600px;
+  height: 85px;
+  background: transparent url(Title.jpg) no-repeat top left;
+  background-repeat: no-repeat;
+  z-index: 5;
+}
+
+#monsters {
+  width: 102px;
+  height:	140px;
+  background:	transparent url(monster.jpg)no-repeat top left;
+  z-index: 15;
+}
+
+#hurler {
+  width: 77px;
+  height:	120px;
+  background:	transparent url(hurler.jpg)no-repeat top left;
+  z-index: 10;
+}
+
+section > header h2 {
+  font-size: 110%;
+  font-weight: 700;
+  margin-left: 11%;
+}
+
+#content_left {
+  position:absolute;
+  top: 0%;
+  right: 67%;
+  bottom: 0%;
+  left: 0%;
+  height: 150px;
+  width: 175px;
+  z-index:10;
+  background-color: green;
+}
+
+#content_centre {
+  position:absolute;
+  top: 0%;
+  right: 33%;
+  bottom: 0%;
+  left: 33%;
+  height: 150px;
+  width: 175px;
+  z-index:10;
+  background-color: orange;
+}
+
+#content_right {
+  position:absolute;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 67%;
+  height: 150px;
+  width: 175px;
+  z-index:5;
+  background-color: blue;
+}
+
+
+#content_left {
+  position:absolute;
+  top: 0%;
+  right: 67%;
+  bottom: 0%;
+  left: 0%;
+  height: 180px;
+  width: 240px;
+  z-index:10;
+  background-color: green;
+}
+
+#content_centre {
+  position:absolute;
+  top: 0%;
+  right: 33%;
+  bottom: 0%;
+  left: 33%;
+  height: 180px;
+  width: 240px;
+  z-index:10;
+  background-color: orange;
+}
+
+#content_right {
+  position:absolute;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 67%;
+  height: 180px;
+  width: 240px;
+  z-index:5;
+  background-color: blue;
+}
+
+.blog_desc {
+  position: relative;
+  display: none;
+}
+
+.homeh4 {
+  font-weight: 700;
+}

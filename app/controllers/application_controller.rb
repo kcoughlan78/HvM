@@ -3,11 +3,6 @@ class ApplicationController < ActionController::Base
 
   protected
 # Returns the currently logged in user or nil if there isn't one
-  helper_method :is_admin?
-  def is_admin?
-    current_user and (current_user.admin == true) ? true : permission_denied
-  end
-
   def current_user
     return unless session[:user_id]
     @current_user ||= User.find_by_id(session[:user_id])
@@ -27,10 +22,6 @@ class ApplicationController < ActionController::Base
   helper_method :logged_in?
   def access_denied
     redirect_to login_path, :notice => "Please log in to continue"
-  end
-
-  def permission_denied
-    redirect_to root_url, :notice => "Insufficent permission"
   end
 end
 
