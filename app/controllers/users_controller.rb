@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :is_admin?, :except => [:new, :show, :create]
+
   def new
     @user = User.new
   end
@@ -11,7 +13,7 @@ class UsersController < ApplicationController
         # Tell the UserMailer to send a welcome Email after save
         UserMailer.reg_email(@user).deliver
 
-        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
+        format.html { redirect_to(root_url, :notice => 'User was successfully created.') }
         format.json { render :json => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
@@ -30,8 +32,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-
+    @user = current_user
   end
 
   def destroy

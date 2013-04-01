@@ -1,6 +1,6 @@
 <%= form_for([@post, @post.replies.build]) do |f| %>
     <div class="response">
-    <p>by: <%= current_user.email %></p>
+    <p>by: <%= current_user.username %></p>
     </div>
     <br>
     <div class="response">

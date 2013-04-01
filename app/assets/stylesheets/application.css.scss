@@ -104,7 +104,6 @@ nav ul li {
   padding: 2% 2% 2% 2%;
   margin: 0% 2% 2% 4%;
   background-color: #ff251e;
-  color: #000000;
   border: #fdfffd;
   border-style: solid;
   border-top-left-radius: 5% 20%;
@@ -140,6 +139,10 @@ nav ul li {
   -moz-border-top-right-radius: 5% 20%;
   -moz-border-bottom-left-radius: 5% 20%;
   -moz-border-bottom-right-radius: 5% 20%;
+}
+
+#notice {
+  color: #000;
 }
 
 #mid_bar {

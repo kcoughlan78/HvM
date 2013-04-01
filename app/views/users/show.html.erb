@@ -1,6 +1,56 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Registration</title>
+    <%= stylesheet_link_tag "sessions", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+      <div id="upper_col1">
+        <header><h2>Your Details</h2></header>
+        <br>
+            <p>Name: <%= @user.fname %> <%= @user.sname %></p>
+        <br>
+            <p>Username: <%= @user.username %></p>
+        <br>
+            <p>Email: <%= @user.email %></p>
+        </div>
+      <div id="upper_col2">
+      <p>List posts/comments/tweets</p>
+      </div>
+    </article>
+<% end %>
+<% content_for :section do %>
+    <section>
+      <header><h2>Join in</h2></header>
+      <div id="content">
+        <figure id="content_left">
+          <figcaption>
+            <h4 class="homeh4"><%=link_to "Try the Game", game_path %>
+            </h4>
+            <div class="blog_desc">
+              <p>Bored? Want to spend 5 minutes away from reality well click here</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure id="content_centre">
+          <figcaption>
+            <h4 class="homeh4"><%= link_to "Sports Blog", :controller => "forum", :action => "index" %>
+            </h4>
+            <div class="blog_desc">
+              <p>Have something to say on the world of sport? Then click here.</p>
+              <p>Start a debate, have thoughts on the current national team selection, or discuss and or promote more local sports.</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure id="content_right">
+          <figcaption>
+            <h4 class="homeh4"><%= link_to "Tech Blog", :controller => "forum", :action => "index" %>
+            </h4>
+            <div class="blog_desc">
+              <p>Have something to say on the world of tech? Then click here.</p>
+              <p>Start a debate whether its a comment on current events, your own opinion or you just want to join the general conversation</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+<% end %>

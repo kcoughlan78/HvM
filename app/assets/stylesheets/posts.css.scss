@@ -5,12 +5,21 @@
 
 #upper_col1 {
   margin-left: 10%;
-  height: 500px;
+  height: 600px;
   width: 450px;
+  max-height: auto;
+}
+
+.post_img_url {
+  float: left;
+  max-height: 160px;
+  max-width: 400px;
+  margin-left: 5%;
+  padding-right: 3%;
 }
 
 #upper_col2 {
-  height: 500px;
+  height: 600px;
   width: 450px;
 }
 

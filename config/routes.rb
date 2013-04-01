@@ -1,4 +1,6 @@
 Gameproject::Application.routes.draw do
+  get "game/index"
+
   get "sessions/new"
 
   resources :users
@@ -51,6 +53,8 @@ Gameproject::Application.routes.draw do
   match '/signup' => "users#new", :as => "signup"
   match '/login' => "sessions#new", :as => "login"
   match '/logout' => "sessions#destroy", :as => "logout"
+  match '/game' => "game#index", :as => "game"
+  match '/myaccount' => "users#show", :as => "myaccount"
 
   #   resources :products do
   #     resources :comments

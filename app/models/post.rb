@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :name, :content, :image_url, :title, :tags_attributes, :user_email
+  attr_accessible :name, :content, :image_url, :title, :category, :tags_attributes, :user_email
 
   #validates :name, :presence => true
 
@@ -8,6 +8,9 @@ class Post < ActiveRecord::Base
 
   validates :title, :presence => true,
             :length => { :minimum => 3 }
+
+  validates :category, :presence => true,
+            :length => { :minimum => 4 }
 
   validates :image_url, allow_blank: true, format: {
       with: %r{\.(gif|jpg|png|svg|dwg)\Z}i,

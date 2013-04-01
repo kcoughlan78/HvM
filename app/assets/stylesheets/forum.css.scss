@@ -3,6 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url("application.css.scss");
 
+#upper_stage {
+  background-color: #ff251e;
+  margin-left: 10%;
+  height: 300px;
+  width: 1150px;
+  text-align: center;
+}
+
+#prototype_text {
+  padding: 2% 2% 2% 2%;
+  background-color: white;
+  color: #ff251e;
+  text-align: center;
+  font-size: 120%;
+  border-top-left-radius: 5% 20%;
+  border-top-right-radius: 5% 20%;
+  border-bottom-left-radius: 5% 20%;
+  border-bottom-right-radius: 5% 20%;
+}
 
 section > header h2 {
   font-size: 110%;

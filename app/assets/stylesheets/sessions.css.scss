@@ -5,18 +5,25 @@
 /* this css is for sign up, login, faq and forms */
 
 #upper_col1 {
+  color: white;
   height: 300px;
   width: 450px;
 }
 
 #upper_col2 {
+  color: white;
   height: 300px;
   width: 450px;
 }
 /* below code is for placeholder images re 3rd party sign-in */
 
-#upper_col2 h4 {
+#upper_col1 h2 {
+  font-size: 120%;
+}
+
+#upper_col2 p h2 h4 {
   text-align: center;
+  color: white;
 }
 
 #upper_col2 img {

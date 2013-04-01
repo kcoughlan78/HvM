@@ -6,6 +6,7 @@
 <article id="upper_stage">
   <div id="upper_col1">
     <header><h2>Sign Up</h2></header>
+    <br>
 
 <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
@@ -19,17 +20,30 @@
         </div>
     <% end %>
     <p>
-      <%= f.label :email %><br />
-      <%= f.text_field :email %>
+      First name: <%= f.text_field :fname %>
     </p>
+        <br>
     <p>
-      <%= f.label :password %><br />
-      <%= f.password_field :password %>
+      Surname: <%= f.text_field :sname %>
     </p>
+        <br>
     <p>
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation %>
+      <%= f.label :username %>: <%= f.text_field :username %>
     </p>
+        <br>
+    <p>
+      <%= f.label :email %>: <%= f.text_field :email %>
+    </p>
+        <br>
+    <p>
+      <%= f.label :password %>: <%= f.password_field :password %>
+    </p>
+        <br>
+    <p>
+      <%= f.label :password_confirmation %>: <%= f.password_field :password_confirmation %>
+    </p>
+        <br>
+        <br>
     <p class="button"><%= f.submit %></p>
       </div>
       <div id="upper_col2">
@@ -44,7 +58,7 @@
         <div id="content">
           <figure id="content_left">
             <figcaption>
-              <h4 class="homeh4">Try the Game
+              <h4 class="homeh4"><%=link_to "Try the Game", game_path %>
               </h4>
               <div class="blog_desc">
                 <p>Bored? Want to spend 5 minutes away from reality well click here</p>
@@ -53,7 +67,7 @@
           </figure>
           <figure id="content_centre">
             <figcaption>
-              <h4 class="homeh4">Sports Blog
+              <h4 class="homeh4"><%= link_to "Sports Blog", :controller => "forum", :action => "index" %>
               </h4>
               <div class="blog_desc">
                 <p>Have something to say on the world of sport? Then click here.</p>
@@ -63,7 +77,7 @@
           </figure>
           <figure id="content_right">
             <figcaption>
-              <h4 class="homeh4">Tech Blog
+              <h4 class="homeh4"><%= link_to "Tech Blog", :controller => "forum", :action => "index" %>
               </h4>
               <div class="blog_desc">
                 <p>Have something to say on the world of tech? Then click here.</p>

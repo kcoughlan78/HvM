@@ -13,12 +13,17 @@
     <% end %>
     <br>
     <div>
-      <p><span class="post_text">by: <%= current_user.email %></span> <span class="post_warning">if this isn't you follow <%= link_to "this link", logout_path %></span></p>
+      <p><span class="post_text">by: <%= current_user.username %></span> <span class="post_warning">if this isn't you follow <%= link_to "this link", logout_path %></span></p>
     </div>
     <br>
     <div class="field">
       <p><span class="post_text"><%= post_form.label :title %></span></p><br>
       <%= post_form.text_field :title %>
+    </div>
+    <br>
+    <div class="field">
+      <p><span class="post_text"><%= post_form.label :category %></span></p><br>
+      <%= post_form.text_field :category %>
     </div>
     <br>
     <div class="field">
