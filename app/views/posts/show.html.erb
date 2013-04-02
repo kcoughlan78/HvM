@@ -5,13 +5,14 @@
 <% content_for :article do %>
 <article id="upper_stage">
     <div id="upper_col1">
-    <h2><span class="post_header">Title:
+    <h2><span class="post_header">
     <%= @post.title %>
     </span></h2>
       <br>
       <p>
         <%= image_tag(@post.image_url, class: "post_img_url") %>
       </p>
+      <figcaption><p><%= @post.created_at %></p></figcaption>
       <br>
       <p>
         <span class="post_text">posted by:
@@ -61,7 +62,7 @@
         </figure>
         <figure id="content_centre">
           <figcaption>
-            <h4 class="homeh4"><%= link_to "Sports Blog", :controller => "forum", :action => "index" %>
+            <h4 class="homeh4"><%= link_to "Sports Blog", :controller => "forum", :action => "sports" %>
             </h4>
             <div class="blog_desc">
               <p>Have something to say on the world of sport? Then click here.</p>
@@ -71,7 +72,7 @@
         </figure>
         <figure id="content_right">
           <figcaption>
-            <h4 class="homeh4"><%= link_to "Tech Blog", :controller => "forum", :action => "index" %>
+            <h4 class="homeh4"><%= link_to "Tech Blog", :controller => "forum", :action => "tech" %>
             </h4>
             <div class="blog_desc">
               <p>Have something to say on the world of tech? Then click here.</p>
