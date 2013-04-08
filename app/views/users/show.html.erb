@@ -1,5 +1,5 @@
 <% content_for :head do %>
-    <title>Hurlers vs Monsters: Registration</title>
+    <title>Hurlers vs Monsters: Your Account</title>
     <%= stylesheet_link_tag "sessions", :media => "all" %>
 <% end %>
 <% content_for :article do %>
@@ -12,9 +12,14 @@
             <p>Username: <%= @user.username %></p>
         <br>
             <p>Email: <%= @user.email %></p>
+        <br>
+        <p>Bio: <%= @user.bio %></p>
+        <br>
+        <%= button_to "edit", editmyaccount_path %>
         </div>
       <div id="upper_col2">
       <p>List posts/comments/tweets</p>
+        <% @user.posts %>
       </div>
     </article>
 <% end %>
@@ -33,7 +38,7 @@
         </figure>
         <figure id="content_centre">
           <figcaption>
-            <h4 class="homeh4"><%= link_to "Sports Blog", :controller => "forum", :action => "index" %>
+            <h4 class="homeh4"><%= link_to "Sports Blog", :controller => "forum", :action => "sports" %>
             </h4>
             <div class="blog_desc">
               <p>Have something to say on the world of sport? Then click here.</p>
@@ -43,7 +48,7 @@
         </figure>
         <figure id="content_right">
           <figcaption>
-            <h4 class="homeh4"><%= link_to "Tech Blog", :controller => "forum", :action => "index" %>
+            <h4 class="homeh4"><%= link_to "Tech Blog", :controller => "forum", :action => "tech" %>
             </h4>
             <div class="blog_desc">
               <p>Have something to say on the world of tech? Then click here.</p>

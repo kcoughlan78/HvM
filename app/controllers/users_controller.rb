@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :is_admin?, :except => [:new, :show, :create]
+  before_filter :is_admin?, :except => [:new, :show, :create, :update, :edit]
 
   def new
     @user = User.new
@@ -22,6 +22,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = current_user
+
+    respond_to do |format|
+      if @user.save
+        redirect_to myaccount_path
+      end
+    end
+  end
+
   def index
     @users = User.order("email")
 
@@ -32,7 +42,25 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    #@user = current_user
+    @user = !params[:id].nil? ? User.find(params[:id]) : current_user
+  end
+
+  def edit
+    @user = !params[:id].nil? ? User.find(params[:id]) : current_user
+  end
+
+  def update
+    @user = !params[:id].nil? ? User.find(params[:id]) : current_user
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        format.html { redirect_to @user, notice: 'Successfully updated profile' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        #format.json { render json: @product.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy

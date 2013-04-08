@@ -1,5 +1,5 @@
 <% @post.tags.build %>
-<%= form_for(@post) do |post_form| %>
+<%= form_for @post, :html => {:multipart => true} do |post_form| %>
     <% if @post.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -23,21 +23,22 @@
     <br>
     <div class="field">
       <p><span class="post_text"><%= post_form.label :category %></span></p><br>
-      <%= post_form.text_field :category %>
+      <%= post_form.select :category, Post::CATEGORY_TYPES, prompt: 'Select your forum' %>
     </div>
     <br>
     <div class="field">
       <p><span class="post_text"><%= post_form.label :content %></span></p><br>
       <p class="content_box"><%= post_form.text_area :content %></p>
     </div>
+    <br>
     <div class="field">
-      <p><span class="post_text"><%= post_form.label :image_url %></span></p><br />
-      <%= post_form.text_field :image_url %>
+      <p><span class="post_text">Add <%= post_form.label :image %></span></p>
+      <%= post_form.file_field :image %>
     </div>
     <br>
     <%= render :partial => 'tags/form',
                :locals => {:form => post_form} %>
-
+    <br>
     <div class="actions">
     <%= post_form.submit %>
   </div>

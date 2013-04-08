@@ -12,7 +12,7 @@
       <p>
         <%= image_tag(@post.image_url, class: "post_img_url") %>
       </p>
-      <figcaption><p><%= @post.created_at %></p></figcaption>
+      <figcaption><p><span class="post_date"><%= @post.created_at.to_s(:short) %></span></p></figcaption>
       <br>
       <p>
         <span class="post_text">posted by:

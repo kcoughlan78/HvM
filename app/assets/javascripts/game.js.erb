@@ -1,0 +1,151 @@
+function loadCanvas(id) {
+    var canvasInsert = document.createElement('canvas');
+    canvasInsert.height = 32;
+    canvasInsert.width = 32;
+    canvasInsert.class = 'bug';
+    insertMonster = document.getElementById(id);
+    insertMonster.appendChild(canvasInsert)
+}
+loadCanvas("monster1");
+
+var monsters =
+{
+    IMAGE: "spritesheet1.png",
+    SIZE: 32,
+    COLUMN_NO: 3,
+
+    totalFrameNo: 4,
+    currentFrameNo: 0,
+
+    sourceX: 0,
+    sourceY: 0,
+
+    playForward: true,
+
+    NOTLANDED: 0,
+    LANDED: 1,
+    HIT: 2,
+    state: this.NOTLANDED,
+
+    resetCount: 12,
+    resetCounter: 0,
+
+    landingTime: undefined,
+
+    findLandingTime: function()
+    {
+        this.landingTime = Math.ceil(Math.random() * 60);
+    },
+
+    runAnimation: function()
+    {
+        this.sourceX
+                = Math.floor(this.currentFrameNo % this.COLUMN_NO) * this.SIZE;
+        this.sourceY
+                = Math.floor(this.currentFrameNo / this.COLUMN_NO) * this.SIZE;
+        if(this.state !== this.HIT)
+        {
+            if(this.landingTime > 0 || this.landingTime === undefined)
+            {
+                this.state = this.NOTLANDED;
+            }
+            else
+            {
+                this.state = this.LANDED;
+            }
+        }
+
+        switch(this.state)
+        {
+            case this.NOTLANDED:
+                this.currentFrameNo = 0;
+                this.landingTime--;
+                break;
+
+            case this.LANDED:
+                if(this.currentFrameNo === this.totalFrameNo)
+                {
+                    this.playForward = false;
+                }
+
+                if(this.currentFrameNo === 0 && this.playForward === false)
+                {
+                    this.playForward = true;
+                    this.findLandingTime();
+                    this.state = this.NOTLANDED;
+                    break;
+                }
+
+                if(this.playForward)
+                {
+                    this.currentFrameNo++;
+                }
+                else
+                {
+                    this.currentFrameNo--;
+                }
+                break;
+
+            case this.HIT:
+
+                this.currentFrameNo = 5;
+
+                this.resetCounter++;
+
+                if(this.resetCounter === this.resetCount)
+                {
+                    this.state = this.NOTLANDED;
+                    this.playForward = true;
+                    this.currentFrameNo = 0;
+                    this.resetCounter = 0;
+                    this.findLandingTime();
+                }
+                break;
+        }
+    }
+};
+
+var canvas = document.querySelector("canvas");
+var animationArea = canvas.getContext("2d");
+canvas.addEventListener("mousedown", mousedownHandler, false);
+var image = new Image();
+image.addEventListener("load", loadHandler, false);
+image.src = "<%= asset_path('spritesheet1.png') %>";
+
+function loadHandler()
+{
+    monsters.findLandingTime();
+
+    runAnimation();
+}
+
+function runAnimation()
+{
+    setTimeout(runAnimation, 85);
+
+    monsters.runAnimation();
+
+    render();
+}
+
+function mousedownHandler(event)
+{
+    if(monsters.state === monsters.LANDED)
+    {
+        monsters.state = monsters.HIT;
+    }
+}
+
+function render()
+{
+    animationArea.clearRect(0, 0, canvas.width, canvas.height);
+
+    animationArea.drawImage
+            (
+                    image,
+                    monsters.sourceX, monsters.sourceY, monsters.SIZE, monsters.SIZE,
+                    0, 0, monsters.SIZE, monsters.SIZE
+            );
+}
+
+

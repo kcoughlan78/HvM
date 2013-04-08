@@ -1,5 +1,5 @@
 class Reply < ActiveRecord::Base
-  attr_accessible :by, :response, :email
+  attr_accessible :by, :response, :email, :username
   belongs_to :post
   has_one :user
 

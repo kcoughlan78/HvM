@@ -1,5 +1,5 @@
 <% content_for :head do %>
-    <title>Hurlers vs Monsters: Home</title>
+    <title>Hurlers vs Monsters: Posts</title>
     <%= stylesheet_link_tag "posts", :media => "all" %>
 <% end %>
 <% content_for :article do %>
@@ -10,11 +10,10 @@
     <tr>
       <th>Title</th>
       <th>Content</th>
-      <th>Name</th>
-      <th>Image url</th>
-      <th></th>
+      <th>Image</th>
       <th></th>
       <th>Actions</th>
+      <th></th>
     </tr>
 
     <% @posts.each do |post| %>
@@ -22,10 +21,17 @@
           <td><%= post.title %></td>
           <td><%= post.content %></td>
           <td><%= post.image_url %></td>
-          <td><%= post.name %></td>
           <td><%= link_to 'Show', post %></td>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+        <tr>
+         <!-- <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>-->
         </tr>
     <% end %>
   </table>
@@ -49,7 +55,7 @@
         </figure>
         <figure id="content_centre">
           <figcaption>
-            <h4 class="homeh4">Sports Blog
+            <h4 class="homeh4"><%= link_to "Sports Blog", :controller => "forum", :action => "sports" %>
             </h4>
             <div class="blog_desc">
               <p>Have something to say on the world of sport? Then click here.</p>
@@ -59,7 +65,7 @@
         </figure>
         <figure id="content_right">
           <figcaption>
-            <h4 class="homeh4">Tech Blog
+            <h4 class="homeh4"><%= link_to "Tech Blog", :controller => "forum", :action => "tech" %>
             </h4>
             <div class="blog_desc">
               <p>Have something to say on the world of tech? Then click here.</p>
@@ -70,6 +76,7 @@
       </div>
     </section>
 <% end %>
+
 
 
 

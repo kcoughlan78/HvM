@@ -22,10 +22,18 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+platforms :mswin, :mingw do
+  gem 'eventmachine', '1.0.0.beta.4.1'
+  gem 'thin'
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.1'
+
+# To aid uploading of photos for posts
+gem 'carrierwave'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

@@ -7,6 +7,10 @@ Gameproject::Application.routes.draw do
 
   get "forum/index"
 
+  get "forum/sports"
+
+  get "forum/tech"
+
   get "home/index"
 
   resources :sessions
@@ -55,6 +59,7 @@ Gameproject::Application.routes.draw do
   match '/logout' => "sessions#destroy", :as => "logout"
   match '/game' => "game#index", :as => "game"
   match '/myaccount' => "users#show", :as => "myaccount"
+  match '/editmyaccount' => "users#edit", :as => "editmyaccount"
 
   #   resources :products do
   #     resources :comments

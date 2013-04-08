@@ -1,0 +1,53 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Game</title>
+    <%= stylesheet_link_tag "game", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage" onload="init();">
+
+    </article>
+<% end %>
+<% content_for :section do %>
+    <section>
+      <header><h2>Join in</h2></header>
+      <div id="content">
+        <figure id="content_left">
+          <figcaption>
+            <h4 class="homeh4"><%=link_to "Try the Game", game_path %>
+            </h4>
+            <div class="blog_desc">
+              <p>Bored? Want to spend 5 minutes away from reality well click here</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure id="content_centre">
+          <figcaption>
+            <h4 class="homeh4"><%= link_to "Sports Blog", :controller => "forum", :action => "sports" %>
+            </h4>
+            <div class="blog_desc">
+              <p>Have something to say on the world of sport? Then click here.</p>
+              <p>Start a debate, have thoughts on the current national team selection, or discuss and or promote more local sports.</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure id="content_right">
+          <figcaption>
+            <h4 class="homeh4"><%= link_to "Tech Blog", :controller => "forum", :action => "tech" %>
+            </h4>
+            <div class="blog_desc">
+              <p>Have something to say on the world of tech? Then click here.</p>
+              <p>Start a debate whether its a comment on current events, your own opinion or you just want to join the general conversation</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+<% end %>
+<%= content_for :script do %>
+    <%= javascript_include_tag "Sprite3D" %>
+    <%= javascript_include_tag "game_background" %>
+    <%= javascript_include_tag "game.js.erb" %>
+<% end %>
+
+
+

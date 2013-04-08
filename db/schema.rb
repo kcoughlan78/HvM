@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130330205120) do
+ActiveRecord::Schema.define(:version => 20130404221636) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -23,16 +23,18 @@ ActiveRecord::Schema.define(:version => 20130330205120) do
     t.integer  "user_id"
     t.string   "user_email"
     t.string   "category"
+    t.string   "image"
   end
 
   create_table "replies", :force => true do |t|
     t.string   "by"
     t.text     "response"
     t.integer  "post_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.string   "user_email"
     t.integer  "user_id"
+    t.string   "user_username"
   end
 
   add_index "replies", ["post_id"], :name => "index_replies_on_post_id"
@@ -66,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20130330205120) do
     t.string   "username"
     t.string   "fname"
     t.string   "sname"
+    t.text     "bio"
   end
 
 end

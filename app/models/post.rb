@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
-  attr_accessible :name, :content, :image_url, :title, :category, :tags_attributes, :user_email
+  attr_accessible :name, :content, :image_url, :title, :category, :tags_attributes, :user_email, :user_username, :image
 
-  #validates :name, :presence => true
+  CATEGORY_TYPES = [ "Sports", "Tech" ]
 
   validates :content, :presence => true,
             :length => { :minimum => 10 }
@@ -9,17 +9,18 @@ class Post < ActiveRecord::Base
   validates :title, :presence => true,
             :length => { :minimum => 3 }
 
-  validates :category, :presence => true,
-            :length => { :minimum => 4 }
-
   validates :image_url, allow_blank: true, format: {
       with: %r{\.(gif|jpg|png|svg|dwg)\Z}i,
       message: 'image must be a gif/jpg/png/svg/dwg file type.'
   }
 
+  validates :category, inclusion: CATEGORY_TYPES
+
   belongs_to :user
   has_many :replies, :dependent => :destroy
   has_many :tags
+
+  mount_uploader :image, PostImageUploader
 
   accepts_nested_attributes_for :tags, :allow_destroy => :true,
                                 :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }

@@ -1,0 +1,30 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Tech Forum</title>
+    <%= stylesheet_link_tag "forum", :media => "all" %>
+    <%= javascript_include_tag "home" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+      <header><h2>My Article</h2></header>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p><span id="prototype_text">Forum Topic of the day/Advertising or sponsored features go here</span></p>
+    </article>
+<% end %>
+<% content_for :section do %>
+    <section>
+      <header><h2>Tech Forum</h2></header>
+      <% @posts.each do |post| %>
+          <article class="<%= cycle('post_odd', 'post_even') %>">
+            <h4><%= link_to post.title, post %></h4>
+            <p><%= truncate(strip_tags(post.content), length: 200) %></p>
+            <h6>Tags:</h6>
+            <p><span class="tags"><%= join_tags(post) %></span></p>
+          </article>
+      <% end %>
+    </section>
+<% end %>

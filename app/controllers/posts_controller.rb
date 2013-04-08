@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :authenticate, :except => [:index, :show]
+  before_filter :authenticate, :except => [:show]
+  before_filter :is_admin?, :except => [:show, :new, :create]
 
   def index
     @posts = Post.order("title")
@@ -68,12 +69,13 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   # DELETE /posts/1.json
+
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to post_path }
       format.json { head :no_content }
     end
   end

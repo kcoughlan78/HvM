@@ -101,8 +101,6 @@ nav ul li {
   bottom: 0%;
   left: 0%;
   z-index:10;
-  padding: 2% 2% 2% 2%;
-  margin: 0% 2% 2% 4%;
   background-color: #ff251e;
   border: #fdfffd;
   border-style: solid;
@@ -124,8 +122,6 @@ nav ul li {
   bottom: 0%;
   left: 50%;
   z-index:10;
-  padding: 2% 2% 2% 2%;
-  margin: 0% 2% 2% 2%;
   background-color: #ff251e;
   color: #000000;
   border: #fdfffd;
@@ -157,7 +153,7 @@ section {
   /*margin: 2% 5% 5% 5%;*/
   padding:0;
   overflow: hidden;
-  background-color: #B20000;
+  background-image: -moz-linear-gradient(bottom, #A10F0F 44%, #423030 100%);
 }
 
 #content {

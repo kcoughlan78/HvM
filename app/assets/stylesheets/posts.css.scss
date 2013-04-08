@@ -4,11 +4,18 @@
 @import url("application.css.scss");
 
 #upper_col1 {
-  margin-left: 10%;
   height: 600px;
-  width: 450px;
+  width: 550px;
   max-height: auto;
+  padding: 2% 3% 2% 3%;
+  margin: 0% 2% 2% 2%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  ::-moz-scrollbar { width: 5px; }
+  ::-webkit-scrollbar { width: 12px; }
 }
+
+
 
 .post_img_url {
   float: left;
@@ -20,7 +27,19 @@
 
 #upper_col2 {
   height: 600px;
-  width: 450px;
+  width: 350px;
+  margin-left: 20%;
+  padding: 2% 2% 2% 2%;
+  margin: 0% 2% 2% 10%;
+}
+table tr {
+  margin: 1% 1% 1% 1%;
+  padding: 3% 3% 3% 3%;
+}
+
+td {
+  margin: 1% 1% 1% 1%;
+  padding: 1% 1% 1% 1%;
 }
 
 .post_header {
@@ -30,6 +49,11 @@
 
 .post_text {
   color: white;
+}
+
+.post_date {
+  color: white;
+  font-style: italic;
 }
 
 .post_warning {

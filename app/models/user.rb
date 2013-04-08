@@ -1,8 +1,8 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :hashed_password, :salted_password, :password, :password_confirmation, :username, :fname, :sname
-  attr_accessor :password, :user_email
+  attr_accessible :email, :hashed_password, :salted_password, :password, :password_confirmation, :username, :fname, :sname, :bio
+  attr_accessor :password, :user_email, :user_username
   before_save :encrypt_password
 
   validates :email,
@@ -14,7 +14,15 @@ class User < ActiveRecord::Base
             :presence => true,
             :confirmation => true,
             :length => {:within => 6..20},
-            :presence => true
+            :presence => true,
+            :if => :password_present?
+  validates :username,
+            :uniqueness => true,
+            :length => {:within => 6..18},
+            :if => :username_present?
+  validates :bio,
+            :length => {:within => 10..200},
+            :if => :bio_present?
 
   has_many :posts
   has_many :replies
@@ -25,6 +33,18 @@ class User < ActiveRecord::Base
     self.hashed_password = BCrypt::Engine.hash_secret(password, salted_password)
     end
 
+  end
+
+  def password_present?
+    !password.nil?
+  end
+
+  def username_present?
+    !username.nil?
+  end
+
+  def bio_present?
+    !bio.nil?
   end
 
   def self.authenticate(email, password)
