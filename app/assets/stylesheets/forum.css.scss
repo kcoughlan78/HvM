@@ -32,6 +32,8 @@ section > header h2 {
 .post_odd {
   padding: 2% 2% 2% 2%;
   margin: 1% 10% 1% 10%;
+  min-height: 130px;
+  max-height: 180px;
   background-color: #ff251e;
   color: #000000;
   border: #fdfffd;
@@ -56,6 +58,8 @@ section > header h2 {
   padding: 2% 2% 2% 2%;
   margin: 1% 10% 1% 10%;
   background-color: #a7e9b8;
+  min-height: 130px;
+  max-height: 160px;
   color: #000000;
   border: #fdfffd;
   border-style: solid;
@@ -73,4 +77,15 @@ section > header h2 {
   -webkit-border-top-right-radius: 5%;
   -webkit-border-bottom-left-radius: 5%;
   -webkit-border-bottom-right-radius: 5%;
+}
+
+.post_img_url {
+  float: left;
+  max-height: 80px;
+  max-width: 200px;
+  padding: 1% 1% 1% 1%;
+}
+
+.forum_detail {
+  font-size: x-small;
 }
