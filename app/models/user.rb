@@ -1,7 +1,7 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :hashed_password, :salted_password, :password, :password_confirmation, :username, :fname, :sname, :bio
+  attr_accessible :email, :hashed_password, :salted_password, :password, :password_confirmation, :username, :fname, :sname, :bio, :image
   attr_accessor :password, :user_email, :user_username
   before_save :encrypt_password
 
@@ -18,14 +18,20 @@ class User < ActiveRecord::Base
             :if => :password_present?
   validates :username,
             :uniqueness => true,
-            :length => {:within => 6..18},
+            :length => {:within => 5..18},
             :if => :username_present?
   validates :bio,
             :length => {:within => 10..200},
             :if => :bio_present?
+  validates :image_url, allow_blank: true, format: {
+      with: %r{\.(gif|jpg|png|svg|dwg)\Z}i,
+      message: 'image must be a gif/jpg/png/svg/dwg file type.'
+  }
 
   has_many :posts
   has_many :replies
+
+  mount_uploader :image, PostImageUploader
 
   def encrypt_password
     if password.present?

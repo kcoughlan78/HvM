@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404221636) do
+ActiveRecord::Schema.define(:version => 20130409015507) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20130404221636) do
     t.string   "fname"
     t.string   "sname"
     t.text     "bio"
+    t.string   "image"
   end
 
 end

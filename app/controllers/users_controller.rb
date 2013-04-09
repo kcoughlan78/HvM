@@ -22,15 +22,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
-    @user = current_user
-
-    respond_to do |format|
-      if @user.save
-        redirect_to myaccount_path
-      end
-    end
-  end
 
   def index
     @users = User.order("email")
@@ -58,7 +49,7 @@ class UsersController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        #format.json { render json: @product.errors, status: :unprocessable_entity }
+        format.json { render json: @users.errors, status: :unprocessable_entity }
       end
     end
   end

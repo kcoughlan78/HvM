@@ -1,6 +1,6 @@
 <% content_for :head do %>
     <title>Hurlers vs Monsters: Your Account</title>
-    <%= stylesheet_link_tag "sessions", :media => "all" %>
+    <%= stylesheet_link_tag "users", :media => "all" %>
 <% end %>
 <% content_for :article do %>
     <article id="upper_stage">
@@ -8,6 +8,7 @@
         <header><h2>Your Details</h2></header>
         <br>
             <p>Name: <%= @user.fname %> <%= @user.sname %></p>
+            <p><%= image_tag(@user.image_url, class: "user_img_url") %></p>
         <br>
             <p>Username: <%= @user.username %></p>
         <br>
@@ -19,7 +20,7 @@
         </div>
       <div id="upper_col2">
       <p>List posts/comments/tweets</p>
-        <% @user.posts %>
+        <% @user.posts.length %>
       </div>
     </article>
 <% end %>

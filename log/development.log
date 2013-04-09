@@ -27404,3 +27404,2288 @@ Served asset /jquery.js - 304 Not Modified (2ms)
 
 Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-08 20:55:23 +0100
 Served asset /application.css.scss - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-09 01:30:57 +0100
+Processing by PostsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 391ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-04-09 01:31:00 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (204.1ms)
+Completed 200 OK in 1027ms (Views: 1025.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-09 01:31:02 +0100
+Served asset /sessions.css - 200 OK (13ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:31:02 +0100
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:31:02 +0100
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/3rd%20party%20signin.jpg" for 127.0.0.1 at 2013-04-09 01:31:02 +0100
+Served asset /3rd%20party%20signin.jpg - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:31:02 +0100
+Served asset /application.css.scss - 304 Not Modified (15ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-09 01:31:31 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "email"=>"coughlan.esther@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'coughlan.esther@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 369ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-09 01:31:32 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (113.7ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 146ms (Views: 144.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /home.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/Sprite3D.js?body=1" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /Sprite3D.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/intro.js?body=1" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /intro.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/assets/game_background3d.png" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /game_background3d.png - 304 Not Modified (9ms)
+
+
+Started GET "/assets/crowd_scene.jpg" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /crowd_scene.jpg - 304 Not Modified (11ms)
+
+
+Started GET "/assets/Title.jpg" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /Title.jpg - 304 Not Modified (8ms)
+
+
+Started GET "/assets/monster.jpg" for 127.0.0.1 at 2013-04-09 01:31:33 +0100
+Served asset /monster.jpg - 304 Not Modified (11ms)
+
+
+Started GET "/assets/hurler.jpg" for 127.0.0.1 at 2013-04-09 01:31:34 +0100
+Served asset /hurler.jpg - 304 Not Modified (7ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:31:55 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (224ms)  (pid 5108)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  Rendered forum/index.html.erb within layouts/application (809.2ms)
+Completed 500 Internal Server Error in 828ms
+
+ActionView::Template::Error (undefined method `image_url' for nil:NilClass):
+    21: <% @posts.each do |post| %>
+    22:     <article class="<%= cycle('post_odd', 'post_even') %>">
+    23:       <h4><%= link_to post.title, post %></h4>
+    24:       <p class="post_image"><%= image_tag(@post.image_url, class: "post_img_url") %></p>
+    25:       <p><%= truncate(strip_tags(post.content), length: 200) %></p>
+    26:       <h6>Tags:</h6>
+    27:       <p><span class="tags"><%= join_tags(post) %></span></p>
+  app/views/forum/index.html.erb:24:in `block (2 levels) in _app_views_forum_index_html_erb__211439838_44696808'
+  app/views/forum/index.html.erb:21:in `block in _app_views_forum_index_html_erb__211439838_44696808'
+  app/views/forum/index.html.erb:18:in `_app_views_forum_index_html_erb__211439838_44696808'
+
+
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (113.1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:32:58 +0100
+Processing by ForumController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (1561.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 1590ms (Views: 1584.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:33:00 +0100
+Served asset /forum.css - 200 OK (10ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:33:00 +0100
+Served asset /home.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:33:00 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:33:00 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:33:00 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:34:56 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (43ms)  (pid 5108)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (156.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 189ms (Views: 182.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:34:57 +0100
+Served asset /forum.css - 200 OK (17ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:34:57 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:34:57 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:34:57 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:34:57 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:36:20 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (39ms)  (pid 5108)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (199.8ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 230ms (Views: 226.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:36:21 +0100
+Served asset /forum.css - 200 OK (12ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:36:21 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:36:21 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:36:21 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:36:21 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:36:51 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (43ms)  (pid 5108)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (171.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 203ms (Views: 197.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:36:52 +0100
+Served asset /forum.css - 200 OK (16ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:36:52 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:36:52 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:36:52 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:36:52 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:37:25 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (43ms)  (pid 5108)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (157.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 187ms (Views: 183.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:37:25 +0100
+Served asset /forum.css - 200 OK (17ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:37:25 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:37:25 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:37:25 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:37:25 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:37:45 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (44ms)  (pid 5108)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (166.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 203ms (Views: 197.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:37:46 +0100
+Served asset /forum.css - 200 OK (68ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:37:46 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:37:46 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:37:46 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:37:46 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:39:29 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (84ms)  (pid 5108)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (2.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (228.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 262ms (Views: 254.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:39:29 +0100
+Served asset /forum.css - 200 OK (13ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:39:29 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:39:29 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:39:29 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:39:30 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:39:32 +0100
+Processing by ForumController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (33.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 110ms (Views: 107.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:39:33 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:39:33 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:39:33 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:39:33 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:39:33 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:39:52 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (91ms)  (pid 5108)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (211.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 239ms (Views: 235.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:39:52 +0100
+Served asset /forum.css - 200 OK (18ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:39:52 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:39:52 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:39:52 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:39:52 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:39:55 +0100
+Processing by ForumController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (30.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 55ms (Views: 50.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:39:56 +0100
+Served asset /forum.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:39:56 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:39:56 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:39:56 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:39:56 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:40:20 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (40ms)  (pid 5108)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (2.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (213.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 245ms (Views: 238.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:40:21 +0100
+Served asset /forum.css - 200 OK (17ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:40:21 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:40:21 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:40:21 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:40:21 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:40:43 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (54ms)  (pid 5108)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (185.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 214ms (Views: 212.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:40:43 +0100
+Served asset /forum.css - 200 OK (11ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:40:43 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:40:43 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:40:43 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:40:43 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:41:12 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (66ms)  (pid 5108)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (207.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 243ms (Views: 236.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:41:13 +0100
+Served asset /forum.css - 200 OK (20ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:41:13 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:41:13 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:41:13 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:41:13 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:41:44 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (59ms)  (pid 5108)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  Rendered forum/index.html.erb within layouts/application (187.3ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 221ms (Views: 217.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:41:44 +0100
+Served asset /forum.css - 200 OK (18ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:41:44 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:41:44 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:41:44 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:41:44 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:44:30 +0100
+Processing by ForumController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at
+  Rendered forum/index.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (undefined method `user_username' for #<Post:0x56fe860>):
+    22:     <article class="<%= cycle('post_odd', 'post_even') %>">
+    23:       <h4><%= link_to post.title, post %></h4>
+    24:       <br>
+    25:       <p>by <%= post.user_username %></p>
+    26:       <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
+    27:       <p><%= truncate(strip_tags(post.content), length: 200) %></p>
+    28:       <h6>Tags:</h6>
+  app/views/forum/index.html.erb:25:in `block (2 levels) in _app_views_forum_index_html_erb__211439838_45903384'
+  app/views/forum/index.html.erb:21:in `block in _app_views_forum_index_html_erb__211439838_45903384'
+  app/views/forum/index.html.erb:18:in `_app_views_forum_index_html_erb__211439838_45903384'
+
+
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (96.1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:45:01 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (277.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 305ms (Views: 299.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:45:02 +0100
+Served asset /forum.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:45:02 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:45:02 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:45:02 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:45:02 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:46:13 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (41.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 72ms (Views: 65.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:46:14 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:46:14 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:46:14 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:46:14 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:46:14 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:50:18 +0100
+Processing by ForumController#index as HTML
+Compiled forum.css  (67ms)  (pid 5108)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (220.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 244ms (Views: 240.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:50:19 +0100
+Served asset /forum.css - 200 OK (11ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:50:19 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:50:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:50:19 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:50:19 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:51:01 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (44.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 77ms (Views: 70.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:51:01 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:51:02 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:51:02 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:51:02 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:51:02 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:53:36 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (2.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (67.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 102ms (Views: 95.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:53:37 +0100
+Served asset /forum.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:53:37 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:53:37 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:53:37 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:53:37 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-09 01:55:08 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-09 01:55:09 +0100
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:55:09 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:55:09 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/Sprite3D.js?body=1" for 127.0.0.1 at 2013-04-09 01:55:09 +0100
+Served asset /Sprite3D.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/intro.js?body=1" for 127.0.0.1 at 2013-04-09 01:55:09 +0100
+Served asset /intro.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:55:09 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_background3d.png" for 127.0.0.1 at 2013-04-09 01:55:09 +0100
+Served asset /game_background3d.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/crowd_scene.jpg" for 127.0.0.1 at 2013-04-09 01:55:10 +0100
+Served asset /crowd_scene.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/Title.jpg" for 127.0.0.1 at 2013-04-09 01:55:10 +0100
+Served asset /Title.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/monster.jpg" for 127.0.0.1 at 2013-04-09 01:55:10 +0100
+Served asset /monster.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hurler.jpg" for 127.0.0.1 at 2013-04-09 01:55:10 +0100
+Served asset /hurler.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/forum/sports" for 127.0.0.1 at 2013-04-09 01:55:12 +0100
+Processing by ForumController#sports as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = 'Sports'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8
+  Rendered forum/sports.html.erb within layouts/application (27.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 71ms (Views: 63.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:55:12 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:55:12 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:55:12 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:55:13 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:55:13 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-09 01:56:36 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-09 01:56:36 +0100
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:56:36 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:56:36 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/Sprite3D.js?body=1" for 127.0.0.1 at 2013-04-09 01:56:36 +0100
+Served asset /Sprite3D.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/intro.js?body=1" for 127.0.0.1 at 2013-04-09 01:56:36 +0100
+Served asset /intro.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:56:36 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/assets/game_background3d.png" for 127.0.0.1 at 2013-04-09 01:56:37 +0100
+Served asset /game_background3d.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/crowd_scene.jpg" for 127.0.0.1 at 2013-04-09 01:56:37 +0100
+Served asset /crowd_scene.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/Title.jpg" for 127.0.0.1 at 2013-04-09 01:56:37 +0100
+Served asset /Title.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/monster.jpg" for 127.0.0.1 at 2013-04-09 01:56:37 +0100
+Served asset /monster.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hurler.jpg" for 127.0.0.1 at 2013-04-09 01:56:37 +0100
+Served asset /hurler.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/forum/tech" for 127.0.0.1 at 2013-04-09 01:56:39 +0100
+Processing by ForumController#tech as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = 'Tech'[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/tech.html.erb within layouts/application (36.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 75ms (Views: 67.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:56:39 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:56:39 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:56:39 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:56:39 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:56:40 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:57:08 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (42.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 69ms (Views: 63.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:57:08 +0100
+Served asset /forum.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:57:08 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:57:08 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:57:08 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:57:08 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:58:53 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (62.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 101ms (Views: 93.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:58:54 +0100
+Served asset /forum.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:58:54 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:58:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:58:54 +0100
+Served asset /jquery.js - 304 Not Modified (64ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:58:54 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:59:37 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (39.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 66ms (Views: 60.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:59:38 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:59:38 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:59:38 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:59:38 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:59:38 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 01:59:55 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (55.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 98ms (Views: 90.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 01:59:55 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 01:59:56 +0100
+Served asset /home.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 01:59:56 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 01:59:56 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 01:59:56 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 02:00:25 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (44.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 75ms (Views: 65.5ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 02:00:25 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 02:00:25 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:00:25 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:00:25 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:00:25 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 02:00:29 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (45.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 75ms (Views: 68.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 02:00:29 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 02:00:29 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:00:29 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:00:29 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:00:29 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 02:00:43 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (43.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 74ms (Views: 67.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 02:00:44 +0100
+Served asset /forum.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 02:00:44 +0100
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:00:44 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:00:44 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:00:44 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 02:01:27 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (40.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 71ms (Views: 67.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 02:01:27 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 02:01:27 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:01:27 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:01:27 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:01:27 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 02:03:54 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (43.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 113ms (Views: 105.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 02:03:54 +0100
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 02:03:54 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:03:55 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:03:55 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:03:55 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20130304132825)
+Migrating to CreateReplies (20130304135934)
+Migrating to CreateTags (20130304144705)
+Migrating to CreateUsers (20130311125327)
+Migrating to AddSessionsTable (20130311183435)
+Migrating to AddUserIdToPosts (20130311200454)
+Migrating to AddUserEmailToPosts (20130312111442)
+Migrating to AddUserEmailToReplies (20130312114353)
+Migrating to AddUserIdToReplies (20130312115033)
+Migrating to AddAdminToUsers (20130327214946)
+Migrating to AddUsernameToUser (20130330191113)
+Migrating to AddFnameToUser (20130330193214)
+Migrating to AddSnameToUser (20130330195107)
+Migrating to AddCategoryToPost (20130330205120)
+Migrating to AddImageToPost (20130402111033)
+Migrating to AddUserUsernameToReplies (20130402175557)
+Migrating to AddBioToUser (20130404221636)
+Migrating to AddPicToUser (20130409011353)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (4.0ms)[0m  ALTER TABLE "users" ADD "pic" text
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130409011353')[0m
+  [1m[35m (60.9ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 02:22:26 +0100
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 71ms (Views: 37.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-09 02:22:27 +0100
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:22:27 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:22:27 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:22:27 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started POST "/editmyaccount" for 127.0.0.1 at 2013-04-09 02:22:32 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Compiled users.css  (48ms)  (pid 5108)
+  Rendered users/edit.html.erb within layouts/application (301.4ms)
+Completed 200 OK in 334ms (Views: 327.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 02:22:32 +0100
+Served asset /users.css - 200 OK (13ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:22:32 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:22:33 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:22:33 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started POST "/editmyaccount" for 127.0.0.1 at 2013-04-09 02:24:28 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI="}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 02:24:29 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:24:29 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:24:29 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:24:29 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 02:24:36 +0100
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-09 02:24:37 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:24:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:24:37 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:24:37 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 02:25:20 +0100
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-09 02:25:20 +0100
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:25:20 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:25:20 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:25:21 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started POST "/editmyaccount" for 127.0.0.1 at 2013-04-09 02:25:25 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 02:25:25 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:25:25 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:25:25 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:25:25 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:26:22 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x57cb118 @original_filename="20825610.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"20825610.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-5108-1locbm0>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/edit.html.erb within layouts/application (15.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 525ms (Views: 51.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 02:26:23 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:26:23 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:26:23 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:26:23 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:27:12 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x5915940 @original_filename="20825610.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"20825610.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-5108-1dkmvgd>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 124ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/users_controller.rb:56:in `block in update'
+  app/controllers/users_controller.rb:55:in `update'
+
+
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (92.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-09 02:29:07 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-09 02:29:07 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:29:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:29:07 +0100
+Served asset /jquery.js - 304 Not Modified (74ms)
+
+
+Started GET "/assets/Sprite3D.js?body=1" for 127.0.0.1 at 2013-04-09 02:29:07 +0100
+Served asset /Sprite3D.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/intro.js?body=1" for 127.0.0.1 at 2013-04-09 02:29:07 +0100
+Served asset /intro.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:29:07 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/assets/game_background3d.png" for 127.0.0.1 at 2013-04-09 02:29:08 +0100
+Served asset /game_background3d.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/crowd_scene.jpg" for 127.0.0.1 at 2013-04-09 02:29:08 +0100
+Served asset /crowd_scene.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/Title.jpg" for 127.0.0.1 at 2013-04-09 02:29:08 +0100
+Served asset /Title.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/monster.jpg" for 127.0.0.1 at 2013-04-09 02:29:08 +0100
+Served asset /monster.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/hurler.jpg" for 127.0.0.1 at 2013-04-09 02:29:08 +0100
+Served asset /hurler.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 02:29:12 +0100
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 47ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-09 02:29:12 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:29:12 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:29:12 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:29:12 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started POST "/editmyaccount" for 127.0.0.1 at 2013-04-09 02:29:17 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 55ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 02:29:17 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:29:17 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:29:17 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:29:17 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:29:37 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x5909e20 @original_filename="20825610.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"20825610.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-5108-ljojhk>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 19ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/users_controller.rb:56:in `block in update'
+  app/controllers/users_controller.rb:55:in `update'
+
+
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (156.1ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:31:24 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x5916078 @original_filename="20825610.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"20825610.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-5108-164ob9q>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/myaccount
+Completed 406 Not Acceptable in 45ms (ActiveRecord: 3.0ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:31:38 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x590b800 @original_filename="20825610.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"20825610.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-5108-295cfu>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/myaccount
+Completed 406 Not Acceptable in 11ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 02:31:51 +0100
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 40ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-09 02:31:52 +0100
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:31:52 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:31:52 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:31:52 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started POST "/editmyaccount" for 127.0.0.1 at 2013-04-09 02:31:56 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI="}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 02:31:56 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:31:56 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:31:56 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:31:56 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:33:27 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x5914da0 @original_filename="20825610.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"20825610.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-5108-3abzq9>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 50ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/users_controller.rb:47:in `block in update'
+  app/controllers/users_controller.rb:46:in `update'
+
+
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (92.1ms)
+Connecting to database specified by database.yml
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:37:21 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x532b3c0 @original_filename="20825610.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"20825610.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-6332-1sfl60v>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 948ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/users_controller.rb:47:in `block in update'
+  app/controllers/users_controller.rb:46:in `update'
+
+
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (43.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (277.2ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:40:23 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x545ffe8 @original_filename="20825610.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"20825610.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-6332-zbpdj5>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/edit.html.erb within layouts/application (731.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 920ms (Views: 835.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 02:40:25 +0100
+Served asset /users.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:40:25 +0100
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:40:25 +0100
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:40:25 +0100
+Served asset /application.css.scss - 304 Not Modified (15ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:40:51 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x5158050 @original_filename="20825610.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"20825610.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-6332-1y9hrxy>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/edit.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 46ms (Views: 35.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 02:40:52 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:40:52 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:40:52 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:40:52 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 02:43:55 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x54456d8 @original_filename="1364179448_button_black_play.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[pic]\"; filename=\"1364179448_button_black_play.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-6332-1r1py9n>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/edit.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 49ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 02:43:55 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 02:43:55 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 02:43:55 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 02:43:55 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to AddPicToUser (20130409011353)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (22.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "hashed_password" varchar(255), "salted_password" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "admin" boolean DEFAULT 'f', "username" varchar(255), "fname" varchar(255), "sname" varchar(255), "bio" text, "pic" text) [0m
+  [1m[35m (1.0ms)[0m  SELECT * FROM "users"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "altered_users" ("id","email","hashed_password","salted_password","created_at","updated_at","admin","username","fname","sname","bio","pic") VALUES (1, 'coughlan.esther@gmail.com', '$2a$10$wbSUran3ivUWwFWfP3QsQuO1sZbHdAWnEU5YgyUtdcRITCEC2jHuq', '$2a$10$wbSUran3ivUWwFWfP3QsQu', '2013-03-25 20:22:55.795586', '2013-04-08 11:50:04.716101', 't', 'Eszti', 'Eszter', 'Coughlan', 'I''m the site administrator and boss do as I say or else bucko!!', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_users" ("id","email","hashed_password","salted_password","created_at","updated_at","admin","username","fname","sname","bio","pic") VALUES (2, 'kcoughlan78@me.com', '$2a$10$cO3.sFSX/4IBiyRua8WhieJhILWbp3WHvY1JTTKlNrs2PDZevCNuq', '$2a$10$cO3.sFSX/4IBiyRua8Whie', '2013-03-30 20:37:19.295491', '2013-04-08 12:00:08.188547', 'f', 'Kaycee78', 'Kieran', 'Coughlan', 'Just an average user', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_users" ("id","email","hashed_password","salted_password","created_at","updated_at","admin","username","fname","sname","bio","pic") VALUES (3, 'tes@ter.tst', '$2a$10$/Kiy6DOZWhjuGBfImKvlVuBHLE5.09K5LC3kJBHUaLdtNXUcJhKYC', '$2a$10$/Kiy6DOZWhjuGBfImKvlVu', '2013-04-08 12:12:29.469906', '2013-04-08 12:14:58.616573', 'f', 'Tester1', 'Tess', 'Ter', 'I''m just a figment of a dull persons imagination', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_users" ("id","email","hashed_password","salted_password","created_at","updated_at","admin","username","fname","sname","bio","pic") VALUES (4, 'tes2@ter.tst', '$2a$10$v58TxBw7C8nM.HLDFlml3uYSumpHk8nhiP7cLKvycCcHw5e19O.wK', '$2a$10$v58TxBw7C8nM.HLDFlml3u', '2013-04-08 12:24:55.726416', '2013-04-08 12:24:55.726416', 'f', 'Tester2', 'Tess', 'Tee', NULL, NULL)
+  [1m[36m (2.0ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "hashed_password" varchar(255), "salted_password" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "admin" boolean DEFAULT 'f', "username" varchar(255), "fname" varchar(255), "sname" varchar(255), "bio" text) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_users"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "users" ("id","email","hashed_password","salted_password","created_at","updated_at","admin","username","fname","sname","bio") VALUES (1, 'coughlan.esther@gmail.com', '$2a$10$wbSUran3ivUWwFWfP3QsQuO1sZbHdAWnEU5YgyUtdcRITCEC2jHuq', '$2a$10$wbSUran3ivUWwFWfP3QsQu', '2013-03-25 20:22:55.795586', '2013-04-08 11:50:04.716101', 't', 'Eszti', 'Eszter', 'Coughlan', 'I''m the site administrator and boss do as I say or else bucko!!')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "users" ("id","email","hashed_password","salted_password","created_at","updated_at","admin","username","fname","sname","bio") VALUES (2, 'kcoughlan78@me.com', '$2a$10$cO3.sFSX/4IBiyRua8WhieJhILWbp3WHvY1JTTKlNrs2PDZevCNuq', '$2a$10$cO3.sFSX/4IBiyRua8Whie', '2013-03-30 20:37:19.295491', '2013-04-08 12:00:08.188547', 'f', 'Kaycee78', 'Kieran', 'Coughlan', 'Just an average user')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "users" ("id","email","hashed_password","salted_password","created_at","updated_at","admin","username","fname","sname","bio") VALUES (3, 'tes@ter.tst', '$2a$10$/Kiy6DOZWhjuGBfImKvlVuBHLE5.09K5LC3kJBHUaLdtNXUcJhKYC', '$2a$10$/Kiy6DOZWhjuGBfImKvlVu', '2013-04-08 12:12:29.469906', '2013-04-08 12:14:58.616573', 'f', 'Tester1', 'Tess', 'Ter', 'I''m just a figment of a dull persons imagination')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "users" ("id","email","hashed_password","salted_password","created_at","updated_at","admin","username","fname","sname","bio") VALUES (4, 'tes2@ter.tst', '$2a$10$v58TxBw7C8nM.HLDFlml3uYSumpHk8nhiP7cLKvycCcHw5e19O.wK', '$2a$10$v58TxBw7C8nM.HLDFlml3u', '2013-04-08 12:24:55.726416', '2013-04-08 12:24:55.726416', 'f', 'Tester2', 'Tess', 'Tee', NULL)[0m
+  [1m[35m (2.0ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130409011353'[0m
+  [1m[35m (132.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20130304132825)
+Migrating to CreateReplies (20130304135934)
+Migrating to CreateTags (20130304144705)
+Migrating to CreateUsers (20130311125327)
+Migrating to AddSessionsTable (20130311183435)
+Migrating to AddUserIdToPosts (20130311200454)
+Migrating to AddUserEmailToPosts (20130312111442)
+Migrating to AddUserEmailToReplies (20130312114353)
+Migrating to AddUserIdToReplies (20130312115033)
+Migrating to AddAdminToUsers (20130327214946)
+Migrating to AddUsernameToUser (20130330191113)
+Migrating to AddFnameToUser (20130330193214)
+Migrating to AddSnameToUser (20130330195107)
+Migrating to AddCategoryToPost (20130330205120)
+Migrating to AddImageToPost (20130402111033)
+Migrating to AddUserUsernameToReplies (20130402175557)
+Migrating to AddBioToUser (20130404221636)
+Migrating to AddImageToUser (20130409015507)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (4.0ms)[0m  ALTER TABLE "users" ADD "image" varchar(255)
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130409015507')[0m
+  [1m[35m (161.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 02:59:43 +0100
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (461.3ms)
+Completed 500 Internal Server Error in 535ms
+
+ActionView::Template::Error (undefined method `pic' for #<User:0x4f4a090>):
+    8:         <header><h2>Your Details</h2></header>
+    9:         <br>
+    10:             <p>Name: <%= @user.fname %> <%= @user.sname %></p>
+    11:             <p><%= @user.pic %></p>
+    12:         <br>
+    13:             <p>Username: <%= @user.username %></p>
+    14:         <br>
+  app/views/users/show.html.erb:11:in `block in _app_views_users_show_html_erb__685549339_38476452'
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__685549339_38476452'
+
+
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (115.1ms)
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 03:00:23 +0100
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-09 03:00:23 +0100
+Served asset /sessions.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:00:23 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:00:23 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:00:23 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started POST "/editmyaccount" for 127.0.0.1 at 2013-04-09 03:00:26 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI="}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/edit.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 03:00:26 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:00:26 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:00:26 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:00:27 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 03:00:37 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x5159f28 @original_filename="1364179448_button_black_play.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"1364179448_button_black_play.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:C:/Users/User/AppData/Local/Temp/RackMultipart20130409-6332-zebf6x>>, "bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (3.0ms)[0m  UPDATE "users" SET "image" = '1364179448_button_black_play.png', "updated_at" = '2013-04-09 02:00:38.012399' WHERE "users"."id" = 1
+  [1m[36m (126.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 311ms (ActiveRecord: 130.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-04-09 03:00:38 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-09 03:00:39 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:00:39 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:00:39 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:00:39 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-04-09 03:03:19 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Compiled users.css  (198ms)  (pid 6332)
+  Rendered users/show.html.erb within layouts/application (352.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 384ms (Views: 380.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 03:03:20 +0100
+Served asset /users.css - 200 OK (12ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:03:20 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:03:20 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:03:20 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 03:03:41 +0100
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 03:03:42 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:03:42 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:03:42 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:03:42 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 03:07:01 +0100
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 53ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 03:07:02 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:07:02 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:07:02 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:07:02 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 03:07:04 +0100
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 81ms (Views: 76.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 03:07:04 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:07:04 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:07:05 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:07:05 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started POST "/editmyaccount" for 127.0.0.1 at 2013-04-09 03:08:08 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI="}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:09 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:09 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:08:09 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:08:09 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2013-04-09 03:08:12 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "user"=>{"bio"=>"I'm the site administrator and boss do as I say or else bucko!!"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'coughlan.esther@gmail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."username" = 'Eszti' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 46ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-04-09 03:08:12 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:13 +0100
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:13 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:08:13 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:08:13 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2013-04-09 03:08:22 +0100
+Processing by ForumController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10[0m
+  Rendered forum/index.html.erb within layouts/application (1081.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 1201ms (Views: 1105.7ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:24 +0100
+Served asset /forum.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-09 03:08:24 +0100
+Served asset /home.js - 304 Not Modified (53ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:24 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:08:24 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:08:25 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2013-04-09 03:08:28 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 7[0m
+  [1m[35mReply Load (1.0ms)[0m  SELECT "replies".* FROM "replies" WHERE "replies"."post_id" = 7
+  Rendered replies/_reply.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered replies/_form.html.erb (111.9ms)
+  Rendered posts/show.html.erb within layouts/application (451.1ms)
+Completed 200 OK in 484ms (Views: 475.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:29 +0100
+Served asset /posts.css - 200 OK (19ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:29 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:08:29 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:08:29 +0100
+Served asset /application.css.scss - 304 Not Modified (1ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2013-04-09 03:08:44 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  [1m[36mReply Load (1.0ms)[0m  [1mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" = 10[0m
+  Rendered replies/_reply.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered replies/_form.html.erb (5.0ms)
+  Rendered posts/show.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 59ms (Views: 54.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:44 +0100
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:08:44 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:08:44 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:08:44 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started POST "/posts/10/replies" for 127.0.0.1 at 2013-04-09 03:09:04 +0100
+Processing by RepliesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aok3QeOb3qLWusOucV/Sut578gIJetmuCDYHXPuSuSI=", "reply"=>{"response"=>"This went well"}, "commit"=>"Create Reply", "post_id"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "replies" ("by", "created_at", "post_id", "response", "updated_at", "user_email", "user_id", "user_username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["by", nil], ["created_at", Tue, 09 Apr 2013 02:09:04 UTC +00:00], ["post_id", 10], ["response", "This went well"], ["updated_at", Tue, 09 Apr 2013 02:09:04 UTC +00:00], ["user_email", nil], ["user_id", nil], ["user_username", "Eszti"]]
+  [1m[36m (121.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 144ms (ActiveRecord: 127.0ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2013-04-09 03:09:05 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = 10
+  [1m[36mReply Load (0.0ms)[0m  [1mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" = 10[0m
+  Rendered replies/_reply.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered replies/_form.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 67ms (Views: 60.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-04-09 03:09:05 +0100
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:09:05 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:09:05 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:09:05 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2013-04-09 03:10:26 +0100
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1
+  Rendered users/show.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 03:10:26 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 03:10:26 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 03:10:26 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css.scss" for 127.0.0.1 at 2013-04-09 03:10:27 +0100
+Served asset /application.css.scss - 304 Not Modified (0ms)

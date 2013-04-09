@@ -24,6 +24,8 @@
                   </ul>
                 </div>
             <% end %>
+              <p>Add <%= f.label :image %></p>
+              <%= f.file_field :image %>
             <p>Bio:</p>
             <p><span id="textarea"><%= f.text_area :bio, cols: 50, rows: 7 %></span></p>
             <p class="button"><%= f.submit %></p>
