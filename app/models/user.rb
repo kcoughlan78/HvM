@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
       message: 'image must be a gif/jpg/png/svg/dwg file type.'
   }
 
-  has_many :posts
+  has_many :posts, :dependent => :destroy
   has_many :replies
 
   mount_uploader :image, PostImageUploader

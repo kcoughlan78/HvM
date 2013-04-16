@@ -15,7 +15,22 @@
   ::-webkit-scrollbar { width: 12px; }
 }
 
-
+#posted_by {
+  margin: 2% 2% 2% 2%;
+  padding: 2% 2% 2% 2%;
+  border-top-left-radius: 2% 2%;
+  border-top-right-radius: 2% 2%;
+  border-bottom-left-radius: 2% 2%;
+  border-bottom-right-radius: 2% 2%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius: 2% 2%;
+  -moz-border-top-right-radius: 2% 2%;
+  -moz-border-bottom-left-radius: 2% 2%;
+  -moz-border-bottom-right-radius: 2% 2%;
+  border: white 2px;
+  border-style: solid;
+  min-height: 60px;
+}
 
 .post_img_url {
   float: left;
@@ -23,6 +38,12 @@
   max-width: 400px;
   margin-left: 5%;
   padding-right: 3%;
+}
+
+.user_img_url {
+  float: right;
+  height: 50px;
+  width: 50px;
 }
 
 #upper_col2 {

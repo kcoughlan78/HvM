@@ -8,26 +8,32 @@
     <h2><span class="post_header">
     <%= @post.title %>
     </span></h2>
+      <figcaption><p><span class="post_date"><%= @post.created_at.to_s(:short) %></span><span class="post_text">
+    # tags:
+        <%= join_tags(@post) %>
+    </span></p></figcaption>
       <br>
       <p>
         <%= image_tag(@post.image_url, class: "post_img_url") %>
       </p>
-      <figcaption><p><span class="post_date"><%= @post.created_at.to_s(:short) %></span></p></figcaption>
-      <br>
-      <p>
-        <span class="post_text">posted by:
-        <%= @post.user.username %>
-      </span></p>
-    <br>
     <p><span class="post_text">
     <%= @post.content %>
     </span></p>
+      <div id="posted_by">
 
+        <p>
+        <span class="post_text">posted by:
+          <%= @post.user.username %>
+      </span>
+          <%= image_tag(@post.user.image, class: "user_img_url") %></p>
+        <br>
+      <p>
+        <span class="post_text">
+          <%= @post.user.bio %>
+      </span></p>
+      </div>
     <br>
-    <p><span class="post_text">
-    # tags:
-    <%= join_tags(@post) %>
-    </span></p>
+    <br>
     <br>
     <br>
     <h2><span class="post_header">Replies</span></h2>

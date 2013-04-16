@@ -1,51 +1,31 @@
-function loadCanvas(id) {
-    var canvasInsert = document.createElement('canvas');
-    canvasInsert.height = 32;
-    canvasInsert.width = 32;
-    canvasInsert.class = 'bug';
-    insertMonster = document.getElementById(id);
-    insertMonster.appendChild(canvasInsert)
-}
-loadCanvas("monster1");
+
 
 var monsters =
 {
-    IMAGE: "spritesheet1.png",
-    SIZE: 32,
-    COLUMN_NO: 3,
-
-    totalFrameNo: 4,
-    currentFrameNo: 0,
-
-    sourceX: 0,
-    sourceY: 0,
-
+    //image source, position and pixel details
+    IMAGE: "spritesheet1.png", SPRITE_SIZE: 32, COLUMN_NO: 3,
+    ORIGIN_X: 0, ORIGIN_Y: 0,
+    //frame setting and details
+    totalFrameNo: 4, currentFrameNo: 0,
     playForward: true,
-
-    NOTLANDED: 0,
-    LANDED: 1,
-    HIT: 2,
-    state: this.NOTLANDED,
-
-    resetCount: 12,
-    resetCounter: 0,
-
+    playBack: false,
+    //game state defined and set
+    NOTLANDED: 0, LANDED: 1, HIT: 2, state: this.NOTLANDED,
+    resetCount: 12, resetCounter: 0,
     landingTime: undefined,
 
     findLandingTime: function()
     {
-        this.landingTime = Math.ceil(Math.random() * 60);
+        this.landingTime = Math.floor(Math.random() * 45);
     },
 
     runAnimation: function()
     {
-        this.sourceX
-                = Math.floor(this.currentFrameNo % this.COLUMN_NO) * this.SIZE;
-        this.sourceY
-                = Math.floor(this.currentFrameNo / this.COLUMN_NO) * this.SIZE;
+        this.ORIGIN_X = Math.floor(this.currentFrameNo % this.COLUMN_NO) * this.SPRITE_SIZE;
+        this.ORIGIN_Y = Math.floor(this.currentFrameNo / this.COLUMN_NO) * this.SPRITE_SIZE;
         if(this.state !== this.HIT)
         {
-            if(this.landingTime > 0 || this.landingTime === undefined)
+            if(this.landingTime === undefined || this.landingTime > 0)
             {
                 this.state = this.NOTLANDED;
             }
@@ -68,7 +48,7 @@ var monsters =
                     this.playForward = false;
                 }
 
-                if(this.currentFrameNo === 0 && this.playForward === false)
+                if(this.playForward === false && this.currentFrameNo === 0)
                 {
                     this.playForward = true;
                     this.findLandingTime();
@@ -92,7 +72,7 @@ var monsters =
 
                 this.resetCounter++;
 
-                if(this.resetCounter === this.resetCount)
+                if(this.resetCount === this.resetCounter)
                 {
                     this.state = this.NOTLANDED;
                     this.playForward = true;
@@ -105,47 +85,156 @@ var monsters =
     }
 };
 
-var canvas = document.querySelector("canvas");
-var animationArea = canvas.getContext("2d");
-canvas.addEventListener("mousedown", mousedownHandler, false);
+var timer = document.querySelector("#timer");
+var scoreBoard = document.querySelector("#score");
+var message = document.querySelector("#gamerMsg");
+
+var countdownClock = 60;
+var tick = countdownClock;
+var display_tick = (function ()	{
+    timer.innerHTML = "<p>Time left: " + tick + "</p>";
+});
+var remove_tick = (function() {
+    timer.innerHTML = "<p>Time left: 0</p>";
+    message.innerHTML = "<p>Game Over</p>";
+})
+
+var countdownTimer = setInterval( function() {
+    display_tick();
+    tick--;
+    if(tick < 0) {
+        gameOver();
+        remove_tick();
+    }
+}, 1500);
+
+var stop = (function () {
+    clearInterval(countdownTimer.interval);
+});
+
+
 var image = new Image();
 image.addEventListener("load", loadHandler, false);
 image.src = "<%= asset_path('spritesheet1.png') %>";
+var landingPoints = 4;
+
+var monsterArmy = [];
+var monsterCanvases = [];
+var monsterAnimationAreas = [];
+
+var SPRITE_SIZE = monsters.SPRITE_SIZE;
+
+var score = 0;
+
+var interval;
 
 function loadHandler()
 {
-    monsters.findLandingTime();
+    loadMonsters("monster1");
+    loadMonsters("monster2");
+    loadMonsters("monster3");
+    loadMonsters("monster4");
 
     runAnimation();
+
+    message.innerHTML = "<p>Get those monsters!!</p>";
 }
+
+function loadMonsters(id) {
+
+    var newMonster = Object.create(monsters);
+    newMonster.findLandingTime();
+    monsterArmy.push(newMonster);
+    var canvasInsert = document.createElement('canvas');
+    canvasInsert.setAttribute("class", "bug");
+    canvasInsert.height = 32;
+    canvasInsert.width = 32;
+    canvasInsert.addEventListener("mousedown", mousedownHandler, false);
+    monsterCanvases.push(canvasInsert);
+    var animationArea = canvasInsert.getContext("2d");
+    monsterAnimationAreas.push(animationArea);
+    insertMonster = document.getElementById(id);
+    insertMonster.appendChild(canvasInsert);
+}
+
+
+
 
 function runAnimation()
 {
-    setTimeout(runAnimation, 85);
+    if(tick > 0)
+    {
+        setTimeout(runAnimation, 90);
+    }
+    else
+    {
+        gameOver();
+    }
 
-    monsters.runAnimation();
-
+    for(var i = 0; i <monsterArmy.length; i++)
+    {
+        monsterArmy[i].runAnimation();
+    }
     render();
 }
 
 function mousedownHandler(event)
 {
-    if(monsters.state === monsters.LANDED)
+    var confirmTarget = event.target;
+
+    for(var i = 0; i < monsterCanvases.length; i++)
     {
-        monsters.state = monsters.HIT;
+        if(monsterCanvases[i] ===confirmTarget)
+        {
+            var monsters = monsterArmy[i]
+            if(monsters.state === monsters.LANDED)
+            {
+                monsters.state = monsters.HIT;
+                message.innerHTML = "<p>BOOM! Hit!</p>";
+                score++;
+            }
+            else
+            {
+                message.innerHTML = "<p>MISSED! You Fool!</p>";
+            }
+        }
+    }
+}
+
+function gameOver ()
+{
+    stop();
+
+    for(var i = 0; i < monsterCanvases.length; i++)
+    {
+        var canvasInsert = monsterCanvases[i];
+        canvasInsert.removeEventListener("mousedown", mousedownHandler, false);
     }
 }
 
 function render()
 {
-    animationArea.clearRect(0, 0, canvas.width, canvas.height);
+    scoreBoard.innerHTML = "<p>Score: " + score + "</p>";
+    for(var i = 0; i < monsterArmy.length; i++)
+    {
+        var monsters = monsterArmy[i];
+        var animationArea = monsterAnimationAreas[i];
+        animationArea.clearRect(0, 0, 32, 32);
 
-    animationArea.drawImage
-            (
-                    image,
-                    monsters.sourceX, monsters.sourceY, monsters.SIZE, monsters.SIZE,
-                    0, 0, monsters.SIZE, monsters.SIZE
-            );
+        animationArea.drawImage
+                (
+                        image,
+                        monsters.ORIGIN_X, monsters.ORIGIN_Y, monsters.SPRITE_SIZE, monsters.SPRITE_SIZE,
+                        0, 0, monsters.SPRITE_SIZE, monsters.SPRITE_SIZE
+                );
+    }
 }
 
-
+function errorHandler()
+{
+    if(render() === false)
+    {
+        alert("We're sorry Monster vs Hurlers is currently closed for maintenance please callback");
+    }
+}
+		

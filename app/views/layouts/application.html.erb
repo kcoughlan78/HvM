@@ -3,6 +3,7 @@
 <head>
   <%= yield :head %>
   <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "jquery" %>
   <%= csrf_meta_tags %>
   <script>
@@ -30,9 +31,9 @@
         <li><%= link_to "Sign up", signup_url %> or <%= link_to "Log in", login_path %></li>
     <% end %>
   </ul>
+  <p id="notice"><%= notice %></p>
 </nav>
 <%= yield :article %>
-<p id="notice"><%= notice %></p>
 <div id="mid_bar"></div>
 <%= yield :section %>
 <footer>Hurlers vs Monsters copyright 2013</footer>

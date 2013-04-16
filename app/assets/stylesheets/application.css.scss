@@ -63,7 +63,7 @@ nav {
   top: 0%;
   right: 0%;
   left: 0%;
-  margin: 0% 0% 5% 0%;
+  margin: 0% 0% 7% 0%;
   padding: 1% 1% 1% 1%;
   width: 100%;
   background-color: white;
@@ -89,7 +89,7 @@ nav ul li {
 
 #upper_stage {
   position: relative;
-  margin: 5% 4% 5% 4%;
+  margin: 6% 4% 5% 4%;
   color: #B20000;
 }
 
@@ -138,7 +138,11 @@ nav ul li {
 }
 
 #notice {
+  font-size: x-small;
+  text-align: right;
   color: #000;
+  margin: 1% 4% 1% 0%;
+  z-index: 20;
 }
 
 #mid_bar {

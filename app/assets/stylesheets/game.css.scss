@@ -13,103 +13,203 @@
   width:					600px;
   height:					300px;
   background:				transparent url(game_background.png) no-repeat top left;
-  background-repeat:        no-repeat;
-  z-index: 				4;
+  z-index: 				5;
 }
 
 #backdrop {
-  width:					300px;
-  height: 				150px;
-  background: 			transparent url(crowd_scene_back.jpg) no-repeat top left;
-  z-index: 				5;
+  width:					185px;
+  height: 				    150px;
+  background: 			    transparent url(crowd_scene_back.jpg) no-repeat top left;
+  z-index: 				    5;
 }
 
 #sidedrop_right {
-  width: 					180px;
-  height:					140px;
-  background: 			transparent url(crowd_scene_back.jpg);
+  width: 					195px;
+  height:					150px;
+  background: 			    transparent url(crowd_scene_back.jpg);
   background-repeat: 		no-repeat;
-  z-index: 				5;
+  z-index: 				    5;
 }
 
 #sidedrop_left {
-  width: 					180px;
-  height:					140px;
-  background: 			transparent url(crowd_scene_back.jpg);
+  width: 					195px;
+  height:					150px;
+  background: 		    	transparent url(crowd_scene_back.jpg);
   background-repeat: 		no-repeat;
-  z-index: 				5;
+  z-index: 				    5;
 }
 
 #roof {
-  width:					150px;
-  height: 				30px;
-  background: 			transparent url(Title.jpg) no-repeat top left;
+  width:					540px;
+  height: 				    80px;
+  background: 			    transparent url(Title.jpg) no-repeat top left;
   background-repeat: 		no-repeat;
-  z-index: 				5;
+  z-index: 				    10;
 }
 
 #monster1 {
   width:					32px;
   height:					32px;
-  z-index: 				5;
+  z-index: 				    10;
+}
+
+#monster2 {
+  width:					32px;
+  height:					32px;
+  z-index: 				    5;
+}
+
+#monster3 {
+  width:					32px;
+  height:					32px;
+  z-index: 				    5;
+}
+
+#monster4 {
+  width:					32px;
+  height:					32px;
+  z-index: 				    5;
+}
+
+#score {
+  width: 					80px;
+  height: 			    	auto;
+  top:					    1%;
+  right: 					5%;
+  bottom: 				    5%;
+  left:					    78%;
+  margin: 				    1% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  color: 					black;
+  z-index: 				    20;
+  text-align: 			    center;
+  font-family: 			    'Share Tech Mono', sans-serif;
+  font-size: 				small;
+}
+
+#score p {
+  margin: 				    15% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  border-radius: 			2px 2px 2px 2px;
+  color: 					white;
+  font-weight: 		    	600;
+  background-image:         -moz-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+}
+
+#timer {
+  width: 					110px;
+  height: 			    	auto;
+  top: 					    1%;
+  right: 					90%;
+  bottom: 				    5%;
+  left:					    3%;
+  margin: 				    1% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  color: 					black;
+  z-index: 				    20;
+  text-align: 			    center;
+  font-family: 			    'Share Tech Mono', sans-serif;
+  font-size: 				small;
+}
+
+#timer p {
+  margin: 				    10% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  border-radius: 			2px 2px 2px 2px;
+  color: 					white;
+  font-weight: 			    600;
+  background-image: 		-moz-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+}
+
+#gamerMsg {
+  width: 					175px;
+  height: 				    auto;
+  position: 				absolute;
+  top: 				    	1%;
+  right: 					30%;
+  bottom: 				    5%;
+  left:					    20%;
+  margin: 				    1% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  color: 					black;
+  z-index: 				    20;
+  text-align: 			    center;
+  font-family: 			    'Share Tech Mono', sans-serif;
+  font-size: 				small;
+}
+
+#gamerMsg p {
+  margin: 				    5% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  border-radius: 			2px 2px 2px 2px;
+  color: 					white;
+  font-weight: 			    600;
+  background-image: 		-moz-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+}
+
+#scoreboard {
+  width: 					645px;
+  height: 				    50px;
+  background-color: 		red;
+  background-image: 		-moz-linear-gradient(bottom, #000000 44%, #C0C0C0 100%);
 }
 
 #hurler {
   width:					77px;
   height:					120px;
   background:				transparent url(hurler.jpg)no-repeat top left;
-  z-index: 				10;
+  z-index: 				    10;
 }
 
 
 
 section > header h2 {
-  font-size: 110%;
-  font-weight: 700;
+  font-size:                110%;
+  font-weight:              700;
 }
 
 #content_left {
-  position:absolute;
-  top: 0%;
-  right: 67%;
-  bottom: 0%;
-  left: 0%;
-  height: 180px;
-  width: 240px;
-  z-index:10;
-  background-color: green;
+  position:                 absolute;
+  top:                      0%;
+  right:                    67%;
+  bottom:                   0%;
+  left:                     0%;
+  height:                   180px;
+  width:                    240px;
+  z-index:                  10;
+  background-color:         green;
 }
 
 #content_centre {
-  position:absolute;
-  top: 0%;
-  right: 33%;
-  bottom: 0%;
-  left: 33%;
-  height: 180px;
-  width: 240px;
-  z-index:5;
-  background-color: orange;
-  overflow: hidden;
+  position:                 absolute;
+  top:                      0%;
+  right:                    33%;
+  bottom:                   0%;
+  left:                     33%;
+  height:                   180px;
+  width:                    240px;
+  z-index:                   5;
+  background-color:         orange;
+  overflow:                 hidden;
 }
 
 #content_right {
-  position:absolute;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  left: 67%;
-  height: 180px;
-  width: 240px;
-  z-index:5;
-  background-color: blue;
+  position:                 absolute;
+  top:                      0%;
+  right:                    0%;
+  bottom:                   0%;
+  left:                     67%;
+  height:                   180px;
+  width:                    240px;
+  z-index:                  5;
+  background-color:         blue;
 }
 
 .blog_desc {
-  position: relative;
-  display: none;
+  position:                 relative;
+  display:                  none;
 }
 
 .homeh4 {
-  font-weight: 700;
+  font-weight:              700;
 }
