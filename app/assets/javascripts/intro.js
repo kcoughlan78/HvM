@@ -22,8 +22,8 @@
         container.appendChild(backdrop);
         container.appendChild(roof);
 
-        for (var x=0;x<30;x++) {
-            monsters[x] = Sprite3D.create("#monsters").position(-135,-90,10+x).update();
+        for (var x=0;x<20;x++) {
+            monsters[x] = Sprite3D.create("#monsters").position(-135,-50,-40+x).update();
             container.appendChild(monsters[x]);
         }
 

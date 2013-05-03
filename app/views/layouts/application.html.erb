@@ -17,7 +17,7 @@
 </head>
 <body>
 <nav>
-  <header><h1>--Hurlers vs Monsters LOGO HERE--</h1></header>
+  <header><h1><%= image_tag("logo.png")%></h1></header>
   <ul>
     <% if current_user %>
         <li>Welcome <%= link_to current_user.username, myaccount_path %></li>

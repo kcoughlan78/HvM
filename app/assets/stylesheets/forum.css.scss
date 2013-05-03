@@ -4,88 +4,256 @@
 @import url("application.css.scss");
 
 #upper_stage {
-  background-color: #ff251e;
-  margin-left: 10%;
-  height: 300px;
-  width: 1150px;
-  text-align: center;
+  background-color:                 #ff251e;
+  margin-left:                      10%;
+  height:                           400px;
+  width:                            1150px;
+  text-align:                       center;
+}
+
+#image_slider {
+  position: 					    relative;
+  width: 						    1150px;
+  height: 					        400px;
+  margin-top: 				        5px;
+  overflow: 					    hidden;
+  border: 					        5px solid black;
+}
+
+#holdall {
+  width:					        0px;
+  height:					        0px;
+  position:				            absolute;
+  background:				        white;
+  -webkit-transition: 	            all 2s ease-out;
+  -moz-transition: 		            all 2s ease-out;
+  -ms-transition: 		            all 2s ease-out;
+}
+
+#loadbanner1:target #holdall {
+  -webkit-transform: 		        translateY(0px) translateX(0px);
+  -moz-transform: 		            translateY(0px) translateX(0px);
+  -ms-transform: 			        translateY(0px) translateX(0px);
+}
+#loadbanner2:target #holdall {
+  -webkit-transform:  	            translateY(0px) translateX(-1150px);
+  -moz-transform:  		            translateY(0px) translateX(-1150px);
+  -ms-transform:  		            translateY(0px) translateX(-1150px);
+}
+#loadbanner3:target #holdall {
+  -webkit-transform:  	            translateY(-400px) translateX(-1150px);
+  -moz-transform:  		            translateY(-400px) translateX(-1150px);
+  -ms-transform:  		            translateY(-400px) translateX(-1150px);
+}
+
+.panel {
+  position:				            absolute;
+  width:					        1150px;
+  height:					        380px;
+  padding:				            10px;
+  overflow:				            hidden;
+}
+
+#panel1 {
+  top:					            0px;
+  left:					            0px;
+  background:				        transparent url(worldtech.png) no-repeat top left;
+}
+
+#panel2 {
+  top:					            0px;
+  left:					            1150px;
+  background:				        transparent url(gaa2013.jpg) no-repeat top left;
+}
+
+#panel3 {
+  top:					            400px;
+  left:					            1150px;
+  background:				        transparent url(windows8.png) no-repeat top left;
+}
+
+#techpanel1 {
+  top:					            0px;
+  left:					            0px;
+  background:				        transparent url(phablets.png) no-repeat top left;
+}
+
+#techpanel2 {
+  top:					            0px;
+  left:					            1150px;
+  background:				        transparent url(fibre.png) no-repeat top left;
+}
+
+#techpanel3 {
+  top:					            400px;
+  left:					            1150px;
+  background:				        transparent url(windows8.png) no-repeat top left;
+}
+
+#sportpanel1 {
+  top:					            0px;
+  left:					            0px;
+  background:				        transparent url(gaa2013.jpg) no-repeat top left;
+}
+
+#sportpanel2 {
+  top:					            0px;
+  left:					            1150px;
+  background:				        transparent url(tyres.png) no-repeat top left;
+}
+
+#sportpanel3 {
+  top:					            400px;
+  left:					            1150px;
+  background:				        transparent url(lions.jpg) no-repeat top left;
+}
+
+
+.toppost {
+  position:				            absolute;
+  top:					            80px;
+  left:					            30px;
+  width:					        200px;
+  padding:				            10px;
+  background:				        rgba(28,0,0,0.6);
+  color:					        white;
+  box-shadow:				        0px 0px 10px #333;
+}
+
+.toppost h2 {
+  text-transform:			       uppercase;
+  font-size:				       140%;
+  font-weight:			           normal;
+  opacity: 				           1;
+}
+
+.toppost p {
+  font-size:				        100%;
+  line-height:			            140%;
+}
+
+
+.slidefromright {
+  position:				            absolute;
+  top:					            0;
+  right:					        0;
+  margin-right:			            -500px;
+  -webkit-transition: 	            all 10s ease-out;
+  -moz-transition: 		            all 10s ease-out;
+  -ms-transition: 		            all 10s ease-out;
+}
+
+#loadbanner2:target .slidefromright {
+  margin-right:			            20px;
+  margin-top:				        270px;
+  -webkit-transform: 		        scale(0.8) rotate(-15deg);
+  -moz-transform: 		            scale(0.8) rotate(-15deg);
+  -ms-transform: 			        scale(0.8) rotate(-15deg);
+}
+
+#nav {
+  position:				            relative;
+  padding:				            10px;
+  width:					        800px;
+  margin:					        auto;
+  text-align:				        center;
+}
+
+#nav ul li {
+  width:					        30px;
+  height:					        30px;
+  margin:					        5px;
+  display:				            inline-block;
+  line-height:			            30px;
+  box-shadow: 			            inset 2px 2px 5px #000;
+  background:				        #ffffff;
+  border-radius:			        15px;
+  border:					        1px solid #000;
+}
+
+#nav ul li a {
+  font-size:				        130%;
+  text-decoration:		            none;
+  font-weight:			            bold;
+  color:					        #ffffff ;
+  display:				            block;
 }
 
 #prototype_text {
-  padding: 2% 2% 2% 2%;
-  background-color: white;
-  color: #ff251e;
-  text-align: center;
-  font-size: 120%;
-  border-top-left-radius: 5% 20%;
-  border-top-right-radius: 5% 20%;
-  border-bottom-left-radius: 5% 20%;
-  border-bottom-right-radius: 5% 20%;
+  padding:                          2% 2% 2% 2%;
+  background-color:                 white;
+  color:                            #ff251e;
+  text-align:                       center;
+  font-size:                        120%;
+  border-top-left-radius:           5% 20%;
+  border-top-right-radius:          5% 20%;
+  border-bottom-left-radius:        5% 20%;
+  border-bottom-right-radius:       5% 20%;
 }
 
 section > header h2 {
-  font-size: 110%;
-  font-weight: 700;
-  margin-left: 11%;
+  font-size:                        110%;
+  font-weight:                      700;
+  margin-left:                      11%;
 }
 
 .post_odd {
-  padding: 2% 2% 2% 2%;
-  margin: 1% 10% 1% 10%;
-  min-height: 130px;
-  max-height: 180px;
-  background-color: #ff251e;
-  color: #000000;
-  border: #fdfffd;
-  border-style: solid;
-  border-top-left-radius: 5% 20%;
-  border-top-right-radius: 5% 20%;
-  border-bottom-left-radius: 5% 20%;
-  border-bottom-right-radius: 5% 20%;
+  padding:                          2% 2% 2% 2%;
+  margin:                           1% 10% 1% 10%;
+  min-height:                       130px;
+  max-height:                       180px;
+  background-color:                 #ff251e;
+  color:                            #000000;
+  border:                           #fdfffd;
+  border-style:                     solid;
+  border-top-left-radius:           5% 20%;
+  border-top-right-radius:          5% 20%;
+  border-bottom-left-radius:        5% 20%;
+  border-bottom-right-radius:       5% 20%;
   /* below ensures correct output for MFF*/
-  -moz-border-top-left-radius: 5% 20%;
-  -moz-border-top-right-radius: 5% 20%;
-  -moz-border-bottom-left-radius: 5% 20%;
-  -moz-border-bottom-right-radius: 5% 20%;
+  -moz-border-top-left-radius:      5% 20%;
+  -moz-border-top-right-radius:     5% 20%;
+  -moz-border-bottom-left-radius:   5% 20%;
+  -moz-border-bottom-right-radius:  5% 20%;
   /* below is for safari */
-  -webkit-border-top-left-radius: 5%;
-  -webkit-border-top-right-radius: 5%;
+  -webkit-border-top-left-radius:   5%;
+  -webkit-border-top-right-radius:  5%;
   -webkit-border-bottom-left-radius: 5%;
   -webkit-border-bottom-right-radius: 5%;
 }
 
 .post_even {
-  padding: 2% 2% 2% 2%;
-  margin: 1% 10% 1% 10%;
-  background-color: #a7e9b8;
-  min-height: 130px;
-  max-height: 160px;
-  color: #000000;
-  border: #fdfffd;
-  border-style: solid;
-  border-top-left-radius: 5% 20%;
-  border-top-right-radius: 5% 20%;
-  border-bottom-left-radius: 5% 20%;
-  border-bottom-right-radius: 5% 20%;
+  padding:                          2% 2% 2% 2%;
+  margin:                           1% 10% 1% 10%;
+  background-color:                 #a7e9b8;
+  min-height:                       130px;
+  max-height:                       160px;
+  color:                            #000000;
+  border:                           #fdfffd;
+  border-style:                     solid;
+  border-top-left-radius:           5% 20%;
+  border-top-right-radius:          5% 20%;
+  border-bottom-left-radius:        5% 20%;
+  border-bottom-right-radius:       5% 20%;
   /* below ensures correct output for MFF*/
-  -moz-border-top-left-radius: 5% 20%;
-  -moz-border-top-right-radius: 5% 20%;
-  -moz-border-bottom-left-radius: 5% 20%;
-  -moz-border-bottom-right-radius: 5% 20%;
+  -moz-border-top-left-radius:      5% 20%;
+  -moz-border-top-right-radius:     5% 20%;
+  -moz-border-bottom-left-radius:   5% 20%;
+  -moz-border-bottom-right-radius:  5% 20%;
   /* below is for safari */
-  -webkit-border-top-left-radius: 5%;
-  -webkit-border-top-right-radius: 5%;
+  -webkit-border-top-left-radius:   5%;
+  -webkit-border-top-right-radius:  5%;
   -webkit-border-bottom-left-radius: 5%;
   -webkit-border-bottom-right-radius: 5%;
 }
 
 .post_img_url {
-  float: left;
-  max-height: 80px;
-  max-width: 200px;
-  padding: 1% 1% 1% 1%;
+  float:                            left;
+  max-height:                       80px;
+  max-width:                        200px;
+  padding:                          1% 1% 1% 1%;
 }
 
 .forum_detail {
-  font-size: x-small;
+  font-size:                        x-small;
 }

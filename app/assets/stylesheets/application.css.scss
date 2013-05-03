@@ -168,6 +168,58 @@ section {
   overflow: hidden;
 }
 
+section > header h2 {
+  font-size:                110%;
+  font-weight:              700;
+}
+
+#content_left {
+  position:                 absolute;
+  top:                      0%;
+  right:                    67%;
+  bottom:                   0%;
+  left:                     0%;
+  height:                   180px;
+  width:                    240px;
+  z-index:                  10;
+  background-color:         green;
+}
+
+#content_centre {
+  position:                 absolute;
+  top:                      0%;
+  right:                    33%;
+  bottom:                   0%;
+  left:                     33%;
+  height:                   180px;
+  width:                    240px;
+  z-index:                   5;
+  background-color:         orange;
+  overflow:                 hidden;
+}
+
+#content_right {
+  position:                 absolute;
+  top:                      0%;
+  right:                    0%;
+  bottom:                   0%;
+  left:                     67%;
+  height:                   180px;
+  width:                    240px;
+  z-index:                  5;
+  background-color:         blue;
+}
+
+.blog_desc {
+  position:                 relative;
+  display:                  none;
+}
+
+.homeh4 {
+  font-weight:              700;
+  text-decoration:          none;
+}
+
 footer {
   font-size: 60%;
   text-align: center;

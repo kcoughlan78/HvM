@@ -19,6 +19,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :replies, :dependent => :destroy
   has_many :tags
+  has_one :toppost, :dependent => :destroy
 
   mount_uploader :image, PostImageUploader
 

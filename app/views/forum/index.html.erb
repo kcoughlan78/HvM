@@ -5,14 +5,45 @@
 <% end %>
 <% content_for :article do %>
     <article id="upper_stage">
-      <header><h2>My Article</h2></header>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    <p><span id="prototype_text">Forum Topic of the day/Advertising or sponsored features go here</span></p>
+      <section id="image_slider">
+        <div id="loadbanner1">
+          <div id="loadbanner2">
+            <div id="loadbanner3">
+              <div id="holdall">
+                <div class="panel" id="panel1">
+                  <article class="toppost">
+                    <h2>Tech Forum</h2>
+                    <br>
+                    <p>Keep up to-date with our tech forum</p>
+                  </article>
+                </div>
+                <div class="panel" id="panel2">
+                  <article class="toppost">
+                    <h2>Sport Forum</h2>
+                    <br>
+                    <p>Read, reply and start threads in our Sports forum.</p>
+                    <br>
+                    <p>Don't worry we don't ust cover GAA</p>
+                  </article>
+                  <div class="slidefromright">
+                    <article class="toppost">
+                      <h2>Test</h2>
+                      <br>
+                      <p>Though pandas love to sleep and relax unlike most bears they do not hibernate.</p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="nav">
+        <ul>
+          <li><a href="#loadbanner1">1</a></li>
+          <li><a href="#loadbanner2">1</a></li>
+        </ul>
+      </div>
     </article>
 <% end %>
 <% content_for :section do %>
