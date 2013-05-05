@@ -10,4 +10,8 @@ class ForumController < ApplicationController
   def sports
     @posts = Post.find_all_by_category("Sports")
   end
+
+  def gaming
+    @posts = Post.find_all_by_category("Gaming")
+  end
 end

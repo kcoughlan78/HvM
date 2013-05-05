@@ -1,0 +1,74 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Gaming Forum</title>
+    <%= stylesheet_link_tag "forum", :media => "all" %>
+    <%= javascript_include_tag "home" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+      <section id="image_slider">
+        <div id="loadbanner1">
+          <div id="loadbanner2">
+            <div id="loadbanner3">
+              <div id="holdall">
+                <div class="panel" id="sportpanel1">
+                  <article class="toppost">
+                    <h2>The Championship 2013</h2>
+                    <br>
+                    <p>Are Dublin and Kerry going to make a comeback this year or will Donegal hang on to Sam! Let us know.</p>
+                  </article>
+                </div>
+                <div class="panel" id="sportpanel2">
+                  <article class="toppost">
+                    <h2>Burnin' Rubber</h2>
+                    <br>
+                    <p>Are the Pirelli tyres making Formula One more exiting or just mucking team strategies.</p>
+                    <br>
+                    <p>What do you think.</p>
+                  </article>
+                  <div class="slidefromright">
+                    <article class="toppost">
+                      <h2>Test</h2>
+                      <br>
+                      <p>Though pandas love to sleep and relax unlike most bears they do not hibernate.</p>
+                    </article>
+                  </div>
+                </div>
+                <div class="panel" id="sportpanel3">
+                  <article class="toppost">
+                    <h2>The Lions</h2>
+                    <br>
+                    <p>Will Sam Warburton make a good Lions captain? Should Maitland have been selected so soon? Are there
+                      enough Irish?</p>
+                    <p>Let us know.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="nav">
+        <ul>
+          <li><a href="#loadbanner1">1</a></li>
+          <li><a href="#loadbanner2">1</a></li>
+          <li><a href="#loadbanner3">1</a></li>
+        </ul>
+      </div>
+    </article>
+<% end %>
+<% content_for :section do %>
+    <section>
+      <header><h2>Sports Forum</h2></header>
+      <% @posts.each do |post| %>
+          <article class="<%= cycle('post_odd', 'post_even') %>">
+            <h4><%= link_to post.title, post %></h4>
+            <p><span class="forum_detail"><%= post.created_at.to_s(:short) %></span></p>
+            <p><span class="forum_detail">by <%= post.user.username %></span></p>
+            <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
+            <p><%= truncate(strip_tags(post.content), length: 200) %></p>
+            <h6>Tags:</h6>
+            <p><span class="tags"><%= join_tags(post) %></span></p>
+          </article>
+      <% end %>
+    </section>
+<% end %>

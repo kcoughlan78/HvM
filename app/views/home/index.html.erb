@@ -11,28 +11,40 @@
     <section>
       <header><h2>Join in</h2></header>
       <div id="content">
-        <figure id="content_left">
-          <figcaption>
-            <h4 class="homeh4"><%=link_to "Try the Game", game_path %>
+        <figure id="content_left" class="lower_box">
+          <figcaption class="content_box">
+            <h4 class="homeh4"><%=link_to(image_tag("hurler.png", alt: "Try the game", id: "hurler"), game_path, title: "Game") %>
             </h4>
             <div class="blog_desc">
+              <p>Zzzzz.....</p>
               <p>Bored? Want to spend 5 minutes away from reality well click here</p>
             </div>
+
           </figcaption>
         </figure>
-        <figure id="content_centre">
-          <figcaption>
-            <h4 class="homeh4"><%= link_to "Sports Blog", :controller => "forum", :action => "sports" %>
+        <figure id="content_left_centre" class="lower_box">
+          <figcaption class="content_box">
+            <h4 class="homeh4"><%=link_to(image_tag("Soccer-Ball-icon.png", alt: "Sports Tech", id: "Sportech"), :controller => "forum", :action => "sports", title: "Sports") %>
             </h4>
             <div class="blog_desc">
-              <p>Have something to say on the world of sport? Then click here.</p>
-              <p>Start a debate, have thoughts on the current national team selection, or discuss and or promote more local sports.</p>
+              <p>Have something to say on the world of technology in sport?</p>
+              <p>Start a debate, have thoughts on the current use of computer in F1 or Hawkeye in the GAA.</p>
             </div>
           </figcaption>
         </figure>
-        <figure id="content_right">
-          <figcaption>
-            <h4 class="homeh4"><%= link_to "Tech Blog", :controller => "forum", :action => "tech" %>
+        <figure id="content_right_centre" class="lower_box">
+          <figcaption class="content_box">
+            <h4 class="homeh4"><%= link_to(image_tag("gaming.png", alt: "Gaming", id: "Gaming"), :controller => "forum", :action => "gaming", title: "Games") %>
+            </h4>
+            <div class="blog_desc">
+              <p>Games!!!</p>
+              <p>Whether you love playing or designing games we want to hear from you.</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure id="content_right" class="lower_box">
+          <figcaption class="content_box">
+            <h4 class="homeh4"><%= link_to(image_tag("tech.png", alt: "Tech", id: "tech"), :controller => "forum", :action => "tech", title: "tech") %>
             </h4>
             <div class="blog_desc">
               <p>Have something to say on the world of tech? Then click here.</p>
@@ -41,7 +53,7 @@
           </figcaption>
         </figure>
       </div>
-      </section>
+    </section>
 <% end %>
 <%= content_for :script do %>
     <%= javascript_include_tag "Sprite3D" %>

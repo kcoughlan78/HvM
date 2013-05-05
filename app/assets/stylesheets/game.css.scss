@@ -8,6 +8,10 @@
   height: 300px;
 }
 
+#upper_stage:hover {
+  cursor:                   url(hurler1.gif),url(hurler.cur),auto;
+}
+
 
 #pitch {
   width:					600px;
@@ -16,11 +20,19 @@
   z-index: 				5;
 }
 
+#pitch:hover {
+  cursor:                   url(hurler1.gif),url(hurler.cur),auto;
+}
+
 #backdrop {
   width:					185px;
   height: 				    150px;
   background: 			    transparent url(crowd_scene_back.jpg) no-repeat top left;
   z-index: 				    5;
+}
+
+#backdrop:hover {
+  cursor:                   url(hurler1.gif),url(hurler.cur),auto;
 }
 
 #sidedrop_right {
@@ -31,6 +43,10 @@
   z-index: 				    5;
 }
 
+#sidedrop_right:hover {
+  cursor:                   url(hurler1.gif),url(hurler.cur),auto;
+}
+
 #sidedrop_left {
   width: 					195px;
   height:					150px;
@@ -39,12 +55,24 @@
   z-index: 				    5;
 }
 
+#sidedrop_left:hover {
+  cursor:                   url(hurler1.gif),url(hurler.cur),auto;
+}
+
 #roof {
   width:					540px;
   height: 				    80px;
   background: 			    transparent url(Title.jpg) no-repeat top left;
   background-repeat: 		no-repeat;
   z-index: 				    10;
+}
+
+#roof {
+  cursor:                   url(hurler1.gif),url(hurler.cur),auto;
+}
+
+.bug {
+  cursor:                   url(hurler1.gif),url(hurler.cur),auto;
 }
 
 #monster1 {

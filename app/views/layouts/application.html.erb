@@ -5,6 +5,9 @@
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "home" %>
+  <%= javascript_include_tag "jquery.nicescroll.min.js" %>
+  <%= javascript_include_tag "upper_stage" %>
   <%= csrf_meta_tags %>
   <script>
       document.createElement('header');
@@ -16,23 +19,26 @@
   </script>
 </head>
 <body>
-<nav>
-  <header><h1><%= image_tag("logo.png")%></h1></header>
-  <ul>
-    <% if current_user %>
-        <li>Welcome <%= link_to current_user.username, myaccount_path %></li>
-    <% end %>
-    <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Our Forum", :controller => "forum", :action => "index" %></li>
-    <li><%=link_to "Create a Post", :controller => "posts", :action => "new" %></li>
-    <% if current_user %>
-        <li><%= link_to "Log out", logout_path %></li>
-    <% else %>
-        <li><%= link_to "Sign up", signup_url %> or <%= link_to "Log in", login_path %></li>
-    <% end %>
-  </ul>
-  <p id="notice"><%= notice %></p>
-</nav>
+<header id="pagetop">
+  <nav id="logo">
+    <h1><%= link_to(image_tag("logo.png", alt: "Hurlers vs. Monsters", id: "logo"), root_url, title: "Home")%></h1>
+  </nav>
+  <nav id="navbox" role="navigation">
+    <ul>
+      <% if current_user %>
+          <li id="welcome">Welcome <%= link_to current_user.username, myaccount_path %></li>
+      <% end %>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Our Forums", :controller => "forum", :action => "index" %></li>
+      <li><%=link_to "Start a thread", :controller => "posts", :action => "new" %></li>
+      <% if current_user %>
+          <li><%= link_to "Log out", logout_path %></li>
+      <% else %>
+          <li><%= link_to "Sign up", signup_url %> or <%= link_to "Log in", login_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
 <%= yield :article %>
 <div id="mid_bar"></div>
 <%= yield :section %>
