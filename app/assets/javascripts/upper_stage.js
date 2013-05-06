@@ -11,4 +11,9 @@ $(document).ready(
     }
 );
 
+$(document).ready(
+    function() {
+        $("#admin_scroll").niceScroll({cursorcolor:"#fff"});
+    }
+);
 

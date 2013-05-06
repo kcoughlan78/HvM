@@ -4,14 +4,15 @@
 <% end %>
 <% content_for :article do %>
     <article id="upper_stage">
-<header><h1>Hurlers vs Monsters Forum</h1></header>
+      <div class="admin_view">
+        <div id="admin_scroll">
+<h2 class="head2">Hurlers vs Monsters Forum</h2>
 <br>
   <table>
     <tr>
       <th>Title</th>
       <th>Content</th>
       <th>Image</th>
-      <th></th>
       <th>Actions</th>
       <th></th>
     </tr>
@@ -22,7 +23,6 @@
           <td><%= post.content %></td>
           <td><%= post.image_url %></td>
           <td><%= link_to 'Show', post %></td>
-          <td></td>
           <td><%= link_to 'Destroy', post, method: :delete, data: {confirm: 'Are you sure?'} %></td>
         </tr>
         <tr>
@@ -38,48 +38,58 @@
 
   <br />
   <%= link_to 'New Post', new_post_path %>
+        </div>
+      </div>
 </article>
 <% end %>
 <% content_for :section do %>
     <section>
       <header><h2>Join in</h2></header>
       <div id="content">
-        <figure id="content_left">
-          <figcaption>
-            <h4 class="homeh4"><%=link_to "Try the Game", game_path %>
+        <figure id="content_left" class="lower_box">
+          <figcaption class="content_box">
+            <h4 class="homeh4"><%=link_to(image_tag("hurler.png", alt: "Try the game", id: "hurler"), game_path, title: "Game") %>
             </h4>
             <div class="blog_desc">
-              <p>Bored? Want to spend 5 minutes away from reality well click here</p>
+              <h3>My HTML5 game</h3>
+              <br>
+              <p>Interested in HTML5 games or just bored? Try Hurlers vs Monsters now!</p>
+            </div>
+
+          </figcaption>
+        </figure>
+        <figure id="content_left_centre" class="lower_box">
+          <figcaption class="content_box">
+            <h4 class="homeh4"><%=link_to(image_tag("Soccer-Ball-icon.png", alt: "Sports Tech", id: "Sportech"), :controller => "forum", :action => "sports", title: "Sports") %>
+            </h4>
+            <div class="blog_desc">
+              <h3>Tech n' Sport</h3>
+              <br>
+              <p>Love tech? Love sport?</p>
+              <p>Of course you do! Jump on to our Tech n' Sport forum now.</p>
             </div>
           </figcaption>
         </figure>
-        <figure id="content_left_centre">
-          <figcaption>
-            <h4 class="homeh4"><%= link_to "SportTech", :controller => "forum", :action => "sports" %>
+        <figure id="content_right_centre" class="lower_box">
+          <figcaption class="content_box">
+            <h4 class="homeh4"><%= link_to(image_tag("gaming.png", alt: "Gaming", id: "Gaming"), :controller => "forum", :action => "gaming", title: "Games") %>
             </h4>
             <div class="blog_desc">
-              <p>Have something to say on the world of sport? Then click here.</p>
-              <p>Start a debate, have thoughts on the current national team selection, or discuss and or promote more local sports.</p>
+              <h3>Games</h3>
+              <br>
+              <p>Whether you love playing or designing games we want to hear from you.</p>
             </div>
           </figcaption>
         </figure>
-        <figure id="content_right_centre">
-          <figcaption>
-            <h4 class="homeh4"><%= link_to "Gaming", :controller => "forum", :action => "gaming" %>
+        <figure id="content_right" class="lower_box">
+          <figcaption class="content_box">
+            <h4 class="homeh4"><%= link_to(image_tag("tech.png", alt: "Tech", id: "tech"), :controller => "forum", :action => "tech", title: "tech") %>
             </h4>
             <div class="blog_desc">
-              <p>Have something to say on the world of sport? Then click here.</p>
-              <p>Start a debate, have thoughts on the current national team selection, or discuss and or promote more local sports.</p>
-            </div>
-          </figcaption>
-        </figure>
-        <figure id="content_right">
-          <figcaption>
-            <h4 class="homeh4"><%= link_to "Tech", :controller => "forum", :action => "tech" %>
-            </h4>
-            <div class="blog_desc">
-              <p>Have something to say on the world of tech? Then click here.</p>
-              <p>Start a debate whether its a comment on current events, your own opinion or you just want to join the general conversation</p>
+              <h3>Tech</h3>
+              <br>
+              <p>Have something to say on the world of tech?</p>
+              <p>Start a debate or join in the conversation.</p>
             </div>
           </figcaption>
         </figure>

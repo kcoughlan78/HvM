@@ -112,15 +112,21 @@ var stop = (function () {
     clearInterval(countdownTimer.interval);
 });
 
+var monsterArmy = [];
+var monsterCanvases = [];
+var monsterAnimationAreas = [];
+var musicLib = [];
 
 var image = new Image();
 image.addEventListener("load", loadHandler, false);
 image.src = "<%= asset_path('spritesheet1.png') %>";
+var crowd = document.querySelector("#gamemusic");
+crowd.addEventListener("canplaythrough", loadHandler, false);
+crowd.load();
+musicLib.push(crowd);
 var landingPoints = 4;
+var musicLoaded = 0;
 
-var monsterArmy = [];
-var monsterCanvases = [];
-var monsterAnimationAreas = [];
 
 var SPRITE_SIZE = monsters.SPRITE_SIZE;
 
@@ -134,6 +140,13 @@ function loadHandler()
     loadMonsters("monster2");
     loadMonsters("monster3");
     loadMonsters("monster4");
+    musicLoaded++;
+    if(musicLoaded === musicLib.length)
+    {
+        crowd.removeEventListener("canplaythrough", loadHandler, false);
+        crowd.play();
+        crowd.volume = 1;
+    }
 
     runAnimation();
 

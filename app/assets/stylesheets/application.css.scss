@@ -60,6 +60,28 @@ body {
   overflow-x:                                 hidden;
 }
 
+/*removes blue border from linked images in IE*/
+a img {border: none;}
+
+.button {
+  background-color:                           white;
+  color:                                      #b20000;
+  font-family:                                'Racing Sans One', sans-serif;
+  font-weight:                                300;
+  font-size:                                  100%;
+  border:                                     black;
+  padding:                                    1% 1% 1% 1%;
+  box-shadow:                                 0px 3px 3px 0px #000;
+}
+
+.button:active {
+  box-shadow:                                 0px 1px 1px 0px #000;
+}
+
+.textarea {
+  margin-top:                                 30%;
+}
+
 
 header#pagetop {
   position:                                   absolute;
@@ -154,6 +176,67 @@ nav#navbox li#welcome a, a:link, a:visited {
   color:                                      #B20000;
 }
 
+.admin_view {
+  position:                                   relative;
+  top:                                        0%;
+  right:                                      0%;
+  bottom:                                     0%;
+  left:                                       0%;
+  z-index:                                    10;
+  width:                                      100%;
+  height:                                     auto;
+  min-height:                                 200px;
+  padding:                                    2%;
+  background-color:                           #ff251e;
+  border:                                     #fdfffd;
+  border-style:                               solid;
+  border-top-left-radius:                     5% 20%;
+  border-top-right-radius:                    5% 20%;
+  border-bottom-left-radius:                  5% 20%;
+  border-bottom-right-radius:                 5% 20%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius:                5% 20%;
+  -moz-border-top-right-radius:               5% 20%;
+  -moz-border-bottom-left-radius:             5% 20%;
+  -moz-border-bottom-right-radius:            5% 20%;
+  box-shadow:                                 2px 2px 2px 0px #000;
+  overflow-y:                                   hidden;
+  overflow-x:                                   hidden;
+}
+
+
+.admin_view table {
+  color:                                      white;
+  padding:                                    3%;
+  width:                                      90%;
+}
+
+.admin_view table th {
+  font-family:                                'Racing Sans One', sans-serif;
+  text-align:                                 left;
+  padding-right:                               1%;
+  padding-bottom:                              0.5%;
+  padding-left:                                1%;
+}
+
+.admin_view table td {
+  padding-right:                               1%;
+  padding-bottom:                              0.5%;
+  padding-left:                                1%;
+}
+
+.admin_view a:visited {
+  color:                                      white;
+}
+
+#admin_scroll {
+  padding:                                      2%;
+  width:                                        90%;
+  height:                                       100%;
+  max-height:                                   auto;
+  overflow-y:                                   scroll;
+  overflow-x:                                   hidden;
+}
 
 #upper_col1 {
   position:                                   relative;
@@ -175,6 +258,15 @@ nav#navbox li#welcome a, a:link, a:visited {
   -moz-border-bottom-left-radius:             5% 20%;
   -moz-border-bottom-right-radius:            5% 20%;
   box-shadow:                                 2px 2px 2px 0px #000;
+}
+
+
+.head2 {
+  font-size:                                200%;
+  color:                                    white;
+  text-shadow:                              2px 2px 2px #000;
+  border-top:                               solid 3px #fff;
+  border-bottom:                            solid 3px #fff;
 }
 
 #upper_col2 {
@@ -219,21 +311,23 @@ section {
   position:                                   relative;
   /*margin: 2% 5% 5% 5%;*/
   padding:                                    0;
-  overflow: hidden;
+  overflow:                                   hidden;
   background-image:                           -moz-linear-gradient(bottom, #A10F0F 44%, #423030 100%);
 }
 
 #content {
   position:                                   relative;
   height:                                     220px;
-  margin:                                     4% 6% 5% 11%;
+  margin:                                     4% 7% 5% 9%;
   padding:                                    0;
   overflow:                                   hidden;
 }
 
 section > header h2 {
-  font-size:                                  110%;
+  font-size:                                  200%;
   font-weight:                                700;
+  font-family:                                'Racing Sans One', sans-serif;
+  text-align:                                 center;
 }
 
 .lower_box {
@@ -243,6 +337,7 @@ section > header h2 {
   background-color:                           white;
   box-shadow:                                 0px 5px 5px 0px #000;
   overflow:                                   hidden;
+  font-family:                                'Racing Sans One', sans-serif;
 }
 
 .lower_box:hover {
@@ -292,8 +387,13 @@ section > header h2 {
   position:                                   relative;
   color:                                      #b20000;
   height:                                     180px;
-  padding:                                    2%;
+  padding:                                    1% 2% 1% 2%;
   font-size:                                  110%;
+}
+
+.blog_desc h3 {
+  font-size:                                  120%;
+  text-align:                                 center;
 }
 
 .homeh4 {

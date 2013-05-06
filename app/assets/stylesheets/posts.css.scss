@@ -4,14 +4,17 @@
 @import url("application.css.scss");
 
 #upper_col1 {
-  height: 600px;
-  width: 550px;
-  max-height: auto;
-  padding: 2% 3% 2% 3%;
-  margin: 0% 2% 2% 2%;
+  height:                                       600px;
+  width:                                        550px;
+  max-height:                                   auto;
+  padding:                                      2% 3% 2% 3%;
+  margin:                                       0% 2% 2% 2%;
   overflow-y:                                   hidden;
   overflow-x:                                   hidden;
+}
 
+.post {
+  font-family:                              'Racing Sans One', sans-serif;
 }
 
 #postscroll {
@@ -86,8 +89,12 @@ td {
 }
 
 .post_warning {
-  font-size: x-small;
+  font-size: small;
   color: #ffffff;
+}
+
+.post_warning a, a:link, a:visited {
+  color: white;
 }
 
 .content_box textarea {

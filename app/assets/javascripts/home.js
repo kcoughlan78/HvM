@@ -10,48 +10,48 @@ $(document).ready(function(){
 
     $('#content_left').hover(function(){
 
-            $(this).find('.content_box').stop().animate({marginTop:'0px'},200);
+            $(this).find('.content_box').stop().animate({marginTop:'0px'},500);
 
         },
 
         function(){
 
-            $(this).find('.content_box').stop().animate({marginTop:'-180px'},200);
+            $(this).find('.content_box').stop().animate({marginTop:'-180px'},700);
 
         });
 
     $('#content_left_centre').hover(function(){
 
-            $(this).find('.content_box').stop().animate({marginTop:'0px'},200);
+            $(this).find('.content_box').stop().animate({marginTop:'0px'},500);
 
         },
 
         function(){
 
-            $(this).find('.content_box').stop().animate({marginTop:'-180px'},200);
+            $(this).find('.content_box').stop().animate({marginTop:'-180px'},700);
 
         });
     $('#content_right_centre').hover(function(){
 
-            $(this).find('.content_box').stop().animate({marginTop:'0px'},200);
+            $(this).find('.content_box').stop().animate({marginTop:'0px'},500);
 
         },
 
         function(){
 
-            $(this).find('.content_box').stop().animate({marginTop:'-180px'},200);
+            $(this).find('.content_box').stop().animate({marginTop:'-180px'},700);
 
         });
 
     $('#content_right').hover(function(){
 
-            $(this).find('.content_box').stop().animate({marginTop:'0px'},200);
+            $(this).find('.content_box').stop().animate({marginTop:'0px'},500);
 
         },
 
         function(){
 
-            $(this).find('.content_box').stop().animate({marginTop:'-180px'},200);
+            $(this).find('.content_box').stop().animate({marginTop:'-180px'},700);
 
         });
 

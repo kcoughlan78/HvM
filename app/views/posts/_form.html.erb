@@ -13,25 +13,24 @@
     <% end %>
     <br>
     <div>
-      <p><span class="post_text">by: <%= current_user.username %></span> <span class="post_warning">if this isn't you follow <%= link_to "this link", logout_path %></span></p>
+      <p><span class="post_text">by: <%= current_user.username %></span> <span class="post_warning">if this isn't you follow <%= link_to "this link", logout_path, class: 'post_warning'%></span></p>
     </div>
     <br>
-    <div class="field">
+    <div>
       <p><span class="post_text"><%= post_form.label :title %></span></p><br>
       <%= post_form.text_field :title %>
     </div>
     <br>
-    <div class="field">
+    <div>
       <p><span class="post_text"><%= post_form.label :category %></span></p><br>
       <%= post_form.select :category, Post::CATEGORY_TYPES, prompt: 'Select your forum' %>
     </div>
     <br>
-    <div class="field">
+    <div>
       <p><span class="post_text"><%= post_form.label :content %></span></p><br>
-      <p class="content_box"><%= post_form.text_area :content %></p>
+      <p class="content_box"><%= post_form.text_area :content, class: 'textarea' %></p>
     </div>
-    <br>
-    <div class="field">
+    <div>
       <p><span class="post_text">Add <%= post_form.label :image %></span></p>
       <%= post_form.file_field :image %>
     </div>
@@ -39,7 +38,7 @@
     <%= render :partial => 'tags/form',
                :locals => {:form => post_form} %>
     <br>
-    <div class="actions">
-    <%= post_form.submit %>
+    <div>
+    <%= post_form.submit "Create Post", class: 'button' %>
   </div>
 <% end %>
