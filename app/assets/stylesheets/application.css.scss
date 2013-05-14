@@ -141,32 +141,26 @@ nav#navbox li#welcome {
   text-shadow:                                1px 1px 1px #000;
 }
 
-nav#navbox a, a:link, a:visited {
+#navbox a, a:link, a:visited {
   text-decoration:                            none;
   color:                                      white;
 }
 
-nav#navbox li a:hover {
+#navbox li a:hover {
   text-shadow:                                1px 1px 1px #fff;
 }
 
-nav#navbox li a:active {
+#navbox li a:active {
   background:                                 #fff8ed;
-  a, a:link, a:visited {
-    color:                                      #b20000;
-    text-shadow:                                1px 1px 1px #fff;
-  }
+  color:                                      #b20000;
+  text-shadow:                                1px 1px 1px #fff;
 }
 
-nav#navbox li#welcome a, a:link, a:visited {
+#navbox li#welcome a, a:link, a:visited {
   text-decoration:                            none;
   color:                                      #b20000;
   font-weight:                                600;
-  a:hover {
-    color:                                      #b20000;
-    font-weight:                                600;
-    text-shadow:                                1px 1px 1px 1px #000;
-  }
+  text-shadow:                                1px 1px 1px 1px #000;
 }
 
 
@@ -323,7 +317,15 @@ section {
   overflow:                                   hidden;
 }
 
-section > header h2 {
+#content_admin {
+  position:                                   relative;
+  height:                                     220px;
+  margin:                                     4% 7% 5% 9%;
+  padding:                                    0;
+  overflow:                                   hidden;
+}
+
+section > header h3 {
   font-size:                                  200%;
   font-weight:                                700;
   font-family:                                'Racing Sans One', sans-serif;
@@ -368,8 +370,6 @@ section > header h2 {
   left:                                       50%;
 }
 
-
-
 #content_right {
   position:                                   absolute;
   top:                                        0%;
@@ -377,6 +377,41 @@ section > header h2 {
   bottom:                                     0%;
   left:                                       75%;
 }
+
+#content_admin_left {
+  position:                                   absolute;
+  top:                                        0%;
+  right:                                      75%;
+  bottom:                                     0%;
+  left:                                       0%;
+}
+
+#content_admin_left_centre {
+  position:                                   absolute;
+  top:                                        0%;
+  right:                                      50%;
+  bottom:                                     0%;
+  left:                                       25%;
+}
+
+#content_admin_right_centre {
+  position:                                   absolute;
+  top:                                        0%;
+  right:                                      25%;
+  bottom:                                     0%;
+  left:                                       50%;
+}
+
+
+
+#content_admin_right {
+  position:                                   absolute;
+  top:                                        0%;
+  right:                                      0%;
+  bottom:                                     0%;
+  left:                                       75%;
+}
+
 
 .content_box {
   margin-top:                                 -180px;

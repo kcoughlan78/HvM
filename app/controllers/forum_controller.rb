@@ -8,7 +8,7 @@ class ForumController < ApplicationController
   end
 
   def sports
-    @posts = Post.find_all_by_category("Sports")
+    @posts = Post.find_all_by_category("Sports n' Tech")
   end
 
   def gaming

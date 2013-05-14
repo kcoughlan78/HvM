@@ -1,0 +1,266 @@
+// Place all the styles related to the Forum controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url("application.css.scss");
+
+#upper_stage {
+  background-color:                           white;
+  width:                                      100%;
+  min-width:                                  900px;
+  height:                                     auto;
+  margin-left:                                -1%;
+}
+
+
+
+#forumtabs {
+  font-family:                                'Racing Sans One', sans-serif;
+  height:                                     50px;
+  margin-top:                                 10px;
+  padding:                                    1%;
+  width:                                      80%;
+  margin-right:                               13%;
+  margin-left:                                5%;
+  text-align:                                 center;
+}
+
+
+.forumtab {
+  color:                                      red;
+  cursor:                                     pointer;
+  display:                                    inline-block;
+  height:                                     53px;
+  background-color:                           white;
+  font-size:                                  24px;
+  line-height:                                24px;
+  margin-left:                                2px;
+  margin-right:                               2px;
+  padding-top:                                8px;
+  text-align:                                 center;
+  vertical-align:                             top;
+  width:                                      32%;
+  min-width:                                  298px;
+}
+
+.forumtab:hover {
+  border:                                     1px solid #b20000;
+  border-bottom:                              1px solid white;
+  height:                                     53px;
+  margin-top:                                 5px;
+  padding-top:                                2px;
+}
+
+#selected {
+  border:                                     1px solid #b20000;
+  border-bottom:                              1px solid white;
+  height:                                     51px;
+  margin-top:                                 5px;
+  padding-top:                                4px;
+  padding-bottom:                             1px;
+}
+
+
+
+.selected:hover {
+  height:                                     23px;
+  margin-top:                                 0;
+  padding-top:                                6px;
+  width:                                      198px;
+}
+
+#forumcontent {
+  background-color:                           white;
+  border-right:                               1px solid black;
+  border-bottom:	                          1px solid black;
+  border-left:                                1px solid black;
+  box-shadow:                                 0 2px 2px 2px red;
+  width:                                      80%;
+  margin-right:                               13%;
+  margin-left:                                5%;
+  min-width:                                  850px;
+  min-height:                                 800px;
+  padding:                                    1%;
+}
+
+#image_slider {
+  position: 					    relative;
+  width: 						    950px;
+  height: 					        400px;
+  margin-top: 				        15px;
+  overflow: 					    hidden;
+  border: 					        5px solid black;
+  margin-left:                      0.5%;
+  box-shadow: 						1px 1px 1px 1px #fff;
+}
+
+#holdall {
+  width:					        0px;
+  height:					        0px;
+  position:				            absolute;
+  background:				        white;
+  -webkit-transition: 	            all 2s ease-out;
+  -moz-transition: 		            all 2s ease-out;
+  -ms-transition: 		            all 2s ease-out;
+}
+
+#loadbanner1:target #holdall {
+  -webkit-transform: 		        translateY(0px) translateX(0px);
+  -moz-transform: 		            translateY(0px) translateX(0px);
+  -ms-transform: 			        translateY(0px) translateX(0px);
+}
+#loadbanner2:target #holdall {
+  -webkit-transform:  	            translateY(0px) translateX(-1150px);
+  -moz-transform:  		            translateY(0px) translateX(-1150px);
+  -ms-transform:  		            translateY(0px) translateX(-1150px);
+}
+#loadbanner3:target #holdall {
+  -webkit-transform:  	            translateY(-400px) translateX(-1150px);
+  -moz-transform:  		            translateY(-400px) translateX(-1150px);
+  -ms-transform:  		            translateY(-400px) translateX(-1150px);
+}
+
+.panel {
+  position:				            absolute;
+  width:					        1150px;
+  height:					        380px;
+  padding:				            10px;
+  overflow:				            hidden;
+}
+
+#panel1 {
+  top:					            0px;
+  left:					            0px;
+  background:				        transparent url(worldtech.png) no-repeat top left;
+}
+
+#panel2 {
+  top:					            0px;
+  left:					            1150px;
+  background:				        transparent url(gaa2013.jpg) no-repeat top left;
+}
+
+#panel3 {
+  top:					            400px;
+  left:					            1150px;
+  background:				        transparent url(windows8.png) no-repeat top left;
+}
+
+.toppost {
+  position:				            absolute;
+  top:					            80px;
+  left:					            30px;
+  width:					        200px;
+  padding:				            10px;
+  background:				        rgba(28,0,0,0.6);
+  color:					        white;
+  box-shadow:				        0px 0px 10px #333;
+}
+
+.toppost h2 {
+  text-transform:			       uppercase;
+  font-size:				       140%;
+  font-weight:			           normal;
+  opacity: 				           1;
+}
+
+.toppost p {
+  font-size:				        100%;
+  line-height:			            140%;
+}
+
+#nav {
+  position:				            relative;
+  padding:				            10px;
+  width:					        800px;
+  margin:					        auto;
+  text-align:				        center;
+}
+
+#nav ul li {
+  width:					        30px;
+  height:					        30px;
+  margin:					        5px;
+  display:				            inline-block;
+  line-height:			            30px;
+  box-shadow: 			            inset 2px 2px 5px #000;
+  background:				        #ffffff;
+  border-radius:			        15px;
+  border:					        1px solid #000;
+}
+
+header h2 {
+  font-size:                        110%;
+  font-weight:                      700;
+  margin-left:                      11%;
+}
+
+.post_odd {
+  padding:                          2% 2% 2% 2%;
+  margin:                           1% 8% 1% 8%;
+  width:                            80%;
+  min-height:                       130px;
+  max-height:                       180px;
+  background-color:                 #b20000;
+  color:                            #fff;
+  border:                           #fdfffd;
+  border-style:                     solid;
+  border-top-left-radius:           5% 20%;
+  border-top-right-radius:          5% 20%;
+  border-bottom-left-radius:        5% 20%;
+  border-bottom-right-radius:       5% 20%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius:      5% 20%;
+  -moz-border-top-right-radius:     5% 20%;
+  -moz-border-bottom-left-radius:   5% 20%;
+  -moz-border-bottom-right-radius:  5% 20%;
+  /* below is for safari */
+  -webkit-border-top-left-radius:   5%;
+  -webkit-border-top-right-radius:  5%;
+  -webkit-border-bottom-left-radius: 5%;
+  -webkit-border-bottom-right-radius: 5%;
+}
+
+.post_even {
+  padding:                          2% 2% 2% 2%;
+  margin:                           1% 8% 1% 8%;
+  width:                            80%;
+  background-color:                 #a7e9b8;
+  min-height:                       130px;
+  max-height:                       180px;
+  color:                            #000000;
+  border:                           #fdfffd;
+  border-style:                     solid;
+  border-top-left-radius:           5% 20%;
+  border-top-right-radius:          5% 20%;
+  border-bottom-left-radius:        5% 20%;
+  border-bottom-right-radius:       5% 20%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius:      5% 20%;
+  -moz-border-top-right-radius:     5% 20%;
+  -moz-border-bottom-left-radius:   5% 20%;
+  -moz-border-bottom-right-radius:  5% 20%;
+  /* below is for safari */
+  -webkit-border-top-left-radius:   5%;
+  -webkit-border-top-right-radius:  5%;
+  -webkit-border-bottom-left-radius: 5%;
+  -webkit-border-bottom-right-radius: 5%;
+}
+
+.post_odd h4 {
+  color:                            white;
+}
+
+.post_even h4 {
+  color:                            white;
+}
+
+.post_img_url {
+  float:                            left;
+  max-height:                       80px;
+  max-width:                        200px;
+  padding:                          1% 1% 1% 1%;
+}
+
+.forum_detail {
+  font-size:                        x-small;
+}

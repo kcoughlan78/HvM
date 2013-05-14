@@ -5,68 +5,64 @@
 <% end %>
 <% content_for :article do %>
     <article id="upper_stage">
-      <section id="image_slider">
-      <div id="loadbanner1">
-        <div id="loadbanner2">
-          <div id="loadbanner3">
-            <div id="holdall">
-              <div class="panel" id="techpanel1">
-                <article class="toppost">
-                  <h2>Phablets...</h2>
-                  <br>
-                  <p>With Samsung releasing the 'Mega' at 6.3 inches are phones just getting too bit? Let us know your thoughts</p>
-                </article>
-              </div>
-              <div class="panel" id="techpanel2">
-                <article class="toppost">
-                  <h2>Hmm...Fibre</h2>
-                  <br>
-                  <p>With Eircom rolling out Fibre has UPC look some of its competitive edge?</p>
-                  <br>
-                  <p>But they prefer to eat</p>
-                </article>
-                <div class="slidefromright">
-                  <article class="toppost">
-                    <h2>Test</h2>
-                    <br>
-                    <p>Though pandas love to sleep and relax unlike most bears they do not hibernate.</p>
-                  </article>
+      <ul id="forumtabs">
+        <li class="forumtab" id="selected"><%= link_to "Tech", :controller => "forum", :action => "tech" %></li>
+        <li class="forumtab"><%= link_to "Gaming", :controller => "forum", :action => "gaming" %></li>
+        <li class="forumtab"><%= link_to "Sport n' Tech", :controller => "forum", :action => "sports" %></li>
+      </ul>
+      <article id="forumcontent">
+        <section id="image_slider">
+          <div id="loadbanner1">
+            <div id="loadbanner2">
+              <div id="loadbanner3">
+                <div id="holdall">
+                  <div class="panel" id="techpanel1">
+                    <article class="toppost">
+                      <h2>Phablets...</h2>
+                      <br>
+                      <p>With Samsung releasing the 'Mega' at 6.3 inches are phones just getting too bit? Let us know your thoughts</p>
+                    </article>
+                  </div>
+                  <div class="panel" id="techpanel2">
+                    <article class="toppost">
+                      <h2>Hmm...Fibre</h2>
+                      <br>
+                      <p>With Eircom rolling out Fibre has UPC look some of its competitive edge?</p>
+                      <br>
+                      <p>But they prefer to eat</p>
+                    </article>
+                  </div>
+                  <div class="panel" id="techpanel3">
+                    <article class="toppost">
+                      <h2>It's only a button</h2>
+                      <br>
+                      <p>Do you long for the start button to return or are you sick of the whining!!!</p>
+                    </article>
+                  </div>
                 </div>
-              </div>
-              <div class="panel" id="techpanel3">
-                <article class="toppost">
-                  <h2>It's only a button</h2>
-                  <br>
-                  <p>Do you long for the start button to return or are you sick of the whining!!!</p>
-                </article>
               </div>
             </div>
           </div>
+        </section>
+        <div id="nav">
+          <ul>
+            <li><a href="#loadbanner1">1</a></li>
+            <li><a href="#loadbanner2">1</a></li>
+            <li><a href="#loadbanner3">1</a></li>
+          </ul>
         </div>
-      </div>
-      </section>
-      <div id="nav">
-        <ul>
-          <li><a href="#loadbanner1">1</a></li>
-          <li><a href="#loadbanner2">1</a></li>
-          <li><a href="#loadbanner3">1</a></li>
-        </ul>
-      </div>
+        <header><h2>Tech Forum</h2></header>
+        <% @posts.each do |post| %>
+            <article class="<%= cycle('post_odd', 'post_even') %>">
+              <h4><%= link_to post.title, post %></h4>
+              <p><span class="forum_detail"><%= post.created_at.to_s(:short) %></span></p>
+              <p><span class="forum_detail">by <%= post.user.username %></span></p>
+              <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
+              <p><%= truncate(strip_tags(post.content), length: 200) %></p>
+              <h6>Tags:</h6>
+              <p><span class="tags"><%= join_tags(post) %></span></p>
+            </article>
+        <% end %>
+      </article>
     </article>
-<% end %>
-<% content_for :section do %>
-    <section>
-      <header><h2>Tech Forum</h2></header>
-      <% @posts.each do |post| %>
-          <article class="<%= cycle('post_odd', 'post_even') %>">
-            <h4><%= link_to post.title, post %></h4>
-            <p><span class="forum_detail"><%= post.created_at.to_s(:short) %></span></p>
-            <p><span class="forum_detail">by <%= post.user.username %></span></p>
-            <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
-            <p><%= truncate(strip_tags(post.content), length: 200) %></p>
-            <h6>Tags:</h6>
-            <p><span class="tags"><%= join_tags(post) %></span></p>
-          </article>
-      <% end %>
-    </section>
 <% end %>

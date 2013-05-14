@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   attr_accessible :name, :content, :image_url, :title, :category, :tags_attributes, :user_email, :user_username, :image
 
-  CATEGORY_TYPES = [ "Sports", "Tech", "Gaming" ]
+  CATEGORY_TYPES = [ "Sports n' Tech", "Tech", "Gaming" ]
 
   validates :content, :presence => true,
             :length => { :minimum => 10 }

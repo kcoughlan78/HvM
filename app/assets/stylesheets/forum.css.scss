@@ -4,20 +4,93 @@
 @import url("application.css.scss");
 
 #upper_stage {
-  background-color:                 #ff251e;
-  margin-left:                      10%;
-  height:                           400px;
-  width:                            1150px;
-  text-align:                       center;
+  background-color:                           white;
+  width:                                      100%;
+  min-width:                                  900px;
+  height:                                     auto;
+  margin-left:                                -1%;
+}
+
+
+
+#forumtabs {
+  font-family:                                'Racing Sans One', sans-serif;
+  height:                                     50px;
+  margin-top:                                 10px;
+  padding:                                    1%;
+  width:                                      80%;
+  margin-right:                               13%;
+  margin-left:                                5%;
+  text-align:                                 center;
+}
+
+
+.forumtab {
+  color:                                      red;
+  cursor:                                     pointer;
+  display:                                    inline-block;
+  height:                                     53px;
+  background-color:                           white;
+  font-size:                                  24px;
+  line-height:                                24px;
+  margin-left:                                2px;
+  margin-right:                               2px;
+  padding-top:                                8px;
+  text-align:                                 center;
+  vertical-align:                             top;
+  width:                                      32%;
+  min-width:                                  298px;
+}
+
+.forumtab:hover {
+  border:                                     1px solid #b20000;
+  border-bottom:                              1px solid white;
+  height:                                     53px;
+  margin-top:                                 5px;
+  padding-top:                                2px;
+}
+
+#selected {
+  border:                                     1px solid #b20000;
+  border-bottom:                              1px solid white;
+  height:                                     51px;
+  margin-top:                                 5px;
+  padding-top:                                4px;
+  padding-bottom:                             1px;
+}
+
+
+
+.selected:hover {
+  height:                                     23px;
+  margin-top:                                 0;
+  padding-top:                                6px;
+  width:                                      198px;
+}
+
+#forumcontent {
+  background-color:                           white;
+  border-right:                               1px solid black;
+  border-bottom:	                          1px solid black;
+  border-left:                                1px solid black;
+  box-shadow:                                 0 2px 2px 2px red;
+  width:                                      80%;
+  margin-right:                               13%;
+  margin-left:                                5%;
+  min-width:                                  850px;
+  min-height:                                 800px;
+  padding:                                    1%;
 }
 
 #image_slider {
   position: 					    relative;
-  width: 						    1150px;
+  width: 						    950px;
   height: 					        400px;
-  margin-top: 				        5px;
+  margin-top: 				        15px;
   overflow: 					    hidden;
   border: 					        5px solid black;
+  margin-left:                      0.5%;
+  box-shadow: 						1px 1px 1px 1px #fff;
 }
 
 #holdall {
@@ -132,25 +205,6 @@
   line-height:			            140%;
 }
 
-
-.slidefromright {
-  position:				            absolute;
-  top:					            0;
-  right:					        0;
-  margin-right:			            -500px;
-  -webkit-transition: 	            all 10s ease-out;
-  -moz-transition: 		            all 10s ease-out;
-  -ms-transition: 		            all 10s ease-out;
-}
-
-#loadbanner2:target .slidefromright {
-  margin-right:			            20px;
-  margin-top:				        270px;
-  -webkit-transform: 		        scale(0.8) rotate(-15deg);
-  -moz-transform: 		            scale(0.8) rotate(-15deg);
-  -ms-transform: 			        scale(0.8) rotate(-15deg);
-}
-
 #nav {
   position:				            relative;
   padding:				            10px;
@@ -171,27 +225,7 @@
   border:					        1px solid #000;
 }
 
-#nav ul li a {
-  font-size:				        130%;
-  text-decoration:		            none;
-  font-weight:			            bold;
-  color:					        #ffffff ;
-  display:				            block;
-}
-
-#prototype_text {
-  padding:                          2% 2% 2% 2%;
-  background-color:                 white;
-  color:                            #ff251e;
-  text-align:                       center;
-  font-size:                        120%;
-  border-top-left-radius:           5% 20%;
-  border-top-right-radius:          5% 20%;
-  border-bottom-left-radius:        5% 20%;
-  border-bottom-right-radius:       5% 20%;
-}
-
-section > header h2 {
+header h2 {
   font-size:                        110%;
   font-weight:                      700;
   margin-left:                      11%;
@@ -199,11 +233,12 @@ section > header h2 {
 
 .post_odd {
   padding:                          2% 2% 2% 2%;
-  margin:                           1% 10% 1% 10%;
+  margin:                           1% 8% 1% 8%;
+  width:                            80%;
   min-height:                       130px;
   max-height:                       180px;
-  background-color:                 #ff251e;
-  color:                            #000000;
+  background-color:                 #b20000;
+  color:                            #fff;
   border:                           #fdfffd;
   border-style:                     solid;
   border-top-left-radius:           5% 20%;
@@ -224,10 +259,11 @@ section > header h2 {
 
 .post_even {
   padding:                          2% 2% 2% 2%;
-  margin:                           1% 10% 1% 10%;
+  margin:                           1% 8% 1% 8%;
+  width:                            80%;
   background-color:                 #a7e9b8;
   min-height:                       130px;
-  max-height:                       160px;
+  max-height:                       180px;
   color:                            #000000;
   border:                           #fdfffd;
   border-style:                     solid;
@@ -245,6 +281,14 @@ section > header h2 {
   -webkit-border-top-right-radius:  5%;
   -webkit-border-bottom-left-radius: 5%;
   -webkit-border-bottom-right-radius: 5%;
+}
+
+.post_odd a {
+  color:                              #B20000;
+}
+
+.post_even a {
+  color:                              #B20000;
 }
 
 .post_img_url {
