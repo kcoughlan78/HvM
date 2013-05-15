@@ -1,97 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/audios/Crowd.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/audios/Crowd.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/audios/EndGame1.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/audios/No_mercy-Hipis-1227409429.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C2C/7D0/sprockets%2Fdd65ecf832874057135721983662470c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C6E/070/sprockets%2F92d37687a043b3c232a2a11661e7343d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C87/BB0/sprockets%2Fd4047b559e8621545922fe20cf149c65" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C8D/430/sprockets%2F49a112d732f99228015e6966f8e45ce1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CCE/DC0/sprockets%2Fed463076c2a3a108730fb32cf454c732" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE8/770/sprockets%2F540e96894e39fc555189df1ed3400b1a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CEA/2F0/sprockets%2Fd6d32f26c7c87851359dd25338a8b42d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CEA/3F0/sprockets%2F79abab81dc93548b3fd21494381e4478" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D03/670/sprockets%2F6c0f2a2c7346b84a92e2cb81473e251b" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D04/C60/sprockets%2F670de3fe56e0c0426d4141ecc48f1711" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D0B/4F0/sprockets%2Fc38d193a75d5b64bb734f0ea6202777a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D0B/610/sprockets%2Fe9b7526c04436985a2d42a6353cbaeb5" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D18/1A0/sprockets%2Fced8448e9106baa609477e2a488fa335" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D24/DB0/sprockets%2F7281c4305a0beba622ad1a38f6441f3b" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D2A/090/sprockets%2F981fdf59c6c819da5a85424ee749e704" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D4F/520/sprockets%2Fc8c97df9ee0a04039978ab0796d7d11e" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D54/780/sprockets%2F8567a57c8f0974382a8b63cf69ca5fac" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D6E/DE0/sprockets%2F58286db4fd0762db1f28c0ce1c5a676c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D73/F90/sprockets%2F08a35d9057f79ff5a8caa6e03cb7a652" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D7C/D80/sprockets%2F54672256d4d7db7e6a9bff2553bfd35e" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D91/350/sprockets%2F5b2e81471a8e463cc6ab204804cbefae" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D97/4A0/sprockets%2F4e8109ab184cc18cd60e0dad98c4ad09" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DA4/460/sprockets%2F977ead1d20bc9f7e1c191bd4348f9e3a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DAE/D50/sprockets%2F39c5f08a3fa56fa715c0edef77579c3f" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DF4/D80/sprockets%2F1ee41665ee0deeb7bc3a5b1e44c4ea83" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/application.css.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/forum.css.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/game.css.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/home.css.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/posts.css.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/sessions.css.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/users.css.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/gamingforum.css.scss" />
-      <change type="DELETED" beforePath="C:\devkit_install\gameproject\app\assets\javascripts\game_background.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/C24/D40/sprockets%2F29945123542346a9c3175c766cf224d5" afterPath="$PROJECT_DIR$/tmp/cache/assets/C24/D40/sprockets%2F29945123542346a9c3175c766cf224d5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/C62/1D0/sprockets%2F1638f87db345b13872695759502b54fe" afterPath="$PROJECT_DIR$/tmp/cache/assets/C62/1D0/sprockets%2F1638f87db345b13872695759502b54fe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/C7A/170/sprockets%2Ff1663d34d4b6003379113df98f1433a5" afterPath="$PROJECT_DIR$/tmp/cache/assets/C7A/170/sprockets%2Ff1663d34d4b6003379113df98f1433a5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CA4/8B0/sprockets%2F21510ea8264eaa94d48104f903b60f39" afterPath="$PROJECT_DIR$/tmp/cache/assets/CA4/8B0/sprockets%2F21510ea8264eaa94d48104f903b60f39" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CB0/D60/sprockets%2F0335d87ebd93523744c2fec4426f4432" afterPath="$PROJECT_DIR$/tmp/cache/assets/CB0/D60/sprockets%2F0335d87ebd93523744c2fec4426f4432" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CC5/AC0/sprockets%2F73cf352579b646a784a2780873ee5ea8" afterPath="$PROJECT_DIR$/tmp/cache/assets/CC5/AC0/sprockets%2F73cf352579b646a784a2780873ee5ea8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CDA/EB0/sprockets%2F4c18768d0e239a10a5b7349c083cba94" afterPath="$PROJECT_DIR$/tmp/cache/assets/CDA/EB0/sprockets%2F4c18768d0e239a10a5b7349c083cba94" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CDF/870/sprockets%2Fb878faf942403e313a5b103e5d80488e" afterPath="$PROJECT_DIR$/tmp/cache/assets/CDF/870/sprockets%2Fb878faf942403e313a5b103e5d80488e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE5/650/sprockets%2F8ab512c9b33ac90e699b73469d71f061" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE5/650/sprockets%2F8ab512c9b33ac90e699b73469d71f061" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE5/CB0/sprockets%2F9ef8b3034506be9061b9df2e00698d80" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE5/CB0/sprockets%2F9ef8b3034506be9061b9df2e00698d80" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE8/840/sprockets%2F67eb859757910e1082d8534cbce75a2a" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE8/840/sprockets%2F67eb859757910e1082d8534cbce75a2a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE8/950/sprockets%2Fe4f0bd458b657ff5608d906390800fe1" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE8/950/sprockets%2Fe4f0bd458b657ff5608d906390800fe1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D05/D40/sprockets%2F1c9faaf28d05409b88ad3113374d613c" afterPath="$PROJECT_DIR$/tmp/cache/assets/D05/D40/sprockets%2F1c9faaf28d05409b88ad3113374d613c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D07/4E0/sprockets%2F860ec874b520da108a406ba9c1495fa7" afterPath="$PROJECT_DIR$/tmp/cache/assets/D07/4E0/sprockets%2F860ec874b520da108a406ba9c1495fa7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D16/BE0/sprockets%2F12a4e433f6bf99f82719eff08053d0f1" afterPath="$PROJECT_DIR$/tmp/cache/assets/D16/BE0/sprockets%2F12a4e433f6bf99f82719eff08053d0f1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D1A/1D0/sprockets%2F4f52f250e58fa8a4a8f48593c31381fe" afterPath="$PROJECT_DIR$/tmp/cache/assets/D1A/1D0/sprockets%2F4f52f250e58fa8a4a8f48593c31381fe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D1F/730/sprockets%2Fa9f028f7a492b5907ed80268be8f50f4" afterPath="$PROJECT_DIR$/tmp/cache/assets/D1F/730/sprockets%2Fa9f028f7a492b5907ed80268be8f50f4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D30/3B0/sprockets%2F40e4dc27315c8bb23ab744a9b4109d6d" afterPath="$PROJECT_DIR$/tmp/cache/assets/D30/3B0/sprockets%2F40e4dc27315c8bb23ab744a9b4109d6d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D4E/1B0/sprockets%2Ff7cbd26ba1d28d48de824f0e94586655" afterPath="$PROJECT_DIR$/tmp/cache/assets/D4E/1B0/sprockets%2Ff7cbd26ba1d28d48de824f0e94586655" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D91/080/sprockets%2Fbcca522c6302f184f12fe0e8a7d7e71a" afterPath="$PROJECT_DIR$/tmp/cache/assets/D91/080/sprockets%2Fbcca522c6302f184f12fe0e8a7d7e71a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D9F/300/sprockets%2Fc13fc73ceafa45876a901b3e775b83ae" afterPath="$PROJECT_DIR$/tmp/cache/assets/D9F/300/sprockets%2Fc13fc73ceafa45876a901b3e775b83ae" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/DDC/400/sprockets%2Fcffd775d018f68ce5dba1ee0d951a994" afterPath="$PROJECT_DIR$/tmp/cache/assets/DDC/400/sprockets%2Fcffd775d018f68ce5dba1ee0d951a994" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/DF8/990/sprockets%2Fc0be3fdcd1ef51771836e2c6035eabff" afterPath="$PROJECT_DIR$/tmp/cache/assets/DF8/990/sprockets%2Fc0be3fdcd1ef51771836e2c6035eabff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/DFC/470/sprockets%2F8a0e7cc1ca5e1af0b1a30ac42ea00e1a" afterPath="$PROJECT_DIR$/tmp/cache/assets/DFC/470/sprockets%2F8a0e7cc1ca5e1af0b1a30ac42ea00e1a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/E04/890/sprockets%2F2f5173deea6c795b8fdde723bb4b63af" afterPath="$PROJECT_DIR$/tmp/cache/assets/E04/890/sprockets%2F2f5173deea6c795b8fdde723bb4b63af" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/E88/D90/sprockets%2Ffdfd9bbf943cd08aa8cafd027e1cab54" afterPath="$PROJECT_DIR$/tmp/cache/assets/E88/D90/sprockets%2Ffdfd9bbf943cd08aa8cafd027e1cab54" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
+    <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="test change">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/game.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/game.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/forum.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/forum.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/game.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/game.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/forum_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/forum_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/post.rb" afterPath="$PROJECT_DIR$/app/models/post.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/gaming.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/gaming.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/sports.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/sports.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/tech.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/tech.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/game/index.html.erb" afterPath="$PROJECT_DIR$/app/views/game/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/new.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="gameproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -206,7 +118,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="20" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.035490606">
+            <state line="89" column="40" selection-start="3523" selection-end="3523" vertical-scroll-proportion="0.49686846">
               <folding />
             </state>
           </provider>
@@ -276,7 +188,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -680,17 +591,18 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -963,18 +875,22 @@
       <created>1367871354109</created>
       <updated>1367871354109</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed audio asset pipeline, re-styled forums and admin portal">
+      <created>1368572467976</created>
+      <updated>1368572467976</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4628788" sideWeight="0.67079645" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47045454" sideWeight="0.67079645" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1025,7 +941,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="lower buttons styled, and copied to other pages, admins views styled, fixed post create view" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed audio asset pipeline, re-styled forums and admin portal" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1047,6 +963,7 @@
     <MESSAGE value="Images and style changes made" />
     <MESSAGE value="hurler cursor added, jquery slider added, js for box slider working" />
     <MESSAGE value="lower buttons styled, and copied to other pages, admins views styled, fixed post create view" />
+    <MESSAGE value="fixed audio asset pipeline, re-styled forums and admin portal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1155,7 +1072,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="20" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.035490606">
+        <state line="89" column="40" selection-start="3523" selection-end="3523" vertical-scroll-proportion="0.49686846">
           <folding />
         </state>
       </provider>
