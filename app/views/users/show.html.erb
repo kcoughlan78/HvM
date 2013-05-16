@@ -4,8 +4,9 @@
 <% end %>
 <% content_for :article do %>
     <article id="upper_stage">
-      <div id="upper_col1">
-        <header><h2>Your Details</h2></header>
+      <div id="upper_col1" class="post">
+        <div class="userscroll">
+        <h2><span class="head2">Your Details</span></h2>
         <br>
             <p>Name: <%= @user.fname %> <%= @user.sname %></p>
             <p><%= image_tag(@user.image_url, class: "user_img_url") %></p>
@@ -16,11 +17,13 @@
         <br>
         <p>Bio: <%= @user.bio %></p>
         <br>
-        <%= button_to "edit", editmyaccount_path %>
+        <%= button_to "edit", editmyaccount_path, class: 'button'  %>
+          </div>
         </div>
-      <div id="upper_col2">
-      <p>List posts/comments/tweets</p>
-        <% @user.posts.length %>
+      <div id="upper_col2" class="post">
+        <div class="userscroll">
+        <%= render "users/myposts" %>
+        </div>
       </div>
     </article>
 <% end %>

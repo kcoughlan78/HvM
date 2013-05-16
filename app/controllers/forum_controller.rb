@@ -14,4 +14,5 @@ class ForumController < ApplicationController
   def gaming
     @posts = Post.find_all_by_category("Gaming")
   end
+
 end

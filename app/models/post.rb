@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   attr_accessible :name, :content, :image_url, :title, :category, :tags_attributes, :user_email, :user_username, :image
+  #attr_accessor :title, :category, :content
 
   CATEGORY_TYPES = [ "Sports n' Tech", "Tech", "Gaming" ]
 

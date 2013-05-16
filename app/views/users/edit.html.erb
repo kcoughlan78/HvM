@@ -4,8 +4,8 @@
 <% end %>
 <% content_for :article do %>
     <article id="upper_stage">
-      <div id="upper_col1">
-        <header><h2>Update Your Details</h2></header>
+      <div id="upper_col1" class="post">
+        <h2><span class="head2">Update Your Details</span></h2>
         <br>
         <p>Name: <%= @user.fname %> <%= @user.sname %></p>
         <br>
@@ -28,7 +28,8 @@
               <%= f.file_field :image %>
             <p>Bio:</p>
             <p><span id="textarea"><%= f.text_area :bio, cols: 50, rows: 7 %></span></p>
-            <p class="button"><%= f.submit %></p>
+            <br>
+            <p><%= f.submit "Update User", class: 'button' %></p>
             <% end %>
       </div>
       <div id="upper_col2">

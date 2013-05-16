@@ -1,0 +1,10 @@
+<h2><span class="head2"><%= current_user.username %>'s Posts</span></h2>
+<br>
+<% @user.posts.order("created_at DESC").each do |post| %>
+    <article class="<%= 'myposts' %>">
+      <h4><%= link_to post.title, post %></h4>
+      <p><span class="mypost_detail"><%= post.created_at.to_s(:short) %></span></p>
+      <p><%= image_tag(post.image_url, class: "mypost_img_url") %></p>
+      <p><%= truncate(strip_tags(post.content), length: 150) %></p>
+    </article>
+<% end %>

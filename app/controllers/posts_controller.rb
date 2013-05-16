@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_filter :is_admin?, :except => [:show, :new, :create]
 
   def index
-    @posts = Post.order("title")
+    @posts = Post.order("created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb

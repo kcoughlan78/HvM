@@ -13,10 +13,6 @@
   overflow-x:                                   hidden;
 }
 
-.post {
-  font-family:                              'Racing Sans One', sans-serif;
-}
-
 #postscroll {
   padding:                                      2%;
   width:                                        90%;
@@ -49,6 +45,11 @@
   max-width: 400px;
   margin-left: 5%;
   padding-right: 3%;
+}
+
+.post_vid_url {
+  max-height: 200px;
+  max-width: 400px;
 }
 
 .user_img_url {

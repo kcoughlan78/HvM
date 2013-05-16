@@ -17,3 +17,9 @@ $(document).ready(
     }
 );
 
+$(document).ready(
+    function() {
+        $(".userscroll").niceScroll({cursorcolor:"#fff"});
+    }
+);
+

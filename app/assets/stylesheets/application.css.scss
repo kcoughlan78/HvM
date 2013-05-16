@@ -170,6 +170,10 @@ nav#navbox li#welcome {
   color:                                      #B20000;
 }
 
+.post {
+  font-family:                              'Racing Sans One', sans-serif;
+}
+
 .admin_view {
   position:                                   relative;
   top:                                        0%;
@@ -256,6 +260,7 @@ nav#navbox li#welcome {
 
 
 .head2 {
+  font-family:                              'Racing Sans One' sans-serif;
   font-size:                                200%;
   color:                                    white;
   text-shadow:                              2px 2px 2px #000;
@@ -307,6 +312,7 @@ section {
   padding:                                    0;
   overflow:                                   hidden;
   background-image:                           -moz-linear-gradient(bottom, #A10F0F 44%, #423030 100%);
+  background-image:                           -webkit-linear-gradient(bottom, #A10F0F 44%, #423030 100%);
 }
 
 #content {

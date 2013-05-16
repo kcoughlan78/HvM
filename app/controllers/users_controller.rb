@@ -54,6 +54,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def myposts
+    render :_layout => 'users/myposts'
+  end
+
   def destroy
     @user = User.delete(params[:id])
     redirect_to users_url

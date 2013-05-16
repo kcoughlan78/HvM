@@ -35,6 +35,10 @@ gem 'bcrypt-ruby', '~> 3.0.1'
 # To aid uploading of photos for posts
 gem 'carrierwave'
 
+# To aid uploading videos
+# gem 'carrierwave-video'
+# gem 'streamio-ffmpeg'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 

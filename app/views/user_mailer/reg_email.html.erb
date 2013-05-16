@@ -3,8 +3,12 @@
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <%= stylesheet_link_tag "users", :media => "all" %>
 </head>
 <body>
+<nav id="logo">
+  <h1><%= link_to(image_tag("logo.png", alt: "Hurlers vs. Monsters", id: "logo"), root_url, title: "Home")%></h1>
+</nav>
 <h1>Welcome to Hurlers vs Monsters, <%= @user.email %></h1>
 <p>Hi <%= @user.fname %></p>
 <p>
@@ -16,5 +20,6 @@
   To get started now, follow this link: <%= @url %>.
 </p>
 <p>Thanks for joining and hope you have a blast!</p>
+<footer>Hurlers vs Monsters copyright 2013</footer>
 </body>
 </html>

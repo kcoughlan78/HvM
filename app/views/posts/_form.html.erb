@@ -30,10 +30,13 @@
       <p><span class="post_text"><%= post_form.label :content %></span></p>
       <p><%= post_form.text_area :content, class: 'content_textbox' %></p>
     </div>
+    <br>
+    <br>
     <div>
-      <p><span class="post_text">Add <%= post_form.label :image %></span></p>
-      <%= post_form.file_field :image %>
+      <p><span class="post_text">Add <%= post_form.label :image %></span><%= post_form.file_field :image %></p>
+
     </div>
+    <br>
     <br>
     <%= render :partial => 'tags/form',
                :locals => {:form => post_form} %>
