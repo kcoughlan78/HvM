@@ -1,6 +1,6 @@
 <% content_for :head do %>
     <title>Hurlers vs Monsters: Gaming Forum</title>
-    <%= stylesheet_link_tag "gamingforum", :media => "all" %>
+    <%= stylesheet_link_tag "forum", :media => "all" %>
     <%= javascript_include_tag "home" %>
 <% end %>
 <% content_for :article do %>
@@ -51,7 +51,6 @@
             <li><a href="#loadbanner3">1</a></li>
           </ul>
         </div>
-        <header><h2>Gaming Forum</h2></header>
         <% @posts.each do |post| %>
             <article class="<%= cycle('post_odd', 'post_even') %>">
               <h4><%= link_to post.title, post %></h4>
@@ -63,6 +62,18 @@
               <p><span class="tags"><%= join_tags(post) %></span></p>
             </article>
         <% end %>
+        <div id="forumcontent_right">
+          <div id="twitfeed">
+            <h3>Latest HTML5 Game News</h3>
+            <br>
+            <ol id="twitter_update_list">
+              <li class="tweet"></li>
+            </ol>
+            <!-- below code taken from Twitter developer help have used my own twitter account to test the code and layout as the gallery haven't yet set up their twitter-->
+            <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+            <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/kcoughlan78.json?callback=twitterCallback2&amp;count=5"></script>
+          </div>
+        </div>
       </article>
     </article>
 <% end %>

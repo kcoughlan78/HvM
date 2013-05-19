@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :name, :content, :image_url, :title, :category, :tags_attributes, :user_email, :user_username, :image
+  attr_accessible :name, :content, :image_url, :title, :category, :tags_attributes, :user_email, :user_username, :image, :views
   #attr_accessor :title, :category, :content
 
   CATEGORY_TYPES = [ "Sports n' Tech", "Tech", "Gaming" ]
@@ -15,7 +15,9 @@ class Post < ActiveRecord::Base
       message: 'image must be a gif/jpg/png/svg/dwg file type.'
   }
 
+
   validates :category, inclusion: CATEGORY_TYPES
+
 
   belongs_to :user
   has_many :replies, :dependent => :destroy
@@ -27,6 +29,7 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :tags, :allow_destroy => :true,
                                 :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
+
   def self.search(search)
     if search
       find(:all, :conditions => ['title LIKE ?', "%#{search}%"])
@@ -34,5 +37,6 @@ class Post < ActiveRecord::Base
       find(:all)
     end
   end
+
 
 end

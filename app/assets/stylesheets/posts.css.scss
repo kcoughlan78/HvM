@@ -13,6 +13,11 @@
   overflow-x:                                   hidden;
 }
 
+#upper_col1 a, a:link, a:visited {
+  text-decoration:                            none;
+  color:                                      white;
+}
+
 #postscroll {
   padding:                                      2%;
   width:                                        90%;
@@ -47,11 +52,6 @@
   padding-right: 3%;
 }
 
-.post_vid_url {
-  max-height: 200px;
-  max-width: 400px;
-}
-
 .user_img_url {
   float: right;
   height: 50px;
@@ -75,9 +75,28 @@ td {
   padding: 1% 1% 1% 1%;
 }
 
+#postheader {
+  border-top:                                   white 2px solid;
+  border-bottom:                                white 2px solid;
+}
+
+#postinfo {
+  border-top:                                   white 1px solid;
+  color:                                        white;
+  font-size:                                    90%;
+  font-family:                                  "Racing Sans One", sans-serif;
+}
+
+#postinfo li {
+  text-decoration:                              none;
+  display:                                      inline-block;
+  padding-right:                                2%;
+}
+
 .post_header {
   color: white;
   font-weight: 700;
+  font-size: 200%;
 }
 
 #post_content {
@@ -107,6 +126,10 @@ td {
   width: 375px;
   height: 20px;
   max-height: 70px;
+}
+
+#abuse {
+  text-align:                                 right;
 }
 
 .response {

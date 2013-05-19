@@ -3,10 +3,12 @@ class RepliesController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
+    poster = @post.user_email
     @reply = @post.replies.build(params[:reply])
     #@reply.user_email = current_user.email
     @reply.user_username = current_user.username
     @reply.save
+    ReplyMailer.response_received(@reply, poster).deliver
     redirect_to post_path(@post)
   end
 

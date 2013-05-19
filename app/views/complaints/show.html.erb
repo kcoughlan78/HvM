@@ -1,0 +1,27 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Complaint</title>
+    <%= stylesheet_link_tag "complaints", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+      <div id="upper_col1" class="post">
+        <div class="userscroll">
+          <br>
+          <h2><span class="head2">Complaint Details</span></h2>
+          <br>
+          <p>Made by: <%= @complaint.user_id %> </p>
+          <p>Where: <%= @complaint.location %></p>
+          <br>
+          <p>Details: <%= @complaint.message %></p>
+          <br>
+          <p>Offender: <%= @complaint.offender %></p>
+          <br>
+          <p><%= link_to "View User Records", :controller => "users", :action => "index", class: 'button'  %></p>
+        </div>
+      </div>
+      <div id="upper_col2" class="post">
+        <div class="userscroll">
+        </div>
+      </div>
+    </article>
+<% end %>

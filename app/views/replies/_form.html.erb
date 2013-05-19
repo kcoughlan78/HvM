@@ -1,5 +1,5 @@
 <%= form_for([@post, @post.replies.build]) do |f| %>
-    <div class="response">
+    <div class="post_text">
     <p>by: <%= current_user.username %></p>
     </div>
     <br>
@@ -10,6 +10,6 @@
     </div>
     <br>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Reply", class: 'button' %>
     </div>
 <% end %>

@@ -1,0 +1,17 @@
+<%= form_for(@complaint) do |complaint| %>
+    <div>
+      <p><span class="post_text">complaint by: <%= current_user.username %></span></p>
+      <br>
+      <p><span class="post_text"><%= complaint.label :offender %></span></p>
+      <%= complaint.text_field :offender, placeholder: "Name of abusive user" %>
+      <br>
+      <p><span class="post_text"><%= complaint.label :message %></span></p>
+      <%= complaint.text_area :message, placeholder: "Details of complaint", class: 'content_textbox' %>
+      <br>
+      <p><span class="post_text"><%= complaint.label :location %></span></p>
+      <%= complaint.select :location, Complaint::LOCATION_TYPES, prompt: 'Select forum' %>
+      <br>
+      <br>
+      <%= complaint.submit "Send Complaint", class: 'button' %>
+    </div>
+<% end %>

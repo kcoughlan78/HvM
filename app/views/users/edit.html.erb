@@ -29,6 +29,11 @@
             <p>Bio:</p>
             <p><span id="textarea"><%= f.text_area :bio, cols: 50, rows: 7 %></span></p>
             <br>
+            <% if current_user and current_user.admin %>
+            <p><%= f.label :suspended %></p>
+            <p><%= f.select :suspended, User::SUSPENDED_TYPES, :selected => "No" %></p>
+            <% end %>
+            <br>
             <p><%= f.submit "Update User", class: 'button' %></p>
             <% end %>
       </div>

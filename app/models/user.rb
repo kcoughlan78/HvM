@@ -1,9 +1,11 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :hashed_password, :salted_password, :password, :password_confirmation, :username, :fname, :sname, :bio, :image
+  attr_accessible :email, :hashed_password, :salted_password, :password, :password_confirmation, :username, :fname, :sname, :bio, :image, :suspended
   attr_accessor :password, :user_email, :user_username
   before_save :encrypt_password
+
+  SUSPENDED_TYPES = [ "Yes", "No" ]
 
   validates :email,
             :presence => true,
@@ -28,8 +30,11 @@ class User < ActiveRecord::Base
       message: 'image must be a gif/jpg/png/svg/dwg file type.'
   }
 
+  validates :suspended, inclusion: SUSPENDED_TYPES
+
   has_many :posts, :dependent => :destroy
   has_many :replies
+  has_many :complaints
 
   mount_uploader :image, PostImageUploader
 

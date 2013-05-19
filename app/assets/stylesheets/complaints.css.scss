@@ -1,0 +1,128 @@
+// Place all the styles related to the Complaints controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url("application.css.scss");
+
+#upper_col1 {
+  height:                                       600px;
+  width:                                        550px;
+  max-height:                                   auto;
+  padding:                                      2% 3% 2% 3%;
+  margin:                                       0% 2% 2% 2%;
+  overflow-y:                                   hidden;
+  overflow-x:                                   hidden;
+}
+
+#postscroll {
+  padding:                                      2%;
+  width:                                        90%;
+  height:                                       100%;
+  max-height:                                   auto;
+  overflow-y:                                   scroll;
+  overflow-x:                                   hidden;
+}
+
+#posted_by {
+  margin: 2% 2% 2% 2%;
+  padding: 2% 2% 2% 2%;
+  border-top-left-radius: 2% 2%;
+  border-top-right-radius: 2% 2%;
+  border-bottom-left-radius: 2% 2%;
+  border-bottom-right-radius: 2% 2%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius: 2% 2%;
+  -moz-border-top-right-radius: 2% 2%;
+  -moz-border-bottom-left-radius: 2% 2%;
+  -moz-border-bottom-right-radius: 2% 2%;
+  border: white 2px;
+  border-style: solid;
+  min-height: 60px;
+}
+
+.post_img_url {
+  float: left;
+  max-height: 160px;
+  max-width: 400px;
+  margin-left: 5%;
+  padding-right: 3%;
+}
+
+.user_img_url {
+  float: right;
+  height: 50px;
+  width: 50px;
+}
+
+#upper_col2 {
+  height: 600px;
+  width: 350px;
+  margin-left: 20%;
+  padding: 2% 2% 2% 2%;
+  margin: 0% 2% 2% 10%;
+}
+table tr {
+  margin: 1% 1% 1% 1%;
+  padding: 3% 3% 3% 3%;
+}
+
+td {
+  margin: 1% 1% 1% 1%;
+  padding: 1% 1% 1% 1%;
+}
+
+.post_header {
+  color: white;
+  font-weight: 700;
+}
+
+#post_content {
+  height: auto;
+  min-height: 165px;
+}
+
+.post_text {
+  color: white;
+}
+
+.post_date {
+  color: white;
+  font-style: italic;
+}
+
+.post_warning {
+  font-size: small;
+  color: #ffffff;
+}
+
+.post_warning > a, a:link, a:visited {
+  color: white;
+}
+
+.content_textbox {
+  width: 375px;
+  height: 20px;
+  max-height: 70px;
+}
+
+.response {
+  color: #ff251e;
+  display: block;
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  padding: 2% 2% 2% 2%;
+  border-top-left-radius: 4% 4%;
+  border-top-right-radius: 4% 4%;
+  border-bottom-left-radius: 4% 4%;
+  border-bottom-right-radius: 4% 4%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius: 4% 4%;
+  -moz-border-top-right-radius: 4% 4%;
+  -moz-border-bottom-left-radius: 4% 4%;
+  -moz-border-bottom-right-radius: 4% 4%;
+}
+

@@ -1,0 +1,42 @@
+<p class="post_text" >&lt; &lt;<%= link_to " back to forum", :controller => "forum", :action => "index" %></p>
+<header id="postheader">
+<h2><span class="post_header">
+    <%= @post.title %>
+    </span></h2>
+<figcaption><p><span class="post_date"><%= @post.created_at.to_s(:short) %></span><span class="post_text">
+    # tags:
+  <%= join_tags(@post) %>
+    </span></p></figcaption>
+  <br>
+<ul id="postinfo">
+  <li><%= @post.view %> views</li>
+  <li><%= link_to "tweet", "http://twitter.com/home?status=#{@post.title} #{post_url(@post)}" %></li>
+  <li><%= link_to "Report Abuse", :controller => "complaints", :action => "new" %></li>
+</ul>
+</header>
+<br>
+<article id="post_content">
+  <p>
+    <%= image_tag(@post.image_url, class: "post_img_url") %>
+  </p>
+  <p><span class="post_text">
+    <%= @post.content %>
+    </span></p>
+</article>
+<div id="posted_by">
+
+  <p>
+        <span class="post_text">posted by:
+          <%= @post.user.username %>
+      </span>
+    <%= image_tag(@post.user.image, class: "user_img_url") %></p>
+  <br>
+  <p>
+        <span class="post_text">
+          <%= @post.user.bio %>
+      </span></p>
+</div>
+<br>
+<br>
+<br>
+<br>

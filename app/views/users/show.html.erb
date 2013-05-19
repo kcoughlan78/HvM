@@ -17,6 +17,9 @@
         <br>
         <p>Bio: <%= @user.bio %></p>
         <br>
+          <% if current_user and current_user.admin %>
+        <p>Suspended: <%= @user.suspended %></p>
+          <% end %>
         <%= button_to "edit", editmyaccount_path, class: 'button'  %>
           </div>
         </div>

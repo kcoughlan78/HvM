@@ -48,7 +48,7 @@
   <div id="content_admin">
     <figure id="content_admin_left" class="lower_box">
       <figcaption class="content_box">
-        <h4 class="homeh4"><%=link_to(image_tag("hurler.png", alt: "Try the game", id: "hurler"), game_path, title: "Game") %>
+        <h4 class="homeh4"><%=link_to(image_tag("hurler.png", alt: "Try the game", id: "hurler"), posts_path) %>
         </h4>
         <div class="blog_desc">
           <h3>Post and Forum Mgmt</h3>
@@ -60,7 +60,7 @@
     </figure>
     <figure id="content_admin_left_centre" class="lower_box">
       <figcaption class="content_box">
-        <h4 class="homeh4"><%=link_to(image_tag("Soccer-Ball-icon.png", alt: "Sports Tech", id: "Sportech"), :controller => "forum", :action => "sports", title: "Sports") %>
+        <h4 class="homeh4"><%=link_to(image_tag("Soccer-Ball-icon.png", alt: "Sports Tech", id: "Sportech"), :controller => "users", :action => "index") %>
         </h4>
         <div class="blog_desc">
           <h3>User Mgmt</h3>
@@ -71,12 +71,12 @@
     </figure>
     <figure id="content_admin_right_centre" class="lower_box">
       <figcaption class="content_box">
-        <h4 class="homeh4"><%= link_to(image_tag("gaming.png", alt: "Gaming", id: "Gaming"), :controller => "forum", :action => "gaming", title: "Games") %>
+        <h4 class="homeh4"><%= link_to(image_tag("gaming.png", alt: "Gaming", id: "Gaming"), :controller => "complaints", :action => "index") %>
         </h4>
         <div class="blog_desc">
-          <h3>Top Posts</h3>
+          <h3>Complaints</h3>
           <br>
-          <p>Add feature topics to forum headers</p>
+          <p>List of reports and/or complaints of inappropriate content</p>
         </div>
       </figcaption>
     </figure>
@@ -85,9 +85,9 @@
         <h4 class="homeh4"><%= link_to(image_tag("tech.png", alt: "Tech", id: "tech"), :controller => "forum", :action => "tech", title: "tech") %>
         </h4>
         <div class="blog_desc">
-          <h3>Communications</h3>
+          <h3>Policy Reference</h3>
           <br>
-          <p>Manage Email, social media, twitter etc</p>
+          <p>Guidelines to good practices, conduct and response to inappropriate activity.</p>
         </div>
       </figcaption>
     </figure>

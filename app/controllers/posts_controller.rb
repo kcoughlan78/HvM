@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_filter :authenticate, :except => [:show]
   before_filter :is_admin?, :except => [:show, :new, :create]
+  before_filter :is_suspended?
 
   def index
     @posts = Post.order("created_at DESC")
@@ -14,6 +15,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @post.view += 1
+    @post.save
+
 
     respond_to do |format|
       format.html # show.html.erb
@@ -49,6 +53,16 @@ class PostsController < ApplicationController
         format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+
+  def popularposts
+    @posts = Post.order("view DESC")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @posts }
     end
   end
 

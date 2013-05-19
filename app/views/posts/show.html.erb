@@ -6,39 +6,7 @@
 <article id="upper_stage">
     <div id="upper_col1">
       <div id="postscroll">
-    <h2><span class="post_header">
-    <%= @post.title %>
-    </span></h2>
-      <figcaption><p><span class="post_date"><%= @post.created_at.to_s(:short) %></span><span class="post_text">
-    # tags:
-        <%= join_tags(@post) %>
-    </span></p></figcaption>
-      <br>
-      <article id="post_content">
-      <p>
-        <%= image_tag(@post.image_url, class: "post_img_url") %>
-      </p>
-    <p><span class="post_text">
-    <%= @post.content %>
-    </span></p>
-      </article>
-      <div id="posted_by">
-
-        <p>
-        <span class="post_text">posted by:
-          <%= @post.user.username %>
-      </span>
-          <%= image_tag(@post.user.image, class: "user_img_url") %></p>
-        <br>
-      <p>
-        <span class="post_text">
-          <%= @post.user.bio %>
-      </span></p>
-      </div>
-    <br>
-    <br>
-    <br>
-    <br>
+    <%= render "postshow" %>
     <h2><span class="post_header">Replies</span></h2>
     <br>
     <%= render @post.replies %>
@@ -46,7 +14,7 @@
     </div>
     <div id="upper_col2">
     <% if logged_in? %>
-    <span class="post_header"><h2>Add a comment:</h2></span>
+    <span class="head2"><h2>Add a comment:</h2></span>
     <br>
     <%= render "replies/form" %>
     <% else %>

@@ -1,4 +1,12 @@
 Gameproject::Application.routes.draw do
+  get "complaints/index"
+
+  get "complaints/show"
+
+  get "complaints/new"
+
+  get "complaints/destroy"
+
   get "game/index"
 
   get "sessions/new"
@@ -22,6 +30,8 @@ Gameproject::Application.routes.draw do
   resources :posts do
     resources :replies
   end
+
+  resources :complaints
 
 
   # The priority is based upon order of creation:

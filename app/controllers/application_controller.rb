@@ -11,6 +11,14 @@ class ApplicationController < ActionController::Base
         insufficient_access
     end
   end
+
+  def is_suspended?
+    if current_user and (@current_user.suspended == "No")
+      true
+    else
+      suspended_user
+    end
+  end
   # Stops unregistered users accessing all the sites functions re requirement 3.3.A
   def current_user
     return unless session[:user_id]
@@ -34,6 +42,10 @@ class ApplicationController < ActionController::Base
 
   def insufficient_access
     redirect_to root_url :notice => "You do not have permission to view this page"
+  end
+
+  def suspended_user
+    redirect_to root_url :notice => "Due to a breach in our code of conduct you account has been suspended"
   end
 end
 

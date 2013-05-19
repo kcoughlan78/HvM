@@ -1,0 +1,18 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Report Abuse</title>
+    <%= stylesheet_link_tag "complaints", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+      <div id="upper_col1" class="post">
+        <div id="postscroll">
+          <h2><span class="head2">Report Abuse</span></h2>
+            <br>
+            <br>
+          <%= render 'form' %>
+        </div>
+      </div>
+      <div id="upper_col2">
+      </div>
+    </article>
+<% end %>

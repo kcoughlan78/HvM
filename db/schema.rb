@@ -11,19 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409015507) do
+ActiveRecord::Schema.define(:version => 20130519150507) do
+
+  create_table "complaints", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "location"
+    t.text     "message"
+    t.string   "offender"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "name"
     t.string   "title"
     t.text     "content"
     t.string   "image_url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.integer  "user_id"
     t.string   "user_email"
     t.string   "category"
     t.string   "image"
+    t.integer  "view",       :default => 0
   end
 
   create_table "replies", :force => true do |t|
@@ -70,6 +80,7 @@ ActiveRecord::Schema.define(:version => 20130409015507) do
     t.string   "sname"
     t.text     "bio"
     t.string   "image"
+    t.string   "suspended",       :default => "No"
   end
 
 end

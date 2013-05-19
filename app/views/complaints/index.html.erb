@@ -1,0 +1,43 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Posts</title>
+    <%= stylesheet_link_tag "posts", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+      <div class="admin_view">
+        <div id="admin_scroll">
+          <h2 class="head2">complaint Log</h2>
+          <br>
+          <table>
+            <tr>
+              <th>Offender</th>
+              <th>Message</th>
+              <th>Location</th>
+              <th>Actions</th>
+              <th></th>
+            </tr>
+
+            <% @complaints.each do |complaint| %>
+                <tr>
+                  <td><%= complaint.offender %></td>
+                  <td><%= complaint.message %></td>
+                  <td><%= complaint.location %></td>
+                  <td><%= link_to 'Show', complaint %></td>
+                  <td><%= link_to 'Delete', complaint, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                </tr>
+                <tr>
+                  <!-- <td>_</td>
+                  <td>_</td>
+                  <td>_</td>
+                  <td>_</td>
+                  <td>_</td>
+                  <td>_</td>-->
+                </tr>
+            <% end %>
+          </table>
+
+          <br />
+        </div>
+      </div>
+    </article>
+<% end %>
