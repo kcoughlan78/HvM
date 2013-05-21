@@ -1,6 +1,6 @@
 class ForumController < ApplicationController
   def index
-    @posts = Post.order("created_at DESC")
+    @posts = Post.where("created_at > ?", 7.days.ago).order("view DESC")
   end
 
   def tech

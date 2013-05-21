@@ -10,6 +10,15 @@
       <source src= "<%= asset_path('Crowd.wav') %>" type="audio/wav">
     </audio>
     <article id="upper_stage" onload="init();">
+      <section id="levels">
+          <div id="currentLevel">
+            <p><%= link_to "Level 1: Invasion", :controller => "game", :action => "index" %></p>
+          </div>
+
+          <div id="nextLevel">
+          <p><%= link_to "Level 2: Greenbug", :controller => "game", :action => "greenbug" %></p>
+          </div>
+      </section>
 
     </article>
 <% end %>

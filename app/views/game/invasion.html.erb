@@ -1,0 +1,27 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Game</title>
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "game", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+    <audio id="gamemusic">
+
+      <source src="Crowd.mp3" type="audio/mpeg" loop>
+      <source src= "<%= asset_path('Crowd.wav') %>" type="audio/wav">
+    </audio>
+    <article id="upper_stage" onload="init();">
+      <section id="levels">
+        <ul>
+          <li></li>
+        </ul>
+      </section>
+
+    </article>
+<% end %>
+<%= content_for :script do %>
+    <%= javascript_include_tag "Sprite3D" %>
+    <%= javascript_include_tag "game.js.erb" %>
+<% end %>
+
+
+

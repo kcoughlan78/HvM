@@ -236,6 +236,16 @@ nav#navbox li#welcome {
   overflow-x:                                   hidden;
 }
 
+.userscroll {
+  padding:                                      2%;
+  width:                                        90%;
+  height:                                       100%;
+  max-height:                                   auto;
+  overflow-y:                                   scroll;
+  overflow-x:                                   hidden;
+}
+
+
 #upper_col1 {
   position:                                   relative;
   top:                                        0%;
@@ -263,6 +273,15 @@ nav#navbox li#welcome {
   font-family:                              'Racing Sans One' sans-serif;
   font-size:                                200%;
   color:                                    white;
+  text-shadow:                              2px 2px 2px #000;
+  border-top:                               solid 3px #fff;
+  border-bottom:                            solid 3px #fff;
+}
+
+.head3 {
+  font-family:                              'Racing Sans One' sans-serif;
+  font-size:                                130%;
+  color:                                    #b20000;
   text-shadow:                              2px 2px 2px #000;
   border-top:                               solid 3px #fff;
   border-bottom:                            solid 3px #fff;
@@ -344,6 +363,21 @@ nav#navbox li#welcome {
   font-size:                                  70%;
   margin-bottom:                              1%;
 }
+
+#sitepromo {
+  font-family:                              'Racing Sans One', sans-serif;
+  color:                                    white;
+  padding:                                  0 3% 3% 3%;
+}
+
+#sitepromo p {
+  font-size:                                100%;
+}
+
+#sitepromo ol li {
+  list-style-type:                          upper-alpha;
+}
+
 
 #mid_bar {
   position:                                   relative;

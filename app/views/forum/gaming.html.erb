@@ -18,25 +18,25 @@
                 <div id="holdall">
                   <div class="panel" id="panel1">
                     <article class="toppost">
-                      <h2>Phablets...</h2>
+                      <h2>Next gen...</h2>
                       <br>
-                      <p>With Samsung releasing the 'Mega' at 6.3 inches are phones just getting too bit? Let us know your thoughts</p>
+                      <p>Are you excited by the PS4 and new Xbox or are you sad to see the likely end of discs and trade-ins?</p>
                     </article>
                   </div>
                   <div class="panel" id="panel2">
                     <article class="toppost">
-                      <h2>Hmm...Fibre</h2>
+                      <h2>HTML5 Games</h2>
                       <br>
-                      <p>With Eircom rolling out Fibre has UPC look some of its competitive edge?</p>
+                      <p>What are you favourite HTML5 games? How do you see the market developing.</p>
                       <br>
-                      <p>But they prefer to eat</p>
+                      <p>Developer? Whats you favourite game development tool</p>
                     </article>
                   </div>
                   <div class="panel" id="panel3">
                     <article class="toppost">
-                      <h2>It's only a button</h2>
+                      <h2>Retro</h2>
                       <br>
-                      <p>Do you long for the start button to return or are you sick of the whining!!!</p>
+                      <p>Frogger, Paperboy or do you prefer nouveau retro games from the early Playstation/Xbox days.</p>
                     </article>
                   </div>
                 </div>
@@ -51,17 +51,6 @@
             <li><a href="#loadbanner3">1</a></li>
           </ul>
         </div>
-        <% @posts.each do |post| %>
-            <article class="<%= cycle('post_odd', 'post_even') %>">
-              <h4><%= link_to post.title, post %></h4>
-              <p><span class="forum_detail"><%= post.created_at.to_s(:short) %></span></p>
-              <p><span class="forum_detail">by <%= post.user.username %></span></p>
-              <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
-              <p><%= truncate(strip_tags(post.content), length: 200) %></p>
-              <h6>Tags:</h6>
-              <p><span class="tags"><%= join_tags(post) %></span></p>
-            </article>
-        <% end %>
         <div id="forumcontent_right">
           <div id="twitfeed">
             <h3>Latest HTML5 Game News</h3>
@@ -73,6 +62,19 @@
             <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
             <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/kcoughlan78.json?callback=twitterCallback2&amp;count=5"></script>
           </div>
+        </div>
+        <div id="postlist">
+        <% @posts.each do |post| %>
+            <article class="<%= cycle('post_odd', 'post_even') %>">
+              <h4><%= link_to post.title, post %></h4>
+              <p><span class="forum_detail"><%= post.created_at.to_s(:short) %></span></p>
+              <p><span class="forum_detail">by <%= post.user.username %></span></p>
+              <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
+              <p><%= truncate(strip_tags(post.content), length: 200) %></p>
+              <h6>Tags:</h6>
+              <p><span class="tags"><%= join_tags(post) %></span></p>
+            </article>
+        <% end %>
         </div>
       </article>
     </article>

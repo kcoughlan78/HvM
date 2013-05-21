@@ -1,64 +1,78 @@
 <% content_for :head do %>
-    <title>Hurlers vs Monsters: Forum</title>
+    <title>Hurlers vs Monsters: Forums</title>
     <%= stylesheet_link_tag "forum", :media => "all" %>
     <%= javascript_include_tag "home" %>
 <% end %>
 <% content_for :article do %>
     <article id="upper_stage">
-      <section id="image_slider">
-        <div id="loadbanner1">
-          <div id="loadbanner2">
-            <div id="loadbanner3">
-              <div id="holdall">
-                <div class="panel" id="panel1">
-                  <article class="toppost">
-                    <h2>Tech Forum</h2>
-                    <br>
-                    <p>Keep up to-date with our tech forum</p>
-                  </article>
-                </div>
-                <div class="panel" id="panel2">
-                  <article class="toppost">
-                    <h2>Sport Forum</h2>
-                    <br>
-                    <p>Read, reply and start threads in our Sports forum.</p>
-                    <br>
-                    <p>Don't worry we don't ust cover GAA</p>
-                  </article>
-                  <div class="slidefromright">
+      <ul id="forumtabs">
+        <li class="forumtab_index" ><%= link_to "Tech", :controller => "forum", :action => "tech" %></li>
+        <li class="forumtab_index"><%= link_to "Gaming", :controller => "forum", :action => "gaming" %></li>
+        <li class="forumtab_index"><%= link_to "Sport n' Tech", :controller => "forum", :action => "sports" %></li>
+      </ul>
+      <article id="forumcontent">
+        <section id="image_slider">
+          <div id="loadbanner1">
+            <div id="loadbanner2">
+              <div id="loadbanner3">
+                <div id="holdall">
+                  <div class="panel" id="panelf1">
                     <article class="toppost">
-                      <h2>Test</h2>
+                      <h2>Tech</h2>
                       <br>
-                      <p>Though pandas love to sleep and relax unlike most bears they do not hibernate.</p>
+                      <p>Get the latest opinion on tech news as it happens</p>
+                    </article>
+                  </div>
+                  <div class="panel" id="panelf2">
+                    <article class="toppost">
+                      <h2>Love Sport and Tech</h2>
+                      <br>
+                      <p>From fitbits to F1. Discuss and read up on how tech is changing sport and leisure</p>
+                    </article>
+                  </div>
+                  <div class="panel" id="panelf3">
+                    <article class="toppost">
+                      <h2>Games</h2>
+                      <br>
+                      <p>We love HTML5 games but we welcome your views on all games from retro classics on Commodore 64's to the upcoming next gen.</p>
                     </article>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </section>
+        <div id="nav">
+          <ul>
+            <li><a href="#loadbanner1">1</a></li>
+            <li><a href="#loadbanner2">1</a></li>
+            <li><a href="#loadbanner3">1</a></li>
+          </ul>
         </div>
-      </section>
-      <div id="nav">
-        <ul>
-          <li><a href="#loadbanner1">1</a></li>
-          <li><a href="#loadbanner2">1</a></li>
-        </ul>
-      </div>
+        <h3 class="head3">Most popular posts in last few days</h3>
+        <% @posts.each do |post| %>
+            <article class="<%= cycle('post_odd', 'post_even') %>">
+              <h4><%= link_to post.title, post %></h4>
+              <p><span class="forum_detail"><%= post.created_at.to_s(:short) %>  Views: <%= post.view %></span></p>
+              <p><span class="forum_detail">by <%= post.user.username %></span></p>
+              <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
+              <p><%= truncate(strip_tags(post.content), length: 200) %></p>
+              <h6>Tags:</h6>
+              <p><span class="tags"><%= join_tags(post) %></span></p>
+            </article>
+        <% end %>
+        <div id="forumcontent_right">
+          <div id="twitfeed">
+            <h3>Latest HTML5 Game News</h3>
+            <br>
+            <ol id="twitter_update_list">
+              <li class="tweet"></li>
+            </ol>
+            <!-- below code taken from Twitter developer help have used my own twitter account to test the code and layout as the gallery haven't yet set up their twitter-->
+            <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+            <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/kcoughlan78.json?callback=twitterCallback2&amp;count=5"></script>
+          </div>
+        </div>
+      </article>
     </article>
-<% end %>
-<% content_for :section do %>
-<section>
-<header><h2>Forum</h2></header>
-<% @posts.each do |post| %>
-    <article class="<%= cycle('post_odd', 'post_even') %>">
-      <h4><%= link_to post.title, post %></h4>
-      <p><span class="forum_detail"><%= post.created_at.to_s(:short) %></span></p>
-      <p><span class="forum_detail">by <%= post.user.username %></span></p>
-      <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
-      <p><%= truncate(strip_tags(post.content), length: 200) %></p>
-      <h6>Tags:</h6>
-      <p><span class="tags"><%= join_tags(post) %></span></p>
-    </article>
-<% end %>
-</section>
 <% end %>

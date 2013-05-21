@@ -1,18 +1,23 @@
+//******Start of background code******
 (function(){
-
+    // display 3D content
+    // Create the stage
     var stage = Sprite3D.stage();
     var container = Sprite3D.create("#container");
     stage.appendChild( container );
+    //defines divs to be used by loadhandler
     var monster1 =  Sprite3D.create("#monster1").position(-60,10,90).rotation(0,0,0).update();
     var monster2 = Sprite3D.create("#monster2").position(30,0,70).rotation(0,0,0).update();
     var monster3 = Sprite3D.create("#monster3").position(80,20,80).rotation(0,0,0).update();
     var monster4 = Sprite3D.create("#monster4").position(110,40,150).rotation(0,0,0).update();
+    //defines the stadium backdrop
     var pitch = Sprite3D.create("#pitch").position(-260,-110,20).rotation(75,0,0).update();
     var backdrop = Sprite3D.create("#backdrop").position(-55,-90,0).rotation(20,0,0).update();
     var sidedrop_right = Sprite3D.create("#sidedrop_right").position(120,-85,0).rotation(20,10,0).update();
     var sidedrop_left = Sprite3D.create("#sidedrop_left").position(-241,-85,0).rotation(20,-10,0).update();
     var roof = Sprite3D.create("#roof").position(-235,-120,50).rotation(50,0,0).update();
     var scoreboard = Sprite3D.create("#scoreboard").position(-280,85,115).rotation(0,0,0).update();
+    //adds above to the container for display
     container.appendChild(pitch);
     container.appendChild(backdrop);
     container.appendChild(sidedrop_right);
@@ -32,10 +37,14 @@
 
 }());
 
-var monsters =
+//******End of background code*******
+
+//******Define this levels monster object and its behaviour******
+
+var greenbug =
 {
     //image source, position and pixel details
-    IMAGE: "spritesheet1.png", SPRITE_SIZE: 32, COLUMN_NO: 3,
+    IMAGE: "spritesheet1.png", SPRITE_WIDTH: 32, SPRITE_HEIGHT: 32, COLUMN_NO: 3,
     ORIGIN_X: 0, ORIGIN_Y: 0,
     //frame setting and details
     totalFrameNo: 4, currentFrameNo: 0,
@@ -48,13 +57,15 @@ var monsters =
 
     findLandingTime: function()
     {
-        this.landingTime = Math.floor(Math.random() * 90);
+        this.landingTime = Math.floor(Math.random() * 70);
     },
 
     runAnimation: function()
     {
-        this.ORIGIN_X = Math.floor(this.currentFrameNo % this.COLUMN_NO) * this.SPRITE_SIZE;
-        this.ORIGIN_Y = Math.floor(this.currentFrameNo / this.COLUMN_NO) * this.SPRITE_SIZE;
+        //divides the spritesheet image up to select the appropriate frame per state
+        this.ORIGIN_X = Math.floor(this.currentFrameNo % this.COLUMN_NO) * this.SPRITE_WIDTH;
+        this.ORIGIN_Y = Math.floor(this.currentFrameNo / this.COLUMN_NO) * this.SPRITE_HEIGHT;
+        //below if statements used to discover the monsters current state
         if(this.state !== this.HIT)
         {
             if(this.landingTime === undefined || this.landingTime > 0)
@@ -66,20 +77,23 @@ var monsters =
                 this.state = this.LANDED;
             }
         }
-
+        //the below changes the animation as per current state
         switch(this.state)
         {
+            //defines notlanded state
             case this.NOTLANDED:
                 this.currentFrameNo = 0;
                 this.landingTime--;
                 break;
-
+            //controls animation for landed state
             case this.LANDED:
+                //if last frame is reached the playforward variable is set 
+                //to false so the animation can start again
                 if(this.currentFrameNo === this.totalFrameNo)
                 {
                     this.playForward = false;
                 }
-
+                //if the first frame is playforward is true and the animation can start again
                 if(this.playForward === false && this.currentFrameNo === 0)
                 {
                     this.playForward = true;
@@ -87,7 +101,8 @@ var monsters =
                     this.state = this.NOTLANDED;
                     break;
                 }
-
+                //instruction to change up a frame if playforward is true
+                //change down when false
                 if(this.playForward)
                 {
                     this.currentFrameNo++;
@@ -97,13 +112,13 @@ var monsters =
                     this.currentFrameNo--;
                 }
                 break;
-
+            //defines hit
             case this.HIT:
-
+                //assigns frame to hit state
                 this.currentFrameNo = 5;
-
+                //update the reset counter by one
                 this.resetCounter++;
-
+                //reset the animation when restcounter is the same value as resetcount
                 if(this.resetCount === this.resetCounter)
                 {
                     this.state = this.NOTLANDED;
@@ -117,54 +132,72 @@ var monsters =
     }
 };
 
+//******End of Greenbug object code******
+
+
+//******Game code******
+//defines variables that will control the scoreboard
 var timer = document.querySelector("#timer");
 var scoreBoard = document.querySelector("#score");
 var message = document.querySelector("#gamerMsg");
-
+//sets initial clock value
 var countdownClock = 60;
+//associates tick with the countdown clock
 var tick = countdownClock;
-var display_tick = (function ()	{
+//displays clock using tier variable defined above
+var display_tick = (function () {
     timer.innerHTML = "<p>Time left: " + tick + "</p>";
 });
 var remove_tick = (function() {
     timer.innerHTML = "<p>Time left: 0</p>";
-    message.innerHTML = "<p>Game Over</p>";
 })
-
+//sets the interval the for countdown
 var countdownTimer = setInterval( function() {
     display_tick();
     tick--;
-    if(tick < 0) {
-        gameOver();
+    if(tick < -1) {
         remove_tick();
+        endGame();
     }
 }, 1500);
-
+//defines stop clock
 var stop = (function () {
     clearInterval(countdownTimer.interval);
 });
-
-var monsterArmy = [];
-var monsterCanvases = [];
-var monsterAnimationAreas = [];
+//defines arrays needed to load canvas and audio
+var greenbugSwarm = [];
+var greenbugCanvases = [];
+var greenbugAnimationAreas = [];
 var musicLib = [];
 
 var image = new Image();
+//adds the load event listener so application will load images when page is refreshed or loaded
 image.addEventListener("load", loadHandler, false);
+//image source defined
 image.src = "<%= asset_path('spritesheet1.png') %>";
+//set universal sound level
+var gameVolume = 0.6;
 var crowd = document.querySelector("#gamemusic");
 crowd.addEventListener("canplaythrough", loadHandler, false);
 crowd.load();
+crowd.volume = gameVolume;
 musicLib.push(crowd);
 var landingPoints = 4;
 var musicLoaded = 0;
 
 
-var SPRITE_SIZE = monsters.SPRITE_SIZE;
-
+//sets initial score, hit count, and levels target
 var score = 0;
+var monstersHit = 0;
+var levelTarget = 8;
+//game meeages to 3d stage
+var container = document.querySelector("#container");
+var winner = Sprite3D.create("#winner").position(-115,-20,180).rotation(0,0,0).update();
+var loser = Sprite3D.create("#loser").position(-130,-20,180).rotation(0,0,0).update();
 
 var interval;
+
+var nextLevel = document.getElementById("nextLevel");
 
 function loadHandler()
 {
@@ -174,38 +207,41 @@ function loadHandler()
         this.play();
     }, false);
     crowd.play();
-    crowd.volume = 1;
+
 
     image.removeEventListener("load", loadHandler, false);
-    loadMonsters("monster1");
-    loadMonsters("monster2");
-    loadMonsters("monster3");
-    loadMonsters("monster4");
+    loadgreenbug("monster1");
+    loadgreenbug("monster2");
+    loadgreenbug("monster3");
+    loadgreenbug("monster4");
 
-
-
-
-
+    //calls the run animation function
     runAnimation();
 
-    message.innerHTML = "<p>Get those monsters!!</p>";
+    message.innerHTML = "<p>Destroy " + levelTarget + " bugs!!</p>";
 }
 
-function loadMonsters(id) {
+function loadgreenbug(id) {
 
-    var newMonster = Object.create(monsters);
-    newMonster.findLandingTime();
-    monsterArmy.push(newMonster);
+    //creates a new greenbug based on the definition above
+    var newBug = Object.create(greenbug);
+    newBug.findLandingTime();
+    greenbugSwarm.push(newBug);
     var canvasInsert = document.createElement('canvas');
     canvasInsert.setAttribute("class", "bug");
+    //sets height and width attributes 
     canvasInsert.height = 32;
     canvasInsert.width = 32;
     canvasInsert.addEventListener("mousedown", mousedownHandler, false);
-    monsterCanvases.push(canvasInsert);
+    greenbugCanvases.push(canvasInsert);
+    //defines animation area and context as 2D
     var animationArea = canvasInsert.getContext("2d");
-    monsterAnimationAreas.push(animationArea);
-    insertMonster = document.getElementById(id);
-    insertMonster.appendChild(canvasInsert);
+    //adds this instance of an animationArea to the pandaAnimationAreas array
+    greenbugAnimationAreas.push(animationArea);
+    //defines insert panda and looks for assigned element by id
+    insertGreenbug = document.getElementById(id);
+    //appends the canvas created above to the id assigned in the loadhandler above
+    insertGreenbug.appendChild(canvasInsert);
 }
 
 
@@ -213,18 +249,19 @@ function loadMonsters(id) {
 
 function runAnimation()
 {
-    if(tick > 0)
+    //checks that clock is running and more than zero
+    if(tick > -1)
     {
         setTimeout(runAnimation, 90);
     }
     else
     {
-        gameOver();
+        endGame();
     }
-
-    for(var i = 0; i <monsterArmy.length; i++)
+    //when there are greenbug objects in array run animation
+    for(var i = 0; i <greenbugSwarm.length; i++)
     {
-        monsterArmy[i].runAnimation();
+        greenbugSwarm[i].runAnimation();
     }
     render();
 }
@@ -233,52 +270,71 @@ function mousedownHandler(event)
 {
     var confirmTarget = event.target;
 
-    for(var i = 0; i < monsterCanvases.length; i++)
+    for(var i = 0; i < greenbugCanvases.length; i++)
     {
-        if(monsterCanvases[i] ===confirmTarget)
+        if(greenbugCanvases[i] ===confirmTarget)
         {
-            var monsters = monsterArmy[i]
-            if(monsters.state === monsters.LANDED)
+            var greenbug = greenbugSwarm[i]
+            if(greenbug.state === greenbug.LANDED)
             {
-                monsters.state = monsters.HIT;
+                greenbug.state = greenbug.HIT;
                 message.innerHTML = "<p>BOOM! Hit!</p>";
-                score++;
+                //add 100 to score
+                score+= 100;
+                //tracks bugs hit to compare to levelTarget
+                monstersHit++;
+
             }
             else
             {
                 message.innerHTML = "<p>MISSED! You Fool!</p>";
+                score-= 30;
             }
         }
     }
 }
 
-function gameOver ()
+function endGame ()
 {
     stop();
-    if(tick < 0) {
-        gamemusic.volume = 0;
+    //if clock is less than 0 set gamemusic volume to 0
+    if(tick < -1) {
+        crowd.volume = 0;
     }
-    for(var i = 0; i < monsterCanvases.length; i++)
+    for(var i = 0; i < greenbugCanvases.length; i++)
     {
-        var canvasInsert = monsterCanvases[i];
+        var canvasInsert = greenbugCanvases[i];
         canvasInsert.removeEventListener("mousedown", mousedownHandler, false);
+    }
+
+    if(monstersHit > levelTarget) {
+        var bonus = (monstersHit - levelTarget) * 100;
+        score+= bonus;
+        nextLevel.style.visibility="visible";
+        message.innerHTML = "<p>Level Complete</p>";
+        container.appendChild(winner);
+    }
+
+    else {
+        message.innerHTML = "<p>Game Over! Try again</p>";
+        container.appendChild(loser);
     }
 }
 
 function render()
 {
     scoreBoard.innerHTML = "<p>Score: " + score + "</p>";
-    for(var i = 0; i < monsterArmy.length; i++)
+    for(var i = 0; i < greenbugSwarm.length; i++)
     {
-        var monsters = monsterArmy[i];
-        var animationArea = monsterAnimationAreas[i];
-        animationArea.clearRect(0, 0, 32, 32);
+        var greenbug = greenbugSwarm[i];
+        var animationArea = greenbugAnimationAreas[i];
+        animationArea.clearRect(0, 0, greenbug.SPRITE_WIDTH, greenbug.SPRITE_HEIGHT);
 
         animationArea.drawImage
                 (
                         image,
-                        monsters.ORIGIN_X, monsters.ORIGIN_Y, monsters.SPRITE_SIZE, monsters.SPRITE_SIZE,
-                        0, 0, monsters.SPRITE_SIZE, monsters.SPRITE_SIZE
+                        greenbug.ORIGIN_X, greenbug.ORIGIN_Y, greenbug.SPRITE_WIDTH, greenbug.SPRITE_HEIGHT,
+                        0, 0, greenbug.SPRITE_WIDTH, greenbug.SPRITE_HEIGHT
                 );
     }
 }
@@ -290,4 +346,4 @@ function errorHandler()
         alert("We're sorry Monster vs Hurlers is currently closed for maintenance please callback");
     }
 }
-		
+        

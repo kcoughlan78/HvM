@@ -49,6 +49,24 @@
   padding-top:                                2px;
 }
 
+.forumtab_index {
+  color:                                      red;
+  cursor:                                     pointer;
+  display:                                    inline-block;
+  height:                                     53px;
+  background-color:                           white;
+  border:                                     1px solid #b20000;
+  font-size:                                  24px;
+  line-height:                                24px;
+  margin-left:                                2px;
+  margin-right:                               2px;
+  padding-top:                                8px;
+  text-align:                                 center;
+  vertical-align:                             top;
+  width:                                      32%;
+  min-width:                                  298px;
+}
+
 #selected {
   border:                                     1px solid #b20000;
   border-bottom:                              1px solid white;
@@ -94,9 +112,9 @@
   top:                                        0%;
   right:                                      0%;
   bottom:                                     0%;
-  left:                                       69%;
-  margin-top:                                 -20%;
-  width:                                      29%;
+  left:                                       0%;
+  margin-top:                                 0%;
+  width:                                      28%;
   height:                                     auto;
   min-height:                                 120px;
   padding:                                    1%;
@@ -147,22 +165,40 @@
   overflow:				            hidden;
 }
 
-#panel1 {
+#panelf1 {
   top:					            0px;
   left:					            0px;
   background:				        transparent url(worldtech.png) no-repeat top left;
 }
 
-#panel2 {
+#panelf2 {
   top:					            0px;
   left:					            1150px;
   background:				        transparent url(gaa2013.jpg) no-repeat top left;
 }
 
+#panelf3 {
+  top:					            400px;
+  left:					            1150px;
+  background:				        transparent url(nextgen.png) no-repeat top left;
+}
+
+#panel1 {
+  top:					            0px;
+  left:					            0px;
+  background:				        transparent url(nextgen.png) no-repeat top left;
+}
+
+#panel2 {
+  top:					            0px;
+  left:					            1150px;
+  background:				        transparent url(html5game.png) no-repeat top left;
+}
+
 #panel3 {
   top:					            400px;
   left:					            1150px;
-  background:				        transparent url(windows8.png) no-repeat top left;
+  background:				        transparent url(retro.png) no-repeat top left;
 }
 
 #techpanel1 {
@@ -245,11 +281,14 @@
   border:					        1px solid #000;
 }
 
+#postlist {
+  margin-top:                       -18%;
+}
 
 .post_odd {
   padding:                          2% 2% 2% 2%;
-  margin:                           1% 0% 1% 0%;
-  width:                            65%;
+  margin:                           1% 0% 1% 29%;
+  width:                            63%;
   min-height:                       130px;
   max-height:                       180px;
   background-color:                 #b20000;
@@ -274,8 +313,8 @@
 
 .post_even {
   padding:                          2% 2% 2% 2%;
-  margin:                           1% 0% 1% 0%;
-  width:                            65%;
+  margin:                           1% 0% 1% 29%;
+  width:                            63%;
   background-color:                 #a7e9b8;
   min-height:                       130px;
   max-height:                       180px;
@@ -335,16 +374,4 @@
   -webkit-border-top-right-radius:  5%;
   -webkit-border-bottom-left-radius: 5%;
   -webkit-border-bottom-right-radius: 5%;
-}
-
-
-.poposts_img_url {
-  float:                            left;
-  max-height:                       80px;
-  max-width:                        200px;
-  padding:                          1% 1% 1% 1%;
-}
-
-.poposts_detail {
-  font-size:                        x-small;
 }

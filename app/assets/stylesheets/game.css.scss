@@ -99,6 +99,20 @@
   z-index: 				    5;
 }
 
+#winner {
+  width:					307px;
+  height:					62px;
+  background-image: 		url(win.png);
+  z-index:				    10;
+}
+
+#loser {
+  width:					307px;
+  height:					62px;
+  background: 			    url(lose.png);
+  z-index: 				    10;
+}
+
 #score {
   width: 					80px;
   height: 			    	auto;
@@ -187,6 +201,47 @@
   height:					120px;
   background:				transparent url(hurler.jpg)no-repeat top left;
   z-index: 				    10;
+}
+
+#levels {
+  position:                 absolute;
+  top:                      20%;
+  right:                    75%;
+  bottom:                   10%;
+  left:                     0%;
+  margin:                   1%;
+  padding:                  2%;
+  width:                    18%;
+  min-width:                90px;
+  height:                   auto;
+  min-height:               50px;
+  font-family:              "Racing Sans One", sans-serif;
+  background:               #b20000;
+  color:                    white;
+  border-top-left-radius:                     5% 20%;
+  border-top-right-radius:                    5% 20%;
+  border-bottom-left-radius:                  5% 20%;
+  border-bottom-right-radius:                 5% 20%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius:                5% 20%;
+  -moz-border-top-right-radius:               5% 20%;
+  -moz-border-bottom-left-radius:             5% 20%;
+  -moz-border-bottom-right-radius:            5% 20%;
+  box-shadow:                                 2px 2px 2px 0px #000;
+}
+
+#currentLevel {
+  color:                    white;
+  font-size:                110%;
+  cursor:                   pointer;
+}
+
+#levels a, a:visited, a:hover {
+  color:                    white;
+}
+
+#nextLevel {
+  visibility:                  hidden;
 }
 
 

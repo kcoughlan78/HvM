@@ -9,6 +9,12 @@ Gameproject::Application.routes.draw do
 
   get "game/index"
 
+  get "game/greenbug"
+
+  get "game/slimeball"
+
+  get "game/invasion"
+
   get "sessions/new"
 
   resources :users

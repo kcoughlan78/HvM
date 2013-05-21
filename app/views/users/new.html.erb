@@ -5,7 +5,8 @@
 <% content_for :article do %>
 <article id="upper_stage">
   <div id="upper_col1">
-    <header><h2>Sign Up</h2></header>
+    <article class="userscroll">
+    <h2><span class="head2">Sign up</span></h2>
     <br>
 
 <%= form_for @user do |f| %>
@@ -44,11 +45,26 @@
     </p>
         <br>
         <br>
-    <p class="button"><%= f.submit %></p>
+    <p><%= f.submit "Create Account", class: 'button' %></p>
+          </article>
       </div>
       <div id="upper_col2">
-        <h4>--Placeholder Image Below--</h4>
-        <%= image_tag("3rd party signin.jpg") %>
+        <article id="sitepromo">
+          <h2><span class="head2">Why join!</span></h2>
+          <br>
+          <p>Below are just some of the reasons why you would want to join:</p>
+          <ol>
+            <li>Try my own HTML5 game and watch it develop over months</li>
+            <li>View articles I post about the game progress</li>
+            <li>Get guidance on developing your own game from myself and others</li>
+            <li>Discuss news and reviews in the world of tech.</li>
+            <li>Wannabe journo? My goal is for posts to be of a high standard, hone your skills here. </li>
+            <li>Love sport and tech, well we have the forum for you.</li>
+            <li>I.T. professional or developer? Then share the wealth...of knowledge.</li>
+          </ol>
+          <br>
+          <p>Put simply share, learn, develop and have a blast!</p>
+        </article>
       </div>
 </article>
 <% end %>
