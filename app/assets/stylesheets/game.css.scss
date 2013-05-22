@@ -4,8 +4,9 @@
 @import url("application.css.scss");
 
 #upper_stage {
+  margin-top: 5%;
   background-color: white;
-  height: 300px;
+  height: 400px;
 }
 
 #upper_stage:hover {
@@ -22,6 +23,67 @@
 
 #pitch:hover {
   cursor:                   url(hurler1.gif),auto;
+}
+
+#hill {
+  width:                    550px;
+  height:                   250px;
+  background:               transparent url(hill.png)no-repeat top left;
+}
+
+#hill1 {
+  width:                    600px;
+  height:                   250px;
+  background:               transparent url(hill.png)no-repeat top left;
+}
+
+#smallstadium {
+  width:                    550px;
+  height:                   250px;
+  background:               transparent url(smallstadium.png)no-repeat top left;
+}
+
+#ufo {
+  width:                    125px;
+  height:                   95px;
+  background:               transparent url(ufo.png)no-repeat top left;
+}
+
+#ufo1 {
+  width:                    140px;
+  height:                   107px;
+  background:               transparent url(ufo1.png)no-repeat top left;
+}
+
+
+#tractor {
+  width:                    60px;
+  height:                   43px;
+  background:               transparent url(tractor.png)no-repeat top left;
+}
+
+#pig {
+  width:                    30px;
+  height:                   30px;
+  background:               transparent url(pig.png)no-repeat top left;
+}
+
+#pig1 {
+  width:                    30px;
+  height:                   30px;
+  background:               transparent url(pig1.png)no-repeat top left;
+}
+
+#farmhouse {
+  width:                    37px;
+  height:                   50px;
+  background:               transparent url(farmhouse.png)no-repeat top left;
+}
+
+#barn {
+  width:                    120px;
+  height:                   62px;
+  background:               transparent url(barn.png)no-repeat top left;
 }
 
 #backdrop {
@@ -60,11 +122,12 @@
 }
 
 #roof {
-  width:					540px;
-  height: 				    80px;
+  width:					500px;
+  height: 				    66px;
   background: 			    transparent url(Title.jpg) no-repeat top left;
   background-repeat: 		no-repeat;
   z-index: 				    10;
+  border:                   1px #000;
 }
 
 #roof {
@@ -99,6 +162,30 @@
   z-index: 				    5;
 }
 
+#slimeball1 {
+  width:					48px;
+  height:					48px;
+  z-index: 				    10;
+}
+
+#slimeball2 {
+  width:					48px;
+  height:					48px;
+  z-index: 				    5;
+}
+
+#slimeball3 {
+  width:					48px;
+  height:					48px;
+  z-index: 				    5;
+}
+
+#slimeball4 {
+  width:					48px;
+  height:					48px;
+  z-index: 				    5;
+}
+
 #winner {
   width:					307px;
   height:					62px;
@@ -114,13 +201,13 @@
 }
 
 #score {
-  width: 					80px;
+  width: 					100px;
   height: 			    	auto;
   top:					    1%;
   right: 					5%;
   bottom: 				    5%;
-  left:					    78%;
-  margin: 				    1% 1% 1% 1%;
+  left:					    74%;
+  margin: 				    1% 1% 1% 0%;
   padding: 				    5% 5% 5% 5%;
   color: 					black;
   z-index: 				    20;
@@ -164,7 +251,7 @@
 }
 
 #gamerMsg {
-  width: 					175px;
+  width: 					190px;
   height: 				    auto;
   position: 				absolute;
   top: 				    	1%;
@@ -230,7 +317,7 @@
   box-shadow:                                 2px 2px 2px 0px #000;
 }
 
-#currentLevel {
+.currentLevel {
   color:                    white;
   font-size:                110%;
   cursor:                   pointer;

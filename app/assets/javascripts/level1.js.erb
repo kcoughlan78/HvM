@@ -1,0 +1,352 @@
+//******Start of background code******
+(function(){
+    // display 3D content
+    // Create the stage
+    var stage = Sprite3D.stage();
+    var container = Sprite3D.create("#container");
+    stage.appendChild( container );
+    //defines divs to be used by loadhandler
+    var slimeball1 = Sprite3D.create("#slimeball1").position(-150,10,100).rotation(0,0,0).update();
+    var slimeball2 = Sprite3D.create("#slimeball2").position(-10,0,250).rotation(0,0,0).update();
+    var slimeball3 = Sprite3D.create("#slimeball3").position(120,-10,130).rotation(0,0,0).update();
+    var slimeball4 = Sprite3D.create("#slimeball4").position(150,20,180).rotation(0,0,0).update();
+    var slimeball5 = Sprite3D.create("#slimeball5").position(-145,10,320).rotation(0,0,0).update();
+    //defines the environment
+    var pitch = Sprite3D.create("#pitch").position(-260,-70,20).rotation(75,0,0).update();
+    var hill = Sprite3D.create("#hill").position(-238,-160,-50).rotation(0,0,0).update();
+    var scoreboard = Sprite3D.create("#scoreboard").position(-279,125,115).rotation(0,0,0).update();
+    //adds above to the container for display
+    container.appendChild(pitch);
+    container.appendChild(hill);
+    container.appendChild(slimeball1);
+    container.appendChild(slimeball2);
+    container.appendChild(slimeball3);
+    container.appendChild(slimeball4);
+    container.appendChild(slimeball5);
+    container.appendChild(scoreboard);
+    var timer = Sprite3D.create("#timer").position(0,0,0).rotation(0,0,0).update();
+    var score = Sprite3D.create("#score").position(50,0,0).rotation(0,0,0).update();
+    var gamerMsg = Sprite3D.create("#gamerMsg").position(100,0,0).rotation(0,0,0).update();
+    scoreboard.appendChild(timer);
+    scoreboard.appendChild(score);
+    scoreboard.appendChild(gamerMsg);
+
+}());
+
+//******End of background code*******
+
+//******Define this levels monster object and its behaviour******
+
+var slimeball =
+{
+    //image source, position and pixel details
+    IMAGE: "spritesheet2.png", SPRITE_WIDTH: 48, SPRITE_HEIGHT: 48, COLUMN_NO: 3,
+    ORIGIN_X: 0, ORIGIN_Y: 0,
+    //frame setting and details
+    totalFrameNo: 5, currentFrameNo: 0,
+    playForward: true,
+    playBack: false,
+    //game state defined and set
+    NOTLANDED: 0, LANDED: 1, HIT: 2, state: this.NOTLANDED,
+    resetCount: 12, resetCounter: 0,
+    landingTime: undefined,
+
+    findLandingTime: function()
+    {
+        this.landingTime = Math.floor(Math.random() * 100);
+    },
+
+    runAnimation: function()
+    {
+        //divides the spritesheet image up to select the appropriate frame per state
+        this.ORIGIN_X = Math.floor(this.currentFrameNo % this.COLUMN_NO) * this.SPRITE_WIDTH;
+        this.ORIGIN_Y = Math.floor(this.currentFrameNo / this.COLUMN_NO) * this.SPRITE_HEIGHT;
+        //below if statements used to discover the monsters current state
+        if(this.state !== this.HIT)
+        {
+            if(this.landingTime === undefined || this.landingTime > 0)
+            {
+                this.state = this.NOTLANDED;
+            }
+            else
+            {
+                this.state = this.LANDED;
+            }
+        }
+        //the below changes the animation as per current state
+        switch(this.state)
+        {
+            //defines notlanded state
+            case this.NOTLANDED:
+                this.currentFrameNo = 0;
+                this.landingTime--;
+                break;
+            //controls animation for landed state
+            case this.LANDED:
+                //if last frame is reached the playforward variable is set
+                //to false so the animation can start again
+                if(this.currentFrameNo === this.totalFrameNo)
+                {
+                    this.playForward = false;
+                }
+                //if the first frame is playforward is true and the animation can start again
+                if(this.playForward === false && this.currentFrameNo === 0)
+                {
+                    this.playForward = true;
+                    this.findLandingTime();
+                    this.state = this.NOTLANDED;
+                    break;
+                }
+                //instruction to change up a frame if playforward is true
+                //change down when false
+                if(this.playForward)
+                {
+                    this.currentFrameNo++;
+                }
+                else
+                {
+                    this.currentFrameNo--;
+                }
+                break;
+            //defines hit
+            case this.HIT:
+                //assigns frame to hit state
+                this.currentFrameNo = 6;
+                //update the reset counter by one
+                this.resetCounter++;
+                //reset the animation when restcounter is the same value as resetcount
+                if(this.resetCount === this.resetCounter)
+                {
+                    this.state = this.NOTLANDED;
+                    this.playForward = true;
+                    this.currentFrameNo = 0;
+                    this.resetCounter = 0;
+                    this.findLandingTime();
+                }
+                break;
+        }
+    }
+};
+
+//******End of slimeball object code******
+
+
+//******Game code******
+//defines variables that will control the scoreboard
+var timer = document.querySelector("#timer");
+var scoreBoard = document.querySelector("#score");
+var message = document.querySelector("#gamerMsg");
+//sets initial clock value
+var countdownClock = 60;
+//associates tick with the countdown clock
+var tick = countdownClock;
+//displays clock using tier variable defined above
+var display_tick = (function () {
+    timer.innerHTML = "<p>Time left: " + tick + "</p>";
+});
+var remove_tick = (function() {
+    timer.innerHTML = "<p>Time left: 0</p>";
+})
+//sets the interval the for countdown
+var countdownTimer = setInterval( function() {
+    display_tick();
+    tick--;
+    if(tick < -1) {
+        remove_tick();
+        endGame();
+    }
+}, 1500);
+//defines stop clock
+var stop = (function () {
+    clearInterval(countdownTimer.interval);
+});
+//defines arrays needed to load canvas and audio
+var slimeballSwarm = [];
+var slimeballCanvases = [];
+var slimeballAnimationAreas = [];
+var musicLib = [];
+
+var image = new Image();
+//adds the load event listener so application will load images when page is refreshed or loaded
+image.addEventListener("load", loadHandler, false);
+//image source defined
+image.src = "<%= asset_path('spritesheet2.png') %>";
+//set universal sound level
+var gameVolume = 0.6;
+var nature = document.querySelector("#gamemusic");
+nature.addEventListener("canplaythrough", loadHandler, false);
+nature.load();
+nature.volume = gameVolume;
+musicLib.push(nature);
+var slap = document.querySelector("#slap");
+slap.load();
+musicLib.push(slap);
+var landingPoints = 5;
+var musicLoaded = 0;
+
+
+//sets initial score, hit count, and levels target
+var score = 0;
+var monstersHit = 0;
+var levelTarget = 8;
+//game meeages to 3d stage
+var container = document.querySelector("#container");
+var winner = Sprite3D.create("#winner").position(-115,-20,180).rotation(0,0,0).update();
+var loser = Sprite3D.create("#loser").position(-130,-20,180).rotation(0,0,0).update();
+
+var interval;
+
+var nextLevel = document.getElementById("nextLevel");
+
+function loadHandler()
+{
+    nature.removeEventListener("canplaythrough", loadHandler, false);
+    nature.addEventListener("ended", function() {
+        this.tick = 0;
+        this.play();
+    }, false);
+    nature.play();
+
+
+    image.removeEventListener("load", loadHandler, false);
+    loadslimeball("slimeball1");
+    loadslimeball("slimeball2");
+    loadslimeball("slimeball3");
+    loadslimeball("slimeball4");
+    loadslimeball("slimeball5");
+
+    //calls the run animation function
+    runAnimation();
+
+    message.innerHTML = "<p>Destroy " + levelTarget + " slimeballs!!</p>";
+}
+
+function loadslimeball(id) {
+
+    //creates a new slimeball based on the definition above
+    var newSlime = Object.create(slimeball);
+    newSlime.findLandingTime();
+    slimeballSwarm.push(newSlime);
+    var canvasInsert = document.createElement('canvas');
+    canvasInsert.setAttribute("class", "bug");
+    //sets height and width attributes
+    canvasInsert.height = 48;
+    canvasInsert.width = 48;
+    canvasInsert.addEventListener("mousedown", mousedownHandler, false);
+    slimeballCanvases.push(canvasInsert);
+    //defines animation area and context as 2D
+    var animationArea = canvasInsert.getContext("2d");
+    //adds this instance of an animationArea to the pandaAnimationAreas array
+    slimeballAnimationAreas.push(animationArea);
+    //defines insert panda and looks for assigned element by id
+    insertslimeball = document.getElementById(id);
+    //appends the canvas created above to the id assigned in the loadhandler above
+    insertslimeball.appendChild(canvasInsert);
+}
+
+
+
+
+function runAnimation()
+{
+    //checks that clock is running and more than zero
+    if(tick > -1)
+    {
+        setTimeout(runAnimation, 180);
+    }
+    else
+    {
+        endGame();
+    }
+    //when there are slimeball objects in array run animation
+    for(var i = 0; i <slimeballSwarm.length; i++)
+    {
+        slimeballSwarm[i].runAnimation();
+    }
+    render();
+}
+
+function mousedownHandler(event)
+{
+    var confirmTarget = event.target;
+
+    for(var i = 0; i < slimeballCanvases.length; i++)
+    {
+        if(slimeballCanvases[i] ===confirmTarget)
+        {
+            var slimeball = slimeballSwarm[i]
+            if(slimeball.state === slimeball.LANDED)
+            {
+                slimeball.state = slimeball.HIT;
+                message.innerHTML = "<p>BOOM! Hit!</p>";
+                //add 80 to score
+                score+= 80;
+                //tracks bugs hit to compare to levelTarget
+                monstersHit++;
+                //add sound
+                slap.removeEventListener("canplaythrough", loadHandler, false);
+                slap.play();
+                slap.volume = gameVolume;
+
+            }
+            else
+            {
+                message.innerHTML = "<p>MISSED! You Fool!</p>";
+            }
+        }
+    }
+}
+
+function endGame ()
+{
+    stop();
+    //if clock is less than 0 set gamemusic volume to 0
+    if(tick < -1) {
+        nature.volume = 0;
+    }
+    for(var i = 0; i < slimeballCanvases.length; i++)
+    {
+        var canvasInsert = slimeballCanvases[i];
+        canvasInsert.removeEventListener("mousedown", mousedownHandler, false);
+    }
+
+    if(monstersHit > levelTarget) {
+        var bonus = (monstersHit - levelTarget) * 50;
+        score+= bonus;
+        nextLevel.style.visibility="visible";
+        message.innerHTML = "<p>Level Complete</p>";
+        container.appendChild(winner);
+    }
+
+    else {
+        message.innerHTML = "<p>Game Over! Try again</p>";
+        container.appendChild(loser);
+    }
+}
+
+function render()
+{
+    scoreBoard.innerHTML = "<p>Score: " + score + "</p>";
+    for(var i = 0; i < slimeballSwarm.length; i++)
+    {
+        var slimeball = slimeballSwarm[i];
+        var animationArea = slimeballAnimationAreas[i];
+        animationArea.clearRect(0, 0, slimeball.SPRITE_WIDTH, slimeball.SPRITE_HEIGHT);
+
+        animationArea.drawImage
+                (
+                        image,
+                        slimeball.ORIGIN_X, slimeball.ORIGIN_Y, slimeball.SPRITE_WIDTH, slimeball.SPRITE_HEIGHT,
+                        0, 0, slimeball.SPRITE_WIDTH, slimeball.SPRITE_HEIGHT
+                );
+    }
+}
+
+function errorHandler()
+{
+    if(render() === false)
+    {
+        alert("We're sorry Monster vs Hurlers is currently closed for maintenance please callback");
+    }
+}
+

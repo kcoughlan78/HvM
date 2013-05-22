@@ -6,21 +6,33 @@
 <% content_for :article do %>
     <audio id="gamemusic">
 
-      <source src="Crowd.mp3" type="audio/mpeg" loop>
-      <source src= "<%= asset_path('Crowd.wav') %>" type="audio/wav">
+      <source src="<%= asset_path('Nature Ambiance.mp3') %>" type="audio/mpeg" loop>
+      <source src= "<%= asset_path('Nature Ambiance.wav') %>" type="audio/wav">
+    </audio>
+    <audio id="slap">
+      <source src="<%= asset_path('slimehit.mp3') %>" type="audio/mpeg" loop>
+      <source src= "<%= asset_path('slimehit.wav') %>" type="audio/wav">
+    </audio>
+    <audio id="gamelost">
+      <source src="<%= asset_path('No mercy.mp3') %>" type="audio/mpeg" loop>
+      <source src= "<%= asset_path('No mercy.wav') %>" type="audio/wav">
     </audio>
     <article id="upper_stage" onload="init();">
       <section id="levels">
-        <ul>
-          <li></li>
-        </ul>
+        <div class="currentLevel">
+          <p><%= link_to "Level 1: Slimeball", :controller => "game", :action => "slimeball" %></p>
+        </div>
+
+        <div id="nextLevel">
+          <p><%= link_to "Level 2: Farm Panic", :controller => "game", :action => "farmpanic" %></p>
+        </div>
       </section>
 
     </article>
 <% end %>
 <%= content_for :script do %>
     <%= javascript_include_tag "Sprite3D" %>
-    <%= javascript_include_tag "game.js.erb" %>
+    <%= javascript_include_tag "level1.js.erb" %>
 <% end %>
 
 

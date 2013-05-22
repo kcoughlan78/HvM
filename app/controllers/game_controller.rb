@@ -10,4 +10,7 @@ class GameController < ApplicationController
 
   def invasion
   end
+
+  def farmpanic
+  end
 end

@@ -15,6 +15,8 @@ Gameproject::Application.routes.draw do
 
   get "game/invasion"
 
+  get "game/farmpanic"
+
   get "sessions/new"
 
   resources :users

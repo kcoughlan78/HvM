@@ -97,7 +97,7 @@
   <div id="content">
     <figure id="content_left" class="lower_box">
       <figcaption class="content_box">
-        <h4 class="homeh4"><%=link_to(image_tag("hurler.png", alt: "Try the game", id: "hurler"), game_path, title: "Game") %>
+        <h4 class="homeh4"><%=link_to(image_tag("hurler.png", alt: "Try the game", id: "hurler"), :controller => 'game', :action => 'slimeball', title: "Slimeball") %>
         </h4>
         <div class="blog_desc">
           <h3>My HTML5 game</h3>
