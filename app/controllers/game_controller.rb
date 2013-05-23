@@ -13,4 +13,7 @@ class GameController < ApplicationController
 
   def farmpanic
   end
+
+  def finale
+  end
 end

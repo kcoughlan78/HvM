@@ -17,6 +17,8 @@ Gameproject::Application.routes.draw do
 
   get "game/farmpanic"
 
+  get "game/finale"
+
   get "sessions/new"
 
   resources :users

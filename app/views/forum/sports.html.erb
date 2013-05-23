@@ -11,6 +11,7 @@
           <li class="forumtab" id="selected"><%= link_to "Sport n' Tech", :controller => "forum", :action => "sports" %></li>
         </ul>
         <article id="forumcontent">
+          <div id="forumcontent_upper">
           <section id="image_slider">
             <div id="loadbanner1">
               <div id="loadbanner2">
@@ -51,27 +52,33 @@
               <li><a href="#loadbanner3">1</a></li>
             </ul>
           </div>
-          <% @posts.each do |post| %>
-              <article class="<%= cycle('post_odd', 'post_even') %>">
-                <h4><%= link_to post.title, post %></h4>
-                <p><span class="forum_detail"><%= post.created_at.to_s(:short) %></span></p>
-                <p><span class="forum_detail">by <%= post.user.username %></span></p>
-                <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
-                <p><%= truncate(strip_tags(post.content), length: 200) %></p>
-                <h6>Tags:</h6>
-                <p><span class="tags"><%= join_tags(post) %></span></p>
-              </article>
-          <% end %>
-          <div id="forumcontent_right">
-            <div id="twitfeed">
-              <h3>Latest HTML5 Game News</h3>
-              <br>
-              <ol id="twitter_update_list">
-                <li class="tweet"></li>
-              </ol>
-              <!-- below code taken from Twitter developer help have used my own twitter account to test the code and layout as the gallery haven't yet set up their twitter-->
-              <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-              <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/kcoughlan78.json?callback=twitterCallback2&amp;count=5"></script>
+          </div>
+          <div id="forumcontent_lower">
+            <div id="forumcontent_left">
+              <div id="twitfeed">
+                <h3>Latest HTML5 Game News</h3>
+                <br>
+                <ol id="twitter_update_list">
+                  <li class="tweet"></li>
+                </ol>
+                <!-- below code taken from Twitter developer help have used my own twitter account to test the code and layout as the gallery haven't yet set up their twitter-->
+                <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+                <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/kcoughlan78.json?callback=twitterCallback2&amp;count=5"></script>
+              </div>
+            </div>
+            <div id="forumcontent_right">
+              <h3 class="head3">Most popular posts in last few days</h3>
+              <% @posts.each do |post| %>
+                  <article class="<%= cycle('post_odd', 'post_even') %>">
+                    <h4><%= link_to post.title, post %></h4>
+                    <p><span class="forum_detail"><%= post.created_at.to_s(:short) %>  Views: <%= post.view %></span></p>
+                    <p><span class="forum_detail">by <%= post.user.username %></span></p>
+                    <p><%= image_tag(post.image_url, class: "post_img_url") %></p>
+                    <p><%= truncate(strip_tags(post.content), length: 200) %></p>
+                    <h6>Tags:</h6>
+                    <p><span class="tags"><%= join_tags(post) %></span></p>
+                  </article>
+              <% end %>
             </div>
           </div>
         </article>

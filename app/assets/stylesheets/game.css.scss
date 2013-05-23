@@ -47,19 +47,38 @@
   width:                    125px;
   height:                   95px;
   background:               transparent url(ufo.png)no-repeat top left;
+  visibility:               visible;
 }
 
 #ufo1 {
   width:                    140px;
   height:                   107px;
   background:               transparent url(ufo1.png)no-repeat top left;
+  visibility:               visible;
 }
 
+#ufoboom {
+  width:                    160px;
+  height:                   127px;
+  background:               transparent url(ufoboom.png)no-repeat top left;
+}
+
+#ufoboom1 {
+  width:                    160px;
+  height:                   127px;
+  background:               transparent url(ufoboom.png)no-repeat top left;
+}
 
 #tractor {
   width:                    60px;
   height:                   43px;
   background:               transparent url(tractor.png)no-repeat top left;
+}
+
+#ambulance {
+  width:                    60px;
+  height:                   43px;
+  background:               transparent url(ambulance.png)no-repeat top left;
 }
 
 #pig {
@@ -223,10 +242,12 @@
   color: 					white;
   font-weight: 		    	600;
   background-image:         -moz-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+  background-image: 		-webkit-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+
 }
 
 #timer {
-  width: 					110px;
+  width: 					120px;
   height: 			    	auto;
   top: 					    1%;
   right: 					90%;
@@ -248,10 +269,11 @@
   color: 					white;
   font-weight: 			    600;
   background-image: 		-moz-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+  background-image: 		-webkit-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
 }
 
 #gamerMsg {
-  width: 					190px;
+  width: 					210px;
   height: 				    auto;
   position: 				absolute;
   top: 				    	1%;
@@ -274,6 +296,7 @@
   color: 					white;
   font-weight: 			    600;
   background-image: 		-moz-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+  background-image: 		-webkit-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
 }
 
 #scoreboard {
@@ -281,6 +304,7 @@
   height: 				    50px;
   background-color: 		red;
   background-image: 		-moz-linear-gradient(bottom, #000000 44%, #C0C0C0 100%);
+  background-image: 		-webkit-linear-gradient(bottom, #000000 44%, #C0C0C0 100%);
 }
 
 #hurler {

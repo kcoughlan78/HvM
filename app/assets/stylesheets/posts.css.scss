@@ -8,7 +8,7 @@
   width:                                        550px;
   max-height:                                   auto;
   padding:                                      2% 3% 2% 3%;
-  margin:                                       0% 2% 2% 2%;
+  margin:                                       0% 2% 2% 5%;
   overflow-y:                                   hidden;
   overflow-x:                                   hidden;
 }
@@ -16,6 +16,10 @@
 #upper_col1 a, a:link, a:visited {
   text-decoration:                            none;
   color:                                      white;
+}
+
+#upper_col2 {
+  margin-left:                                10%;
 }
 
 #postscroll {
@@ -28,51 +32,51 @@
 }
 
 #posted_by {
-  margin: 2% 2% 2% 2%;
-  padding: 2% 2% 2% 2%;
-  border-top-left-radius: 2% 2%;
-  border-top-right-radius: 2% 2%;
-  border-bottom-left-radius: 2% 2%;
-  border-bottom-right-radius: 2% 2%;
+  margin:                                       2% 2% 2% 2%;
+  padding:                                      2% 2% 2% 2%;
+  border-top-left-radius:                       2% 2%;
+  border-top-right-radius:                      2% 2%;
+  border-bottom-left-radius:                    2% 2%;
+  border-bottom-right-radius:                   2% 2%;
   /* below ensures correct output for MFF*/
-  -moz-border-top-left-radius: 2% 2%;
-  -moz-border-top-right-radius: 2% 2%;
-  -moz-border-bottom-left-radius: 2% 2%;
-  -moz-border-bottom-right-radius: 2% 2%;
-  border: white 2px;
-  border-style: solid;
-  min-height: 60px;
+  -moz-border-top-left-radius:                  2% 2%;
+  -moz-border-top-right-radius:                 2% 2%;
+  -moz-border-bottom-left-radius:               2% 2%;
+  -moz-border-bottom-right-radius:              2% 2%;
+  border:                                       white 2px;
+  border-style:                                 solid;
+  min-height:                                   60px;
 }
 
 .post_img_url {
-  float: left;
-  max-height: 160px;
-  max-width: 400px;
-  margin-left: 5%;
-  padding-right: 3%;
+  float:                                        left;
+  max-height:                                   160px;
+  max-width:                                    400px;
+  margin-left:                                  5%;
+  padding-right:                                3%;
 }
 
 .user_img_url {
-  float: right;
-  height: 50px;
-  width: 50px;
+  float:                                        right;
+  height:                                       50px;
+  width:                                        50px;
 }
 
 #upper_col2 {
-  height: 600px;
-  width: 350px;
-  margin-left: 20%;
-  padding: 2% 2% 2% 2%;
-  margin: 0% 2% 2% 10%;
+  height:                                       600px;
+  width:                                        350px;
+  margin-left:                                  20%;
+  padding:                                      2% 2% 2% 2%;
+  margin:                                       0% 2% 2% 10%;
 }
 table tr {
-  margin: 1% 1% 1% 1%;
-  padding: 3% 3% 3% 3%;
+  margin:                                       1% 1% 1% 1%;
+  padding:                                      3% 3% 3% 3%;
 }
 
 td {
-  margin: 1% 1% 1% 1%;
-  padding: 1% 1% 1% 1%;
+  margin:                                       1% 1% 1% 1%;
+  padding:                                      1% 1% 1% 1%;
 }
 
 #postheader {
@@ -133,21 +137,25 @@ td {
 }
 
 .response {
-  color: #ff251e;
-  display: block;
-  background-color: whitesmoke;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #000000;
-  padding: 2% 2% 2% 2%;
-  border-top-left-radius: 4% 4%;
-  border-top-right-radius: 4% 4%;
-  border-bottom-left-radius: 4% 4%;
-  border-bottom-right-radius: 4% 4%;
+  color:                                    #ff251e;
+  display:                                  block;
+  background-color:                         whitesmoke;
+  border-style:                             solid;
+  border-width:                             1px;
+  border-color:                             #000000;
+  padding:                                  2% 2% 2% 2%;
+  border-top-left-radius:                   4% 4%;
+  border-top-right-radius:                  4% 4%;
+  border-bottom-left-radius:                4% 4%;
+  border-bottom-right-radius:               4% 4%;
   /* below ensures correct output for MFF*/
-  -moz-border-top-left-radius: 4% 4%;
-  -moz-border-top-right-radius: 4% 4%;
-  -moz-border-bottom-left-radius: 4% 4%;
-  -moz-border-bottom-right-radius: 4% 4%;
+  -moz-border-top-left-radius:              4% 4%;
+  -moz-border-top-right-radius:             4% 4%;
+  -moz-border-bottom-left-radius:           4% 4%;
+  -moz-border-bottom-right-radius:          4% 4%;
+}
+
+.response textarea {
+  max-width:                                90%;
 }
 

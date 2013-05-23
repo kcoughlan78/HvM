@@ -166,12 +166,16 @@ nav#navbox li#welcome {
 
 #upper_stage {
   position:                                   relative;
-  margin:                                     6% 4% 5% 4%;
+  margin:                                     6% 1% 5% 2%;
   color:                                      #B20000;
 }
 
 .post {
   font-family:                              'Racing Sans One', sans-serif;
+}
+
+#file_upload {
+ background-color:                            white;
 }
 
 .admin_view {
@@ -180,6 +184,7 @@ nav#navbox li#welcome {
   right:                                      0%;
   bottom:                                     0%;
   left:                                       0%;
+  margin-left:                                1.5%;
   z-index:                                    10;
   width:                                      100%;
   height:                                     auto;
@@ -388,7 +393,6 @@ nav#navbox li#welcome {
 
 section {
   position:                                   relative;
-  /*margin: 2% 5% 5% 5%;*/
   padding:                                    0;
   overflow:                                   hidden;
   background-image:                           -moz-linear-gradient(bottom, #A10F0F 44%, #423030 100%);
@@ -398,7 +402,7 @@ section {
 #content {
   position:                                   relative;
   height:                                     220px;
-  margin:                                     4% 7% 5% 9%;
+  margin:                                     4% 4% 5% 10%;
   padding:                                    0;
   overflow:                                   hidden;
 }
@@ -406,7 +410,7 @@ section {
 #content_admin {
   position:                                   relative;
   height:                                     220px;
-  margin:                                     4% 7% 5% 9%;
+  margin:                                     4% 4% 5% 10%;
   padding:                                    0;
   overflow:                                   hidden;
 }
@@ -416,6 +420,7 @@ section > header h3 {
   font-weight:                                700;
   font-family:                                'Racing Sans One', sans-serif;
   text-align:                                 center;
+  margin-left:                                5%;
 }
 
 .lower_box {
@@ -528,6 +533,6 @@ section > header h3 {
 
 footer {
   font-size:                                  60%;
-  text-align:                                 center;
+  text-align:                                 right;
   background-color:                           #B20000;
 }

@@ -21,7 +21,7 @@
     <% @posts.each do |post| %>
         <tr>
           <td><%= post.title %></td>
-          <td><%= post.content %></td>
+          <td><%= truncate(strip_tags(post.content), length: 200) %></td>
           <td><%= post.image_url %></td>
           <td><%= post.view %></td>
           <td><%= link_to 'Show', post %></td>
