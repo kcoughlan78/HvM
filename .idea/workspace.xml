@@ -5,43 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/games.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/games.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/games_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/game.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/games/_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/games/farmpanic.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/games/finale.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/games/greenbug.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/games/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/games/info.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/games/invasion.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/games/new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/games/slimeball.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130523213055_add_intro_to_post.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130523213717_add_summary_to_post.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130524104527_create_games.rb" />
+      <change type="DELETED" beforePath="C:\devkit_install\gameproject\app\assets\images\3rd party signin.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\devkit_install\gameproject\app\views\game\farmpanic.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="C:\devkit_install\gameproject\app\views\game\finale.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="C:\devkit_install\gameproject\app\views\game\greenbug.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="C:\devkit_install\gameproject\app\views\game\index.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="C:\devkit_install\gameproject\app\views\game\invasion.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="C:\devkit_install\gameproject\app\views\game\slimeball.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/level1.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/level1.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/level2.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/level2.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/level3.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/level3.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/level4.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/level4.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/level5.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/level5.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/complaints_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/complaints_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/complaints/index.html.erb" afterPath="$PROJECT_DIR$/app/views/complaints/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/gaming.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/gaming.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/index.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/sports.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/sports.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/tech.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/tech.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/game/farmpanic.html.erb" afterPath="$PROJECT_DIR$/app/views/game/farmpanic.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_mailer/reg_email.html.erb" afterPath="$PROJECT_DIR$/app/views/user_mailer/reg_email.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/games.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/games.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/games/info.html.erb" afterPath="$PROJECT_DIR$/app/views/games/info.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="gameproject.iws" />
@@ -65,38 +40,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="games.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/games.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="46" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/complaints/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="46" selection-start="427" selection-end="427" vertical-scroll-proportion="-8.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/complaints/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding>
-                <marker date="1368961820643" expanded="true" signature="210:489" placeholder="..." />
-                <marker date="1368961820643" expanded="true" signature="251:433" placeholder="..." />
-                <marker date="1368961820643" expanded="true" signature="281:420" placeholder="..." />
-                <marker date="1368961820643" expanded="true" signature="461:474" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/complaints/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -150,19 +93,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reg_email.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="reg_email.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/user_mailer/reg_email.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="25" selection-start="601" selection-end="601" vertical-scroll-proportion="1.0851064">
+            <state line="18" column="25" selection-start="601" selection-end="601" vertical-scroll-proportion="-11.769231">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="9" selection-start="1736" selection-end="1736" vertical-scroll-proportion="-15.653846">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="73" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/games/info.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="29" selection-start="367" selection-end="367" vertical-scroll-proportion="-5.230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="games.css.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/games.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="270" column="35" selection-start="6120" selection-end="6120" vertical-scroll-proportion="0.13465346">
               <folding />
             </state>
           </provider>
@@ -181,8 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/level2.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/game/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/game.rb" />
         <option value="$PROJECT_DIR$/app/views/games/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/complaints_controller.rb" />
@@ -190,13 +158,15 @@
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/games.css.scss" />
         <option value="$PROJECT_DIR$/app/views/complaints/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forum/tech.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forum/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forum/gaming.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forum/sports.html.erb" />
         <option value="$PROJECT_DIR$/app/views/user_mailer/reg_email.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/games/info.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/games.css.scss" />
       </list>
     </option>
   </component>
@@ -567,28 +537,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1130,14 +1078,18 @@
       <created>1369359458151</created>
       <updated>1369359458151</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added leaderboards">
+      <created>1369415360531</created>
+      <updated>1369415360531</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33790737" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33790737" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1228,27 +1180,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/complaints_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="40" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="48" selection-end="95" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/games_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="38" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
@@ -1277,13 +1208,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/games.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="46" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/complaints/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="46" selection-start="427" selection-end="427" vertical-scroll-proportion="-8.5">
@@ -1295,10 +1219,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1368961820643" expanded="true" signature="210:489" placeholder="..." />
-            <marker date="1368961820643" expanded="true" signature="251:433" placeholder="..." />
-            <marker date="1368961820643" expanded="true" signature="281:420" placeholder="..." />
-            <marker date="1368961820643" expanded="true" signature="461:474" placeholder="..." />
+            <marker date="1368961820643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1368961820643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1368961820643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1368961820643" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1348,7 +1272,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/user_mailer/reg_email.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="25" selection-start="601" selection-end="601" vertical-scroll-proportion="1.0851064">
+        <state line="18" column="25" selection-start="601" selection-end="601" vertical-scroll-proportion="-11.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="73" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/games/info.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="29" selection-start="367" selection-end="367" vertical-scroll-proportion="-5.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/games.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="270" column="35" selection-start="6120" selection-end="6120" vertical-scroll-proportion="0.13465346">
           <folding />
         </state>
       </provider>

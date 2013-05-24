@@ -23,18 +23,6 @@ Gameproject::Application.routes.draw do
 
   get "complaints/destroy"
 
-  get "game/index"
-
-  get "game/greenbug"
-
-  get "game/slimeball"
-
-  get "game/invasion"
-
-  get "game/farmpanic"
-
-  get "game/finale"
-
   get "sessions/new"
 
   resources :users
