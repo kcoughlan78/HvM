@@ -30,6 +30,9 @@ class ComplaintsController < ApplicationController
     end
   end
 
+  def discipline
+  end
+
   def destroy
     @complaint = Complaint.find(params[:id])
     @complaint.destroy

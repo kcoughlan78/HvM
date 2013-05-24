@@ -6,7 +6,6 @@
     <article id="upper_stage">
       <div id="upper_col1" class="post">
         <div class="userscroll">
-          <br>
           <h2><span class="head2">Complaint Details</span></h2>
           <br>
           <p>Made by: <%= @complaint.user_id %> </p>
@@ -17,10 +16,33 @@
           <p>Offender: <%= @complaint.offender %></p>
           <br>
           <p><%= link_to "View User Records", :controller => "users", :action => "index", class: 'button'  %></p>
+          <br>
+          <p><%= link_to "Check the rules", :controller => "forum", :action => "rules" %></p>
         </div>
       </div>
       <div id="upper_col2" class="post">
         <div class="userscroll">
+          <h2><span class="head2">Discipline Guidelines</span></h2>
+          <br>
+          <p><span class="abuse_text">Ask yourself the following questions</span></p>
+          <br>
+          <ul class="abuse_text">
+            <li>Is the complaint a valid one?</li>
+            <li>What is the nature of the abuse?</li>
+            <li>How serious is the incident?</li>
+            <li>How many people seen the offending comment?</li>
+            <li>Has the user been abusive before?</li>
+            <li>Have they been warned or suspended previously?</li>
+          </ul>
+          <br>
+          <p><span class="abuse_text">The following are the available courses of action:</span></p>
+          <ul class="abuse_text">
+            <li>Warning</li>
+            <li>Suspension</li>
+            <li>Account Deletion</li>
+          </ul>
+          <br>
+          <p><span class="abuse_text">Before proceeding ensure offending comment or post is deleted.</span></p>
         </div>
       </div>
     </article>

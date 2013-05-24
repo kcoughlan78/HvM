@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519150507) do
+ActiveRecord::Schema.define(:version => 20130523213717) do
 
   create_table "complaints", :force => true do |t|
     t.integer  "user_id"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20130519150507) do
     t.string   "category"
     t.string   "image"
     t.integer  "view",       :default => 0
+    t.text     "intro"
+    t.text     "summary"
   end
 
   create_table "replies", :force => true do |t|

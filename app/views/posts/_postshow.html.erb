@@ -20,7 +20,15 @@
     <%= image_tag(@post.image_url, class: "post_img_url") %>
   </p>
   <p><span class="post_text">
+    <%= @post.intro %>
+    </span></p>
+  <br>
+  <p><span class="post_text">
     <%= @post.content %>
+    </span></p>
+  <br>
+  <p><span class="post_text">
+    <%= @post.summary %>
     </span></p>
 </article>
 <div id="posted_by">

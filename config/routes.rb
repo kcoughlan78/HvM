@@ -33,6 +33,8 @@ Gameproject::Application.routes.draw do
 
   get "forum/myposts"
 
+  get "forum/rules"
+
   get "home/index"
 
   resources :sessions

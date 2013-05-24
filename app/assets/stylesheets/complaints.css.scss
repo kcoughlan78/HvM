@@ -7,14 +7,21 @@
 @import url("application.css.scss");
 
 #upper_col1 {
-  height:                                       600px;
-  width:                                        550px;
+  height:                                       400px;
+  width:                                        450px;
   max-height:                                   auto;
-  padding:                                      2% 3% 2% 3%;
-  margin:                                       0% 2% 2% 2%;
+  color:                                        white;
+  padding:                                      2% 3% 2% 4%;
+  margin:                                       0% 2% 2% 6%;
   overflow-y:                                   hidden;
   overflow-x:                                   hidden;
 }
+
+#upper_col1 a, a:link, a:visited {
+  text-decoration:                            none;
+  color:                                      white;
+}
+
 
 #postscroll {
   padding:                                      2%;
@@ -23,6 +30,10 @@
   max-height:                                   auto;
   overflow-y:                                   scroll;
   overflow-x:                                   hidden;
+}
+
+.abuse_text {
+  color:                                      white;
 }
 
 #posted_by {
@@ -57,11 +68,13 @@
 }
 
 #upper_col2 {
-  height: 600px;
-  width: 350px;
+  height: 400px;
+  width: 450px;
   margin-left: 20%;
   padding: 2% 2% 2% 2%;
-  margin: 0% 2% 2% 10%;
+  margin: 0% 2% 2% 5%;
+  color: white;
+  font-family: "Racing Sans One", sans-serif;
 }
 table tr {
   margin: 1% 1% 1% 1%;

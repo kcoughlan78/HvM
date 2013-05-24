@@ -4,39 +4,63 @@
     <bookmark url="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" description="#twitter_update_list" line="358" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="added four levels animation and audio on game events">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/audios/Ambulance.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/audios/Ambulance.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/Title1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/ambulance.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/tractor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/ufoboom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/level5.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/game/finale.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/tech.png" afterPath="$PROJECT_DIR$/app/assets/images/tech.png" />
+    <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/greenbug.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/forum/rules.html.erb" />
+      <change type="DELETED" beforePath="C:\devkit_install\gameproject\tmp\pids\server.pid" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/C50/940/sprockets%2F1bd392624a22649c4a4876d964e10652" afterPath="$PROJECT_DIR$/tmp/cache/assets/C50/940/sprockets%2F1bd392624a22649c4a4876d964e10652" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/C62/1D0/sprockets%2F1638f87db345b13872695759502b54fe" afterPath="$PROJECT_DIR$/tmp/cache/assets/C62/1D0/sprockets%2F1638f87db345b13872695759502b54fe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/C6E/070/sprockets%2F92d37687a043b3c232a2a11661e7343d" afterPath="$PROJECT_DIR$/tmp/cache/assets/C6E/070/sprockets%2F92d37687a043b3c232a2a11661e7343d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/C7A/170/sprockets%2Ff1663d34d4b6003379113df98f1433a5" afterPath="$PROJECT_DIR$/tmp/cache/assets/C7A/170/sprockets%2Ff1663d34d4b6003379113df98f1433a5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/C87/BB0/sprockets%2Fd4047b559e8621545922fe20cf149c65" afterPath="$PROJECT_DIR$/tmp/cache/assets/C87/BB0/sprockets%2Fd4047b559e8621545922fe20cf149c65" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/C8D/430/sprockets%2F49a112d732f99228015e6966f8e45ce1" afterPath="$PROJECT_DIR$/tmp/cache/assets/C8D/430/sprockets%2F49a112d732f99228015e6966f8e45ce1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CA4/8B0/sprockets%2F21510ea8264eaa94d48104f903b60f39" afterPath="$PROJECT_DIR$/tmp/cache/assets/CA4/8B0/sprockets%2F21510ea8264eaa94d48104f903b60f39" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CB0/D60/sprockets%2F0335d87ebd93523744c2fec4426f4432" afterPath="$PROJECT_DIR$/tmp/cache/assets/CB0/D60/sprockets%2F0335d87ebd93523744c2fec4426f4432" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CC5/AC0/sprockets%2F73cf352579b646a784a2780873ee5ea8" afterPath="$PROJECT_DIR$/tmp/cache/assets/CC5/AC0/sprockets%2F73cf352579b646a784a2780873ee5ea8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CCE/DC0/sprockets%2Fed463076c2a3a108730fb32cf454c732" afterPath="$PROJECT_DIR$/tmp/cache/assets/CCE/DC0/sprockets%2Fed463076c2a3a108730fb32cf454c732" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CDF/870/sprockets%2Fb878faf942403e313a5b103e5d80488e" afterPath="$PROJECT_DIR$/tmp/cache/assets/CDF/870/sprockets%2Fb878faf942403e313a5b103e5d80488e" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE5/410/sprockets%2F3e4923d1354f9663529ab9c1b3e28e5b" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE5/410/sprockets%2F3e4923d1354f9663529ab9c1b3e28e5b" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE5/650/sprockets%2F8ab512c9b33ac90e699b73469d71f061" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE5/650/sprockets%2F8ab512c9b33ac90e699b73469d71f061" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE5/CB0/sprockets%2F9ef8b3034506be9061b9df2e00698d80" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE5/CB0/sprockets%2F9ef8b3034506be9061b9df2e00698d80" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE8/840/sprockets%2F67eb859757910e1082d8534cbce75a2a" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE8/840/sprockets%2F67eb859757910e1082d8534cbce75a2a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE8/950/sprockets%2Fe4f0bd458b657ff5608d906390800fe1" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE8/950/sprockets%2Fe4f0bd458b657ff5608d906390800fe1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D03/670/sprockets%2F6c0f2a2c7346b84a92e2cb81473e251b" afterPath="$PROJECT_DIR$/tmp/cache/assets/D03/670/sprockets%2F6c0f2a2c7346b84a92e2cb81473e251b" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D05/D40/sprockets%2F1c9faaf28d05409b88ad3113374d613c" afterPath="$PROJECT_DIR$/tmp/cache/assets/D05/D40/sprockets%2F1c9faaf28d05409b88ad3113374d613c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D0B/4F0/sprockets%2Fc38d193a75d5b64bb734f0ea6202777a" afterPath="$PROJECT_DIR$/tmp/cache/assets/D0B/4F0/sprockets%2Fc38d193a75d5b64bb734f0ea6202777a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D16/BE0/sprockets%2F12a4e433f6bf99f82719eff08053d0f1" afterPath="$PROJECT_DIR$/tmp/cache/assets/D16/BE0/sprockets%2F12a4e433f6bf99f82719eff08053d0f1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D1A/1D0/sprockets%2F4f52f250e58fa8a4a8f48593c31381fe" afterPath="$PROJECT_DIR$/tmp/cache/assets/D1A/1D0/sprockets%2F4f52f250e58fa8a4a8f48593c31381fe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D1F/730/sprockets%2Fa9f028f7a492b5907ed80268be8f50f4" afterPath="$PROJECT_DIR$/tmp/cache/assets/D1F/730/sprockets%2Fa9f028f7a492b5907ed80268be8f50f4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D2A/090/sprockets%2F981fdf59c6c819da5a85424ee749e704" afterPath="$PROJECT_DIR$/tmp/cache/assets/D2A/090/sprockets%2F981fdf59c6c819da5a85424ee749e704" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D30/3B0/sprockets%2F40e4dc27315c8bb23ab744a9b4109d6d" afterPath="$PROJECT_DIR$/tmp/cache/assets/D30/3B0/sprockets%2F40e4dc27315c8bb23ab744a9b4109d6d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D6E/DE0/sprockets%2F58286db4fd0762db1f28c0ce1c5a676c" afterPath="$PROJECT_DIR$/tmp/cache/assets/D6E/DE0/sprockets%2F58286db4fd0762db1f28c0ce1c5a676c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D73/F90/sprockets%2F08a35d9057f79ff5a8caa6e03cb7a652" afterPath="$PROJECT_DIR$/tmp/cache/assets/D73/F90/sprockets%2F08a35d9057f79ff5a8caa6e03cb7a652" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D91/080/sprockets%2Fbcca522c6302f184f12fe0e8a7d7e71a" afterPath="$PROJECT_DIR$/tmp/cache/assets/D91/080/sprockets%2Fbcca522c6302f184f12fe0e8a7d7e71a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D97/4A0/sprockets%2F4e8109ab184cc18cd60e0dad98c4ad09" afterPath="$PROJECT_DIR$/tmp/cache/assets/D97/4A0/sprockets%2F4e8109ab184cc18cd60e0dad98c4ad09" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D9F/300/sprockets%2Fc13fc73ceafa45876a901b3e775b83ae" afterPath="$PROJECT_DIR$/tmp/cache/assets/D9F/300/sprockets%2Fc13fc73ceafa45876a901b3e775b83ae" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/DA4/460/sprockets%2F977ead1d20bc9f7e1c191bd4348f9e3a" afterPath="$PROJECT_DIR$/tmp/cache/assets/DA4/460/sprockets%2F977ead1d20bc9f7e1c191bd4348f9e3a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/DFC/470/sprockets%2F8a0e7cc1ca5e1af0b1a30ac42ea00e1a" afterPath="$PROJECT_DIR$/tmp/cache/assets/DFC/470/sprockets%2F8a0e7cc1ca5e1af0b1a30ac42ea00e1a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/application.css.scssc" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/application.css.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/forum.css.scssc" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/forum.css.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/game.css.scssc" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/game.css.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/home.css.scssc" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/home.css.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/posts.css.scssc" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/posts.css.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/sessions.css.scssc" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/sessions.css.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/users.css.scssc" afterPath="$PROJECT_DIR$/tmp/cache/sass/4f83b1db0717522023abf9812c7f11579e86167b/users.css.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/level2.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/level2.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/complaints.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/complaints.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/forum.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/forum.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/game.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/game.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sessions.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sessions.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/users.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/game_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/game_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/gaming.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/gaming.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/index.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/sports.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/sports.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/tech.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/tech.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/game/farmpanic.html.erb" afterPath="$PROJECT_DIR$/app/views/game/farmpanic.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/game/greenbug.html.erb" afterPath="$PROJECT_DIR$/app/views/game/greenbug.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/game/invasion.html.erb" afterPath="$PROJECT_DIR$/app/views/game/invasion.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/game/slimeball.html.erb" afterPath="$PROJECT_DIR$/app/views/game/slimeball.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/complaints_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/complaints_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/forum_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/forum_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/post.rb" afterPath="$PROJECT_DIR$/app/models/post.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/complaints/show.html.erb" afterPath="$PROJECT_DIR$/app/views/complaints/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/game/index.html.erb" afterPath="$PROJECT_DIR$/app/views/game/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_postshow.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_postshow.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="gameproject.iws" />
@@ -60,91 +84,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="412" column="57" selection-start="14856" selection-end="14856" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/posts/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/game/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="45" column="36" selection-start="2315" selection-end="2315" vertical-scroll-proportion="-15.576923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
+      <file leaf-file-name="forum.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/forum.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="36" selection-start="342" selection-end="342" vertical-scroll-proportion="-7.1923075">
+            <state line="26" column="0" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sessions.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/sessions.css.scss">
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="54" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
+            <state line="84" column="150" selection-start="3360" selection-end="3360" vertical-scroll-proportion="-5.8846154">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/users.css.scss">
+      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="56" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+            <state line="35" column="18" selection-start="446" selection-end="446" vertical-scroll-proportion="0.1960396">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
+      <file leaf-file-name="game.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/game.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="61" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.9290188">
+            <state line="23" column="0" selection-start="662" selection-end="804" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="posts.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
+      <file leaf-file-name="rules.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/forum/rules.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="17" selection-start="4986" selection-end="4986" vertical-scroll-proportion="0.0">
+            <state line="85" column="185" selection-start="5132" selection-end="5132" vertical-scroll-proportion="-55.576923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/replies/_form.html.erb">
+      <file leaf-file-name="complaints_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/complaints_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="6" selection-start="224" selection-end="224" vertical-scroll-proportion="-5.230769">
+            <state line="32" column="16" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/complaints/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="7" column="32" selection-start="282" selection-end="282" vertical-scroll-proportion="-3.9230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="replies_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/replies_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="complaints.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/complaints.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="12" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,22 +187,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/level2.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/game/slimeball.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/level5.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/forum/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/forum.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/forum/gaming.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/forum/sports.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/forum/tech.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/users.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/sessions.css.scss" />
         <option value="$PROJECT_DIR$/app/views/replies/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" />
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/post.rb" />
+        <option value="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/posts/_postshow.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/game.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/game/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/forum_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/complaints_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/complaints/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/complaints.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/forum/rules.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/forum.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -267,90 +291,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="post" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="video" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="post" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="image" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -852,28 +792,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="audios" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -1188,18 +1106,23 @@
       <created>1369261166999</created>
       <updated>1369261166999</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added fifth level animation and audio on game events, tweaked css for consistency">
+      <created>1369344267524</created>
+      <updated>1369344267524</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33790737" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4969697" sideWeight="0.6620926" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4969697" sideWeight="0.6620926" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33790737" sideWeight="0.49772727" order="7" side_tool="true" content_ui="tabs" />
@@ -1209,7 +1132,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33790737" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1250,7 +1172,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added four levels animation and audio on game events" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fifth level animation and audio on game events, tweaked css for consistency" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1278,119 +1200,113 @@
     <MESSAGE value="added report abuse, view counter, user suspend. Styled forums, post views" />
     <MESSAGE value="added game logic, bonus, level complete, miss penalties and levels mapped out on routes" />
     <MESSAGE value="added four levels animation and audio on game events" />
+    <MESSAGE value="added fifth level animation and audio on game events, tweaked css for consistency" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/forum/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="29" selection-start="2939" selection-end="3783" vertical-scroll-proportion="-16.384615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forum/sports.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="9" selection-start="4138" selection-end="4138" vertical-scroll-proportion="-17.115385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forum/tech.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="9" selection-start="3936" selection-end="3936" vertical-scroll-proportion="-16.461538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="129" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-14.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forum/gaming.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="75" selection-start="3644" selection-end="3698" vertical-scroll-proportion="-11.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="68" selection-start="622" selection-end="622" vertical-scroll-proportion="-14.038462">
+        <state line="15" column="0" selection-start="629" selection-end="770" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="412" column="57" selection-start="14856" selection-end="14856" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/forum_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="11" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forum/gaming.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="45" selection-start="0" selection-end="3932" vertical-scroll-proportion="-17.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forum/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="55" selection-start="215" selection-end="2197" vertical-scroll-proportion="-16.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/complaints_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="16" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/replies_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/users.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/game/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="56" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+        <state line="45" column="36" selection-start="2315" selection-end="2315" vertical-scroll-proportion="-15.576923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/game.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="23" column="0" selection-start="662" selection-end="804" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/complaints/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="342" selection-end="342" vertical-scroll-proportion="-7.1923075">
+        <state line="7" column="32" selection-start="282" selection-end="282" vertical-scroll-proportion="-3.9230769">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/sessions.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/complaints.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="54" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
+        <state line="73" column="12" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/replies/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/forum.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="224" selection-end="224" vertical-scroll-proportion="-5.230769">
+        <state line="26" column="0" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/forum/rules.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="17" selection-start="4986" selection-end="4986" vertical-scroll-proportion="0.0">
+        <state line="85" column="185" selection-start="5132" selection-end="5132" vertical-scroll-proportion="-55.576923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="84" column="150" selection-start="3360" selection-end="3360" vertical-scroll-proportion="-5.8846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="61" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.9290188">
+        <state line="35" column="18" selection-start="446" selection-end="446" vertical-scroll-proportion="0.1960396">
           <folding />
         </state>
       </provider>

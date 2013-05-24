@@ -1,0 +1,95 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Forum Rules</title>
+    <%= stylesheet_link_tag "forum", :media => "all" %>
+    <%= javascript_include_tag "home" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+      <ul id="forumtabs">
+        <li class="forumtab_index" ><%= link_to "Tech", :controller => "forum", :action => "tech" %></li>
+        <li class="forumtab_index"><%= link_to "Gaming", :controller => "forum", :action => "gaming" %></li>
+        <li class="forumtab_index"><%= link_to "Sport n' Tech", :controller => "forum", :action => "sports" %></li>
+      </ul>
+      <article id="forumcontent">
+        <div id="forumcontent_upper">
+          <section id="image_slider">
+            <div id="loadbanner1">
+              <div id="loadbanner2">
+                <div id="loadbanner3">
+                  <div id="holdall">
+                    <div class="panel" id="panelf1">
+                      <article class="toppost">
+                        <h2>Tech</h2>
+                        <br>
+                        <p>Get the latest opinion on tech news as it happens</p>
+                      </article>
+                    </div>
+                    <div class="panel" id="panelf2">
+                      <article class="toppost">
+                        <h2>Love Sport and Tech</h2>
+                        <br>
+                        <p>From fitbits to F1. Discuss and read up on how tech is changing sport and leisure</p>
+                      </article>
+                    </div>
+                    <div class="panel" id="panelf3">
+                      <article class="toppost">
+                        <h2>Games</h2>
+                        <br>
+                        <p>We love HTML5 games but we welcome your views on all games from retro classics on Commodore 64's to the upcoming next gen.</p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div id="nav">
+            <ul>
+              <li><a href="#loadbanner1">1</a></li>
+              <li><a href="#loadbanner2">1</a></li>
+              <li><a href="#loadbanner3">1</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="forumcontent_lower">
+          <div id="forumcontent_left">
+            <div id="twitfeed">
+              <h3>Latest HTML5 Game News</h3>
+              <br>
+              <ol id="twitter_update_list">
+                <li class="tweet"></li>
+              </ol>
+              <!-- below code taken from Twitter developer help have used my own twitter account to test the code and layout as the gallery haven't yet set up their twitter-->
+              <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+              <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/kcoughlan78.json?callback=twitterCallback2&amp;count=5"></script>
+            </div>
+          </div>
+          <div id="forumcontent_right">
+            <h3 class="head3">Forum Rules</h3>
+            <ul>
+              <li>Adult content that contains any nudity or sexual activity is strictly prohibited.</li>
+              <li>Hate speech: I want you to use HvM to express your opinions, even controversial ones. But, don't cross the line by publishing hate speech.
+                By this, I mean content that promotes hate or violence towards groups based on race, ethnicity, religion, disability, gender, age, veteran
+                status or sexual orientation/gender identity. For example, don't write a blog saying that members
+                of Race X are criminals or advocating violence against followers of Religion Y.</li>
+              <li>Crude content: don't post content just to be shocking or graphic. For example, collections of close-up images of gunshot wounds or accident
+                scenes without additional context or commentary would violate this policy.</li>
+              <li>Violence: don't threaten other people in your post. For example, don't post death threats against another person or group of people and don't
+                post content encouraging your readers to take violent action against another person or group of people.</li>
+              <li>Harassment: do not harass or bully others. Anyone using HvM to harass or bully may have the offending content removed or be permanently banned from the site.
+                Online harassment is also illegal in many places and can have serious offline consequences</li>
+              <li>Identity and Privacy: do not impersonate other people whether they be members or non-members. Also do not publish
+              private details e.g. credit card numbers</li>
+              <li>Illegal Activity: do not use HvM for organisation of any illegal or potentially illegal activity.</li>
+            </ul>
+            <br>
+            <p>Should you witness any of the above please use the <span class="rules"><%= link_to "Report Abuse", :controller => "complaints", :action => "new", class: 'rules' %></span> link which can be
+            found in every post just under the title.</p>
+            <br>
+            <p>Should you fail to adhere to the above please note your offending content may be deleted and in some cases
+            your access to the forums will be restricted for a period of time. Constant or serious offences may lead to account deletion.</p>
+          </div>
+        </div>
+      </article>
+    </article>
+<% end %>

@@ -27,8 +27,20 @@
     </div>
     <br>
     <div>
+      <p><span class="post_text"><%= post_form.label :intro %></span></p>
+      <p><%= post_form.text_area :intro, class: 'content_textbox' %></p>
+    </div>
+    <br>
+    <br>
+    <div>
       <p><span class="post_text"><%= post_form.label :content %></span></p>
       <p><%= post_form.text_area :content, class: 'content_textbox' %></p>
+    </div>
+    <br>
+    <br>
+    <div>
+      <p><span class="post_text"><%= post_form.label :summary %></span></p>
+      <p><%= post_form.text_area :summary, class: 'content_textbox' %></p>
     </div>
     <br>
     <br>

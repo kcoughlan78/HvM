@@ -13,6 +13,30 @@
   cursor:                   url(hurler1.gif),auto;
 }
 
+#upper_col1 {
+  color:                                      white;
+  height:                                     320px;
+  width:                                      450px;
+  padding:                                    2% 2% 2% 2%;
+  margin:                                     0% 2% 2% 5%;
+}
+
+#upper_col1 a, a:link, a:visited {
+  text-decoration:                            none;
+  color:                                      white;
+}
+
+#upper_col2 {
+  color:                                      white;
+  height:                                     320px;
+  width:                                      450px;
+  padding:                                    1.5% 2% 2% 2%;
+  margin:                                     0% 2% 2% 4%;
+}
+
+.game_text {
+  color:                                      white;
+}
 
 #pitch {
   width:					600px;

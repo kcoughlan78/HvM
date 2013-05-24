@@ -14,4 +14,7 @@ class ForumController < ApplicationController
   def gaming
     @posts = Post.order("created_at DESC").find_all_by_category("Gaming")
   end
+
+  def rules
+  end
 end
