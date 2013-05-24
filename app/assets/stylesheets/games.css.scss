@@ -1,0 +1,435 @@
+// Place all the styles related to the game controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url("application.css.scss");
+
+#upper_stage {
+  margin-top: 5%;
+  background-color: white;
+  height: 400px;
+}
+
+#upper_stage:hover {
+  cursor:                                     url(hurler1.gif),auto;
+}
+
+#upper_col1 {
+  color:                                      white;
+  height:                                     320px;
+  width:                                      450px;
+  padding:                                    2% 2% 2% 2%;
+  margin:                                     0% 2% 2% 5%;
+  cursor:                                     pointer;
+}
+
+#upper_col1 a, a:link, a:visited {
+  text-decoration:                            none;
+  color:                                      white;
+}
+
+#upper_col2 {
+  color:                                      white;
+  height:                                     320px;
+  width:                                      450px;
+  padding:                                    1.5% 2% 2% 2%;
+  margin:                                     0% 2% 2% 4%;
+  cursor:                                     pointer;
+}
+
+#upper_col2 a, a:link, a:visited {
+  text-decoration:                            none;
+  color:                                      white;
+}
+
+.game_text {
+  color:                                      white;
+}
+
+#pitch {
+  width:					600px;
+  height:					300px;
+  background:				transparent url(game_background.png) no-repeat top left;
+  z-index: 				    5;
+}
+
+#pitch:hover {
+  cursor:                   url(hurler1.gif),auto;
+}
+
+#hill {
+  width:                    550px;
+  height:                   250px;
+  background:               transparent url(hill.png)no-repeat top left;
+}
+
+#hill1 {
+  width:                    600px;
+  height:                   250px;
+  background:               transparent url(hill.png)no-repeat top left;
+}
+
+#smallstadium {
+  width:                    550px;
+  height:                   250px;
+  background:               transparent url(smallstadium.png)no-repeat top left;
+}
+
+#ufo {
+  width:                    125px;
+  height:                   95px;
+  background:               transparent url(ufo.png)no-repeat top left;
+  visibility:               visible;
+}
+
+#ufo1 {
+  width:                    140px;
+  height:                   107px;
+  background:               transparent url(ufo1.png)no-repeat top left;
+  visibility:               visible;
+}
+
+#ufoboom {
+  width:                    160px;
+  height:                   127px;
+  background:               transparent url(ufoboom.png)no-repeat top left;
+}
+
+#ufoboom1 {
+  width:                    160px;
+  height:                   127px;
+  background:               transparent url(ufoboom.png)no-repeat top left;
+}
+
+#tractor {
+  width:                    60px;
+  height:                   43px;
+  background:               transparent url(tractor.png)no-repeat top left;
+}
+
+#ambulance {
+  width:                    60px;
+  height:                   43px;
+  background:               transparent url(ambulance.png)no-repeat top left;
+}
+
+#pig {
+  width:                    30px;
+  height:                   30px;
+  background:               transparent url(pig.png)no-repeat top left;
+}
+
+#pig1 {
+  width:                    30px;
+  height:                   30px;
+  background:               transparent url(pig1.png)no-repeat top left;
+}
+
+#farmhouse {
+  width:                    37px;
+  height:                   50px;
+  background:               transparent url(farmhouse.png)no-repeat top left;
+}
+
+#barn {
+  width:                    120px;
+  height:                   62px;
+  background:               transparent url(barn.png)no-repeat top left;
+}
+
+#backdrop {
+  width:					185px;
+  height: 				    150px;
+  background: 			    transparent url(crowd_scene_back.jpg) no-repeat top left;
+  z-index: 				    5;
+}
+
+#backdrop:hover {
+  cursor:                   url(hurler1.gif),auto;
+}
+
+#sidedrop_right {
+  width: 					195px;
+  height:					150px;
+  background: 			    transparent url(crowd_scene_back.jpg);
+  background-repeat: 		no-repeat;
+  z-index: 				    5;
+}
+
+#sidedrop_right:hover {
+  cursor:                   url(hurler1.gif),auto;
+}
+
+#sidedrop_left {
+  width: 					195px;
+  height:					150px;
+  background: 		    	transparent url(crowd_scene_back.jpg);
+  background-repeat: 		no-repeat;
+  z-index: 				    5;
+}
+
+#sidedrop_left:hover {
+  cursor:                   url(hurler1.gif),auto;
+}
+
+#roof {
+  width:					500px;
+  height: 				    66px;
+  background: 			    transparent url(Title.jpg) no-repeat top left;
+  background-repeat: 		no-repeat;
+  z-index: 				    10;
+  border:                   1px #000;
+}
+
+#roof {
+  cursor:                   url(hurler1.gif),auto;
+}
+
+.bug {
+  cursor:                   url(hurler1.gif),auto;
+}
+
+#monster1 {
+  width:					32px;
+  height:					32px;
+  z-index: 				    10;
+}
+
+#monster2 {
+  width:					32px;
+  height:					32px;
+  z-index: 				    5;
+}
+
+#monster3 {
+  width:					32px;
+  height:					32px;
+  z-index: 				    5;
+}
+
+#monster4 {
+  width:					32px;
+  height:					32px;
+  z-index: 				    5;
+}
+
+#slimeball1 {
+  width:					48px;
+  height:					48px;
+  z-index: 				    10;
+}
+
+#slimeball2 {
+  width:					48px;
+  height:					48px;
+  z-index: 				    5;
+}
+
+#slimeball3 {
+  width:					48px;
+  height:					48px;
+  z-index: 				    5;
+}
+
+#slimeball4 {
+  width:					48px;
+  height:					48px;
+  z-index: 				    5;
+}
+
+#winner {
+  width:					307px;
+  height:					62px;
+  background-image: 		url(win.png);
+  z-index:				    10;
+}
+
+#loser {
+  width:					307px;
+  height:					62px;
+  background: 			    url(lose.png);
+  z-index: 				    10;
+}
+
+#score {
+  width: 					100px;
+  height: 			    	auto;
+  top:					    1%;
+  right: 					5%;
+  bottom: 				    5%;
+  left:					    74%;
+  margin: 				    1% 1% 1% 0%;
+  padding: 				    5% 5% 5% 5%;
+  color: 					black;
+  z-index: 				    20;
+  text-align: 			    center;
+  font-family: 			    'Share Tech Mono', sans-serif;
+  font-size: 				small;
+}
+
+#score p {
+  margin: 				    15% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  border-radius: 			2px 2px 2px 2px;
+  color: 					white;
+  font-weight: 		    	600;
+  background-image:         -moz-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+  background-image: 		-webkit-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+
+}
+
+#timer {
+  width: 					120px;
+  height: 			    	auto;
+  top: 					    1%;
+  right: 					90%;
+  bottom: 				    5%;
+  left:					    3%;
+  margin: 				    1% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  color: 					black;
+  z-index: 				    20;
+  text-align: 			    center;
+  font-family: 			    'Share Tech Mono', sans-serif;
+  font-size: 				small;
+}
+
+#timer p {
+  margin: 				    10% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  border-radius: 			2px 2px 2px 2px;
+  color: 					white;
+  font-weight: 			    600;
+  background-image: 		-moz-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+  background-image: 		-webkit-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+}
+
+#gamerMsg {
+  width: 					210px;
+  height: 				    auto;
+  position: 				absolute;
+  top: 				    	1%;
+  right: 					30%;
+  bottom: 				    5%;
+  left:					    20%;
+  margin: 				    1% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  color: 					black;
+  z-index: 				    20;
+  text-align: 			    center;
+  font-family: 			    'Share Tech Mono', sans-serif;
+  font-size: 				small;
+}
+
+#gamerMsg p {
+  margin: 				    5% 1% 1% 1%;
+  padding: 				    5% 5% 5% 5%;
+  border-radius: 			2px 2px 2px 2px;
+  color: 					white;
+  font-weight: 			    600;
+  background-image: 		-moz-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+  background-image: 		-webkit-linear-gradient(bottom, #A2000C 44%, #C0C0C0 100%);
+}
+
+#scoreboard {
+  width: 					645px;
+  height: 				    50px;
+  background-color: 		red;
+  background-image: 		-moz-linear-gradient(bottom, #000000 44%, #C0C0C0 100%);
+  background-image: 		-webkit-linear-gradient(bottom, #000000 44%, #C0C0C0 100%);
+}
+
+#hurler {
+  width:					77px;
+  height:					120px;
+  background:				transparent url(hurler.jpg)no-repeat top left;
+  z-index: 				    10;
+}
+
+#levels {
+  position:                 absolute;
+  top:                      5%;
+  right:                    75%;
+  bottom:                   10%;
+  left:                     0%;
+  margin:                   1%;
+  padding:                  2.5%;
+  width:                    18%;
+  min-width:                90px;
+  height:                   auto;
+  min-height:               50px;
+  font-family:              "Racing Sans One", sans-serif;
+  background:               #b20000;
+  color:                    white;
+  border-top-left-radius:                     5% 20%;
+  border-top-right-radius:                    5% 20%;
+  border-bottom-left-radius:                  5% 20%;
+  border-bottom-right-radius:                 5% 20%;
+  /* below ensures correct output for MFF*/
+  -moz-border-top-left-radius:                5% 20%;
+  -moz-border-top-right-radius:               5% 20%;
+  -moz-border-bottom-left-radius:             5% 20%;
+  -moz-border-bottom-right-radius:            5% 20%;
+  box-shadow:                                 2px 2px 2px 0px #000;
+}
+
+#levels table {
+  background-color:                           white;
+  color:                                      #b20000;
+  font-size:                                  80%;
+  font-weight:                                300;
+}
+
+#postscroll {
+  padding:                                      2%;
+  width:                                        90%;
+  height:                                       100%;
+  max-height:                                   auto;
+  overflow-y:                                   scroll;
+  overflow-x:                                   hidden;
+}
+
+.currentLevel {
+  color:                    white;
+  font-size:                110%;
+  cursor:                   pointer;
+}
+
+#levels a, a:visited, a:hover {
+  color:                    white;
+}
+
+#nextLevel {
+  visibility:                  hidden;
+}
+
+#output {
+  color:                      white;
+}
+
+#output_level {
+  color:                      white;
+}
+
+#input_score {
+  color:                       black;
+}
+
+#input_score {
+  color:                       black;
+}
+
+table {
+  width:                      80%;
+}
+
+table th {
+  text-align:                 left;
+  font-family:                "Racing Sans One", sans-serif;
+}
+
+table td {
+  padding:                    2%;
+}
+
+
+

@@ -35,6 +35,7 @@ class User < ActiveRecord::Base
   has_many :posts, :dependent => :destroy
   has_many :replies
   has_many :complaints
+  has_many :games
 
   mount_uploader :image, PostImageUploader
 

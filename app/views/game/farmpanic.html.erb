@@ -22,6 +22,7 @@
     </audio>
     <article id="upper_stage" onload="init();">
       <section id="levels">
+        <article id="postscroll">
         <h2><span class="head2">Game Info</span></h2>
         <br>
         <div class="currentLevel">
@@ -34,6 +35,7 @@
           <p><%= link_to "Level 3: Invasion", :controller => "game", :action => "invasion" %></p>
         </div>
         <p><%= link_to 'Restart', :controller => "game", :action => "farmpanic", class: 'button' %></p>
+      </article>
       </section>
 
     </article>

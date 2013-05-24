@@ -36,5 +36,13 @@ class ComplaintsController < ApplicationController
   def destroy
     @complaint = Complaint.find(params[:id])
     @complaint.destroy
+
+    respond_to do |format|
+      if @complaint.destroy
+        format.html { redirect_to complaints_path, notice: 'Complaint successfully deleted.' }
+      else
+        format.html { render action: "index" }
+      end
+    end
   end
 end

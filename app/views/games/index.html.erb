@@ -1,0 +1,53 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Overall Leaderboard</title>
+    <%= stylesheet_link_tag "games", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+        <article id="upper_col1">
+          <article id="postscroll">
+          <h2><span class="head2">Overall Highscores</span></h2>
+          <br>
+          <table>
+            <tr>
+              <th>Gamer</th>
+              <th>Score</th>
+              <th>Level</th>
+            </tr>
+
+            <% @games.each do |game| %>
+                <tr>
+                  <td><%= game.user.username %></td>
+                  <td><%= game.score %></td>
+                  <td><%= game.level %></td>
+                </tr>
+                <tr>
+                  <!-- <td>_</td>
+                  <td>_</td>
+                  <td>_</td>
+                  <td>_</td>
+                  <td>_</td>
+                  <td>_</td>-->
+                </tr>
+            <% end %>
+          </table>
+
+          <br />
+          </article>
+        </article>
+      <article id="upper_col2">
+        <br>
+        <h2><span class="head2">Levels &amp; Scores</span></h2>
+        <br>
+        <ul>
+          <li><%= link_to "Level 1: Slimeball", :controller => "games", :action => "slimeball" %></li>
+          <li><%= link_to "Level 2: Farm Panic", :controller => "games", :action => "farmpanic" %></li>
+          <li><%= link_to "Level 3: Invasion", :controller => "games", :action => "invasion" %></li>
+          <li><%= link_to "Level 4: Greenbugs at Croker", :controller => "games", :action => "greenbug" %></li>
+          <li><%= link_to "Level 5: Final Battle", :controller => "games", :action => "finale", class: 'button' %></li>
+        </ul>
+
+      </article>
+    </article>
+<% end %>
+

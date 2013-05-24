@@ -30,6 +30,7 @@
           <li id="welcome">Welcome <%= link_to current_user.username, myaccount_path %></li>
       <% end %>
       <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Leaderboards", :controller => "games", :action => "index" %></li>
       <li><%= link_to "Our Forums", :controller => "forum", :action => "index" %></li>
       <li><%=link_to "Start a thread", :controller => "posts", :action => "new" %></li>
       <% if current_user %>
@@ -40,8 +41,13 @@
     </ul>
   </nav>
 </header>
+
 <%= yield :article %>
-<div id="mid_bar"></div>
+<% if notice %>
+    <p id="notice"></p>
+<% end %>
+<div id="mid_bar">
+</div>
 <section>
   <% if current_user and current_user.admin %>
   <header><h3>Site Management</h3></header>
@@ -97,7 +103,7 @@
   <div id="content">
     <figure id="content_left" class="lower_box">
       <figcaption class="content_box">
-        <h4 class="homeh4"><%=link_to(image_tag("hurler.png", alt: "Try the game", id: "hurler"), :controller => 'game', :action => 'index', title: "Index") %>
+        <h4 class="homeh4"><%=link_to(image_tag("hurler.png", alt: "Try the game", id: "hurler"), :controller => 'games', :action => 'info', title: "Game Info") %>
         </h4>
         <div class="blog_desc">
           <h3>My HTML5 game</h3>

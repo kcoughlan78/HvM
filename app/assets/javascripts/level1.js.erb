@@ -188,7 +188,7 @@ var musicLoaded = 0;
 //sets initial score, hit count, and levels target
 var score = 0;
 var monstersHit = 0;
-var levelTarget = 8;
+var levelTarget = 10;
 //game meeages to 3d stage
 var container = document.querySelector("#container");
 var winner = Sprite3D.create("#winner").position(-115,-20,180).rotation(0,0,0).update();
@@ -217,6 +217,7 @@ function loadHandler()
 
     //calls the run animation function
     runAnimation();
+
 
     message.innerHTML = "<p>Destroy " + levelTarget + " slimeballs!!</p>";
 }
@@ -296,6 +297,19 @@ function mousedownHandler(event)
         }
     }
 }
+//function addLevel ()
+//{
+    //var txt = $("#output_level").text();
+    //$("#input_level").val(txt);
+//}
+
+function addScore ()
+{
+        var txt = $("#output_level").text();
+        var text = $("#output").text();
+        $("#input_level").val(txt);
+        $("#input_score").val(text);
+}
 
 function endGame ()
 {
@@ -322,11 +336,13 @@ function endGame ()
         message.innerHTML = "<p>Game Over! Try again</p>";
         container.appendChild(loser);
     }
+    addScore();
 }
 
 function render()
 {
-    scoreBoard.innerHTML = "<p>Score: " + score + "</p>";
+
+    scoreBoard.innerHTML = "<p>Score: <span id='output'>" + score + "</span></p>";
     for(var i = 0; i < slimeballSwarm.length; i++)
     {
         var slimeball = slimeballSwarm[i];

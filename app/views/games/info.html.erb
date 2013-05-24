@@ -1,0 +1,50 @@
+<% content_for :head do %>
+    <title>Hurlers vs Monsters: Game Info</title>
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "games", :media => "all" %>
+<% end %>
+<% content_for :article do %>
+    <article id="upper_stage">
+      <div id="upper_col1">
+        <div id="postscroll">
+          <br>
+          <br>
+          <h2><span class="head2">Game Guide</span></h2>
+          <br>
+          <p>Hurlers vs Monsters is a HTML5 game that uses the Sprite3D javascript api.</p>
+          <br>
+          <p>There are currently five levels. Players start out in the countryside and eventually progress
+            to Croke Park for a grand battle with the two main enemies the Slimeballs and Greenbugs, see character
+            profile to the right.</p>
+          <br>
+          <p>The object of the game in to destroy a number of monsters in a 60 second period in each level. This is
+            achieved by simply tapping or clicking on the monsters as they appear. Think Whack-a-mole. As you progress
+            monsters become harder to hit but scores are higher, however you soon will start to lose points for a miss!</p>
+          <br>
+          <p>Enjoy the game click to <%= link_to "Start", :controller => 'games', :action => 'slimeball' %></p>
+
+        </div>
+      </div>
+      <div id="upper_col2">
+        <div id="admin_scroll">
+          <br>
+          <h2><span class="head2">Character Guide</span></h2>
+          <br>
+          <%= image_tag("hurler.png") %>
+          <p><span class="game_text">The Hurler is the hero of the game. His special powers are flight and exploding sliothars.</span></p>
+          <br>
+          <%= image_tag("monster.png") %>
+          <p><span class="game_text">Slimeballs are aliens that have been dormant underground for centuries but are stirred from their slumber by the
+          imminent arrival of their allies the Greenbugs. They are intent on destroying the pitches and disturbing the livestock.</span></p>
+          <br>
+          <%= image_tag("greenbug.png") %>
+          <p><span class="game_text">Greenbugs are aliens that are returning to Earth in an attempt to join forces with the Slimeballs. Luckily they
+        explode on contact with sliothars!</span></p>
+        </div>
+      </div>
+    </article>
+<% end %>
+
+
+
+

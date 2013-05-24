@@ -275,7 +275,7 @@ nav#navbox li#welcome {
 
 
 .head2 {
-  font-family:                              'Racing Sans One' sans-serif;
+  font-family:                              'Racing Sans One', sans-serif;
   font-size:                                200%;
   color:                                    white;
   text-shadow:                              2px 2px 2px #000;
@@ -317,9 +317,9 @@ nav#navbox li#welcome {
 
 #notice {
   font-size:                                  small;
-  text-align:                                 right;
+  text-align:                                 center;
   color:                                      #b20000;
-  margin:                                     1% 4% 1% 0%;
+  margin:                                     auto;
   z-index:                                    20;
 }
 

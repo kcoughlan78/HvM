@@ -1,4 +1,20 @@
 Gameproject::Application.routes.draw do
+  get "games/index"
+
+  get "games/new"
+
+  get "games/slimeball"
+
+  get "games/greenbug"
+
+  get "games/invasion"
+
+  get "games/farmpanic"
+
+  get "games/finale"
+
+  get "games/info"
+
   get "complaints/index"
 
   get "complaints/show"
@@ -44,6 +60,8 @@ Gameproject::Application.routes.draw do
   end
 
   resources :complaints
+
+  resources :games
 
 
   # The priority is based upon order of creation:

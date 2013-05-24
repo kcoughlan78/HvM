@@ -1,0 +1,11 @@
+<%= form_for(@game) do |game| %>
+    <div>
+      <p><span class="post_text">Gamer: <%= current_user.username %></span></p>
+      <br>
+      <p><span class="post_text"><%= game.label :score %></span></p>
+      <%= game.text_field :score, :readonly => true, id: 'input_score' %>
+      <p><span class="post_text"><%= game.label :level %></span></p>
+      <%= game.text_field :level, :readonly => true, id: 'input_level' %>
+      <%= game.submit "Post Score", class: 'button' %>
+    </div>
+<% end %>

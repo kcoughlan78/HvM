@@ -325,6 +325,14 @@ function mousedownHandler(event)
     }
 }
 
+function addScore ()
+{
+    var txt = $("#output_level").text();
+    var text = $("#output").text();
+    $("#input_level").val(txt);
+    $("#input_score").val(text);
+}
+
 function endGame ()
 {
     stop();
@@ -352,15 +360,16 @@ function endGame ()
         //add sound
         gamelost.removeEventListener("canplaythrough", loadHandler, false);
         gamelost.play();
-        gamelost.volume = gameVolume;
+        gamelost.volume = 0.6;
         container.appendChild(loser);
         gamelost.stop();
     }
+    addScore();
 }
 
 function render()
 {
-    scoreBoard.innerHTML = "<p>Score: " + score + "</p>";
+    scoreBoard.innerHTML = "<p>Score: <span id='output'>" + score + "</span></p>";
     for(var i = 0; i < slimeballSwarm.length; i++)
     {
         var slimeball = slimeballSwarm[i];
