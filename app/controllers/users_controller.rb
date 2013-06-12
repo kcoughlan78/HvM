@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         UserMailer.reg_email(@user).deliver
 
         format.html { redirect_to(root_url, :notice => 'User was successfully created.') }
-        format.json { render :json => @user, :status => :created, :location => @user }
+        #format.json { render :json => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
         format.json { render :json => @user.errors, :status => :unprocessable_entity }
