@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def reg_email(user)
     @user = user
-    @url = "localhost:3000/login"
+    @url = "http://infinite-spire-6748.herokuapp.com/login"
     mail(:to => user.email, :subject => "Congratulations you are all signed up to Hurlers vs Monsters")
   end
 end
