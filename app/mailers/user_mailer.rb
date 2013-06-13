@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "registration@example.com"
+  default from: 'app16268747@heroku.com'
 
   def reg_email(user)
     @user = user
