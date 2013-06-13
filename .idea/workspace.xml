@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gameproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +54,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="63" selection-start="3272" selection-end="3272" vertical-scroll-proportion="0.53125">
+            <state line="79" column="29" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.34375">
               <folding />
             </state>
           </provider>
@@ -986,7 +987,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="63" selection-start="3272" selection-end="3272" vertical-scroll-proportion="0.53125">
+        <state line="79" column="29" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.34375">
           <folding />
         </state>
       </provider>
