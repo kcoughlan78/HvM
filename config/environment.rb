@@ -6,4 +6,12 @@ Gameproject::Application.initialize!
 
 Time::DATE_FORMATS[:short] = "Created on %d %b at %H:%M %p"
 
-
+ActionMailer::Base.smtp_settings = {
+    :address              => 'smtp.sendgrid.net',
+    :port                 => '587',
+    :authentication       => :plain,
+    :user_name            => ENV['app16268747@heroku.com'],
+    :password             => ENV['nzypgvmp'],
+    :domain               => 'heroku.com',
+    :enable_starttls_auto => true,
+}
