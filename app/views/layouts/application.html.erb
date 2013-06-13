@@ -27,7 +27,7 @@
   <nav id="navbox" role="navigation">
     <ul>
       <% if notice %>
-          <li id="notice"></li>
+          <li><span id="notice"></span></li>
       <% end %>
       <% if current_user %>
           <li id="welcome">Welcome <%= link_to current_user.username, myaccount_path %></li>

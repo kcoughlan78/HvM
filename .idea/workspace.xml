@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="gameproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -12,8 +13,8 @@
     <file path="/users_controller.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371071243303" ignored="false" />
     <file path="/environment.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371148478483" ignored="false" />
     <file path="/user_mailer.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371117711483" ignored="false" />
-    <file path="/application.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371149255861" ignored="false" />
-    <file path="/application.css.scss" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371149522956" ignored="false" />
+    <file path="/application.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371149846325" ignored="false" />
+    <file path="/application.css.scss" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371149814871" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,19 +89,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="45" selection-start="1042" selection-end="1042" vertical-scroll-proportion="-6.875">
+            <state line="29" column="39" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.5300353">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="322" column="59" selection-start="11648" selection-end="11648" vertical-scroll-proportion="0.58843535">
+            <state line="322" column="30" selection-start="11627" selection-end="11627" vertical-scroll-proportion="-6.6538463">
               <folding />
             </state>
           </provider>
@@ -156,8 +157,8 @@
         <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -1055,16 +1056,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="45" selection-start="1042" selection-end="1042" vertical-scroll-proportion="-6.875">
+        <state line="322" column="30" selection-start="11627" selection-end="11627" vertical-scroll-proportion="-6.6538463">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="322" column="59" selection-start="11648" selection-end="11648" vertical-scroll-proportion="0.58843535">
+        <state line="29" column="39" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.5300353">
           <folding />
         </state>
       </provider>
