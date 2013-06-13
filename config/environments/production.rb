@@ -81,7 +81,8 @@ Gameproject::Application.configure do
       authentication:       'plain',
       user_name:            ENV['app16268747@heroku.com'],
       password:             ENV['nzypgvmp'],
-      domain:               'infinite-spire-6748.herokuapp.com'
+      domain:               'infinite-spire-6748.herokuapp.com',
+      enable_starttls_auto: true
   }
 
   # Log the query plan for queries taking more than this (works

@@ -8,7 +8,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1370983041273" ignored="false" />
     <file path="/game.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371058879070" ignored="false" />
-    <file path="/production.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371123132001" ignored="false" />
+    <file path="/production.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371123801642" ignored="false" />
     <file path="/users_controller.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371071243303" ignored="false" />
     <file path="/environment.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371118288311" ignored="false" />
     <file path="/user_mailer.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371117711483" ignored="false" />
@@ -53,7 +53,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="57" selection-start="3067" selection-end="3067" vertical-scroll-proportion="0.4375">
+            <state line="84" column="32" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.8125">
               <folding />
             </state>
           </provider>
@@ -986,7 +986,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="57" selection-start="3067" selection-end="3067" vertical-scroll-proportion="0.4375">
+        <state line="84" column="32" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.8125">
           <folding />
         </state>
       </provider>
