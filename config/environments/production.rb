@@ -66,7 +66,7 @@ Gameproject::Application.configure do
       :authentication       => :plain,
       :user_name            => ENV['app16268747@heroku.com'],
       :password             => ENV['nzypgvmp'],
-      :domain               => 'infinite-spire-6748.herokuapp.com',
+      :domain               => 'heroku.com',
       :enable_starttls_auto => true
   }
 
