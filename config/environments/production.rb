@@ -59,21 +59,9 @@ Gameproject::Application.configure do
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
 
-  ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {
-      :address              => 'smtp.sendgrid.net',
-      :port                 => '587',
-      :authentication       => :plain,
-      :user_name            => ENV['app16268747@heroku.com'],
-      :password             => ENV['nzypgvmp'],
-      :domain               => 'heroku.com',
-      :enable_starttls_auto => true
-  }
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-
-
 
 
 
@@ -82,3 +70,18 @@ Gameproject::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 end
+
+
+
+
+
+ActionMailer::Base.smtp_settings = {
+    :address              => 'smtp.sendgrid.net',
+    :port                 => '587',
+    :authentication       => :plain,
+    :user_name            => ENV['app16268747@heroku.com'],
+    :password             => ENV['nzypgvmp'],
+    :domain               => 'heroku.com',
+    :enable_starttls_auto => true
+}
+ActionMailer::Base.delivery_method = :smtp
