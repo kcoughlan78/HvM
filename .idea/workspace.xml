@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="gameproject.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1370983041273" ignored="false" />
     <file path="/game.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371058879070" ignored="false" />
-    <file path="/production.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371118514707" ignored="false" />
+    <file path="/production.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371118810000" ignored="false" />
     <file path="/users_controller.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371071243303" ignored="false" />
     <file path="/environment.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371118288311" ignored="false" />
     <file path="/user_mailer.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371117711483" ignored="false" />
@@ -54,7 +53,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="53" selection-start="2862" selection-end="2862" vertical-scroll-proportion="0.671875">
+            <state line="76" column="82" selection-start="2909" selection-end="2909" vertical-scroll-proportion="0.8125">
               <folding />
             </state>
           </provider>
@@ -987,7 +986,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="53" selection-start="2862" selection-end="2862" vertical-scroll-proportion="0.671875">
+        <state line="76" column="82" selection-start="2909" selection-end="2909" vertical-scroll-proportion="0.8125">
           <folding />
         </state>
       </provider>
