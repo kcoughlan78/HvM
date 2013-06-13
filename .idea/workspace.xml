@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="gameproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,6 +12,7 @@
     <file path="/users_controller.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371071243303" ignored="false" />
     <file path="/environment.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371148478483" ignored="false" />
     <file path="/user_mailer.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371117711483" ignored="false" />
+    <file path="/application.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371149255861" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="3" selection-start="2867" selection-end="2867" vertical-scroll-proportion="0.625">
+            <state line="74" column="3" selection-start="2867" selection-end="2867" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="49" selection-start="1663" selection-end="1663" vertical-scroll-proportion="-10.0">
+            <state line="30" column="45" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.58303887">
               <folding />
             </state>
           </provider>
@@ -141,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/complaints/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forum/tech.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forum/index.html.erb" />
@@ -157,6 +156,7 @@
         <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -979,13 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="49" selection-start="1663" selection-end="1663" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1023,7 +1016,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="3" selection-start="2867" selection-end="2867" vertical-scroll-proportion="0.625">
+        <state line="74" column="3" selection-start="2867" selection-end="2867" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="45" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.58303887">
           <folding />
         </state>
       </provider>

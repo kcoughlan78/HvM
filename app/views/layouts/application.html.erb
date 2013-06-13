@@ -26,6 +26,9 @@
   </nav>
   <nav id="navbox" role="navigation">
     <ul>
+      <% if notice %>
+          <li id="notice"></li>
+      <% end %>
       <% if current_user %>
           <li id="welcome">Welcome <%= link_to current_user.username, myaccount_path %></li>
       <% end %>
@@ -43,9 +46,6 @@
 </header>
 
 <%= yield :article %>
-<% if notice %>
-    <p id="notice"></p>
-<% end %>
 <div id="mid_bar">
 </div>
 <section>
