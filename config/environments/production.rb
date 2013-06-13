@@ -78,7 +78,7 @@ Gameproject::Application.configure do
   config.action_mailer.smtp_settings = {
       address:              'smtp.sendgrid.net',
       port:                  587,
-      authentication:       :plain,
+      authentication:       'plain',
       user_name:            ENV['app16268747@heroku.com'],
       password:             ENV['nzypgvmp'],
       domain:               'infinite-spire-6748.herokuapp.com'
