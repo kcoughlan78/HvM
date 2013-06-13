@@ -13,6 +13,6 @@ ActionMailer::Base.smtp_settings = {
     :authentication       => :plain,
     :user_name            => ENV['app16268747@heroku.com'],
     :password             => ENV['nzypgvmp'],
-    :domain               => 'heroku.com',
+    :domain               => 'infinite-spire-6748.herokuapp.com',
     :enable_starttls_auto => true,
 }
