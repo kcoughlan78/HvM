@@ -1,4 +1,10 @@
 Gameproject::Application.routes.draw do
+  get "aboutapp/about"
+
+  get "aboutapp/credits"
+
+  get "aboutapp/features"
+
   get "games/index"
 
   get "games/new"
