@@ -16,7 +16,7 @@
     <file path="/application.css.scss" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371149814871" ignored="false" />
     <file path="/about.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371193642271" ignored="false" />
     <file path="/credits.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371195074559" ignored="false" />
-    <file path="/index.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371201016082" ignored="false" />
+    <file path="/index.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371202566160" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/forum/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="112" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.35031846">
+            <state line="63" column="111" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.35031846">
               <folding />
             </state>
           </provider>
@@ -1135,7 +1135,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/forum/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="112" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.35031846">
+        <state line="63" column="111" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.35031846">
           <folding />
         </state>
       </provider>
