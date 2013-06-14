@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e85bb055-939a-4861-b604-8f364e6ffcec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum/index.html.erb" afterPath="$PROJECT_DIR$/app/views/forum/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="gameproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,7 +16,7 @@
     <file path="/application.css.scss" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371149814871" ignored="false" />
     <file path="/about.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371193642271" ignored="false" />
     <file path="/credits.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371195074559" ignored="false" />
-    <file path="/index.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371195437010" ignored="false" />
+    <file path="/index.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371201016082" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,25 @@
         <entry file="file://$PROJECT_DIR$/app/views/aboutapp/about.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="80" column="56" selection-start="2941" selection-end="2941" vertical-scroll-proportion="-14.625">
-              <folding />
+              <folding>
+                <marker date="1371193668000" expanded="true" signature="209:2330" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="385:599" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="620:776" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="859:1211" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1236:2219" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1252:1368" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1265:1351" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1384:1419" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1435:2204" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1448:1568" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1581:1709" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1722:1846" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1859:1962" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="1975:2075" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="2088:2187" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="2393:2940" placeholder="..." />
+                <marker date="1371193668000" expanded="true" signature="2466:2510" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,7 +113,12 @@
         <entry file="file://$PROJECT_DIR$/app/views/aboutapp/credits.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="36" column="48" selection-start="1415" selection-end="1415" vertical-scroll-proportion="-16.875">
-              <folding />
+              <folding>
+                <marker date="1371195110000" expanded="true" signature="203:794" placeholder="..." />
+                <marker date="1371195110000" expanded="true" signature="638:779" placeholder="..." />
+                <marker date="1371195110000" expanded="true" signature="857:1404" placeholder="..." />
+                <marker date="1371195110000" expanded="true" signature="930:974" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,7 +126,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/forum/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="155" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.477707">
+            <state line="63" column="112" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.35031846">
               <folding />
             </state>
           </provider>
@@ -1078,20 +1099,43 @@
     <entry file="file://$PROJECT_DIR$/app/views/aboutapp/about.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="56" selection-start="2941" selection-end="2941" vertical-scroll-proportion="-14.625">
-          <folding />
+          <folding>
+            <marker date="1371193668000" expanded="true" signature="209:2330" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="385:599" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="620:776" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="859:1211" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1236:2219" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1252:1368" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1265:1351" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1384:1419" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1435:2204" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1448:1568" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1581:1709" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1722:1846" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1859:1962" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="1975:2075" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="2088:2187" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="2393:2940" placeholder="..." />
+            <marker date="1371193668000" expanded="true" signature="2466:2510" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/aboutapp/credits.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="48" selection-start="1415" selection-end="1415" vertical-scroll-proportion="-16.875">
-          <folding />
+          <folding>
+            <marker date="1371195110000" expanded="true" signature="203:794" placeholder="..." />
+            <marker date="1371195110000" expanded="true" signature="638:779" placeholder="..." />
+            <marker date="1371195110000" expanded="true" signature="857:1404" placeholder="..." />
+            <marker date="1371195110000" expanded="true" signature="930:974" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/forum/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="155" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.477707">
+        <state line="63" column="112" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.35031846">
           <folding />
         </state>
       </provider>
