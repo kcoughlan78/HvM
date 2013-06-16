@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class PostImageUploader < CarrierWave::Uploader::Base
+  #for direct upload to amazon s3
   include CarrierWaveDirect::Uploader
 
   # Include RMagick or MiniMagick support:

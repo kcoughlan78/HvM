@@ -157,7 +157,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.1)
   carrierwave
-  carrierwave_direct
+  carrierwave_direct (~> 0.0.12)
   coffee-rails (~> 3.2.1)
   eventmachine (= 1.0.0.beta.4.1)
   fog

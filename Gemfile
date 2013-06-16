@@ -41,7 +41,7 @@ gem 'bcrypt-ruby', '~> 3.0.1'
 # To aid uploading of photos for posts
 gem 'carrierwave'
 gem 'fog'
-gem 'carrierwave_direct'
+gem 'carrierwave_direct', '~> 0.0.12'
 gem 'sidekiq'
 
 # To aid uploading videos
