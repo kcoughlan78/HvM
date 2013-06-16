@@ -30,6 +30,13 @@ class Post < ActiveRecord::Base
                                 :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
 
+
+  def image_name
+    File.basename(image.path || image.filename) if image
+  end
+
+
+
   def self.search(search)
     if search
       find(:all, :conditions => ['title LIKE ?', "%#{search}%"])

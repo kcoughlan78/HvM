@@ -12,6 +12,7 @@
         </div>
     <% end %>
     <br>
+    <%= f.hidden_field :key %>
     <div>
       <p><span class="post_text">by: <%= current_user.username %></span> <span class="post_warning">if this isn't you follow <%= link_to "this link", logout_path, class: 'post_warning'%></span></p>
     </div>
@@ -45,7 +46,7 @@
     <br>
     <br>
     <div>
-      <p><span class="post_text">Add <%= post_form.label :image %></span><%= post_form.file_field :image, :id => 'file_upload' %></p>
+      <p><span class="post_text">File: <%= @post.image_name %></p>
 
     </div>
     <br>

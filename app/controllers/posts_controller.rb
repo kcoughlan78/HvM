@@ -25,15 +25,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def loadimage
+    @uploader = Post.new.image
+    @uploader.success_action_redirect = new_post_url
+  end
+
+
 
   def new
-    @post = Post.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @post }
-    end
+    @post = Post.new(key: params[:key])
   end
+
 
 
   def edit

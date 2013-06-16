@@ -47,6 +47,8 @@ Gameproject::Application.routes.draw do
 
   get "home/index"
 
+  get "posts/loadimage"
+
   resources :sessions
 
   resources :posts do
