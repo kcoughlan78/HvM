@@ -35,7 +35,7 @@
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Leaderboards", :controller => "games", :action => "index" %></li>
       <li><%= link_to "Our Forums", :controller => "forum", :action => "index" %></li>
-      <li><%=link_to "Start a thread", :controller => "posts", :action => "new" %></li>
+      <li><%=link_to "Start a thread", :controller => "posts", :action => "loadimage" %></li>
       <% if current_user %>
           <li><%= link_to "Log out", logout_path %></li>
       <% else %>

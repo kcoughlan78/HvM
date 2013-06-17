@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_filter :authenticate, :except => [:show]
-  before_filter :is_admin?, :except => [:show, :new, :create]
+  before_filter :is_admin?, :except => [:show, :new, :create, :loadimage]
   before_filter :is_suspended?
 
   def index
