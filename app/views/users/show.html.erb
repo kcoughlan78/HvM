@@ -9,7 +9,6 @@
         <h2><span class="head2">Your Details</span></h2>
         <br>
             <p>Name: <%= @user.fname %> <%= @user.sname %></p>
-            <p><%= image_tag(@user.image, class: "user_img_url") %></p>
         <br>
             <p>Username: <%= @user.username %></p>
         <br>
@@ -19,10 +18,6 @@
         <br>
           <% if current_user and current_user.admin %>
         <p>Suspended: <%= @user.suspended %></p>
-          <% end %>
-          <%= direct_upload_form_for @uploader do |f| %>
-              <p>Add/change pic:<%= f.file_field :image %></p>
-              <p><%= f.submit %></p>
           <% end %>
         <%= button_to "edit", editmyaccount_path, class: 'button'  %>
           </div>

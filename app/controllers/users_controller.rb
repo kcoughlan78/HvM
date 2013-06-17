@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :is_admin?, :except => [:new, :show, :create, :update, :edit]
 
   def new
-    @user = User.new(key: params[:key])
+    @user = User.new
   end
 
   def create
@@ -39,8 +39,8 @@ class UsersController < ApplicationController
   def show
     #@user = current_user
     @user = !params[:id].nil? ? User.find(params[:id]) : current_user
-    @uploader = User.new.image
-    @uploader.success_action_redirect = editmyaccount_path
+    #@uploader = User.new.image
+    #@uploader.success_action_redirect = editmyaccount_path
   end
 
   def update
