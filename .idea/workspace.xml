@@ -58,7 +58,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="29" selection-start="948" selection-end="948" vertical-scroll-proportion="-15.0">
+            <state line="26" column="30" selection-start="1006" selection-end="1024" vertical-scroll-proportion="-15.625">
               <folding />
             </state>
           </provider>
@@ -85,7 +85,7 @@
       <file leaf-file-name="users_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="48" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.47244096">
+            <state line="40" column="42" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.53149605">
               <folding />
             </state>
           </provider>
@@ -1134,14 +1134,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="948" selection-end="948" vertical-scroll-proportion="-15.0">
+        <state line="26" column="30" selection-start="1006" selection-end="1024" vertical-scroll-proportion="-15.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="48" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.47244096">
+        <state line="40" column="42" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.53149605">
           <folding />
         </state>
       </provider>
