@@ -32,10 +32,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def pic_edit
-    @user = User.edit(key: params[:key])
-  end
-
   def edit
     @user = !params[:id].nil? ? User.find(params[:id]) : current_user
   end

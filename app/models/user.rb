@@ -63,6 +63,10 @@ class User < ActiveRecord::Base
     !bio.nil?
   end
 
+  def pic_edit
+    User.edit(key: params[:key])
+  end
+
   def self.authenticate(email, password)
     user = find_by_email(email)
     if user && user.hashed_password == BCrypt::Engine.hash_secret(password,user.salted_password)
