@@ -40,8 +40,8 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = !params[:id].nil? ? User.find(params[:id]) : current_user
-    #@user = User.edit(key: params[:key])
+    @user = User.edit(key: params[:key]) && !params[:id].nil? ? User.find(params[:id]) : current_user
+    #@user =
   end
 
   def update
