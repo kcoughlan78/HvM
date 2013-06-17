@@ -12,7 +12,7 @@
         </div>
     <% end %>
     <br>
-    <%= f.hidden_field :key %>
+    <%= post_form.hidden_field :key %>
     <div>
       <p><span class="post_text">by: <%= current_user.username %></span> <span class="post_warning">if this isn't you follow <%= link_to "this link", logout_path, class: 'post_warning'%></span></p>
     </div>
