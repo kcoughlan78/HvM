@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     #@user = current_user
     @user = !params[:id].nil? ? User.find(params[:id]) : current_user
     @uploader = User.new.image
-    #@uploader.success_action_redirect = edit_user_url
+    @uploader.success_action_redirect = user_url
   end
 
   def edit
