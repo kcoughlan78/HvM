@@ -43,6 +43,7 @@ gem 'carrierwave'
 gem 'fog', '~> 1.12.1'
 gem 'carrierwave_direct', '~> 0.0.12'
 gem 'sidekiq'
+gem 'figaro'
 
 # To aid uploading videos
 # gem 'carrierwave-video'
