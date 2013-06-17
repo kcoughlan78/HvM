@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = !params[:id].nil? ? User.find(params[:id]) : current_user
-    @user = User.edit(key: params[:key])
+    #@user = User.edit(key: params[:key])
   end
 
   def update
