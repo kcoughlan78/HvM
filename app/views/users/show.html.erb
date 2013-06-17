@@ -20,6 +20,10 @@
           <% if current_user and current_user.admin %>
         <p>Suspended: <%= @user.suspended %></p>
           <% end %>
+          <%= direct_upload_form_for @uploader do |f| %>
+              <p>Add/change pic:<%= f.file_field :image %></p>
+              <p><%= f.submit %></p>
+          <% end %>
         <%= button_to "edit", editmyaccount_path, class: 'button'  %>
           </div>
         </div>

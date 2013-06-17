@@ -39,6 +39,10 @@ class User < ActiveRecord::Base
 
   mount_uploader :image, PostImageUploader
 
+  def image_name
+    File.basename(image.path || image.filename) if image
+  end
+
   def encrypt_password
     if password.present?
     self.salted_password = BCrypt::Engine.generate_salt
