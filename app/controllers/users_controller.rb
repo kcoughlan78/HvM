@@ -32,17 +32,24 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    #@user = current_user
-    @user = !params[:id].nil? ? User.find(params[:id]) : current_user
-    @uploader = User.new.image
-    @uploader.success_action_redirect = editmyaccount_path
+  def pic_edit
+    @user = User.edit(key: params[:key])
   end
 
   def edit
-    @user = !params[:id].nil? ? User.find(params[:id]) : current_user, User(key: params[:key])
-    #@user =
+    @user = !params[:id].nil? ? User.find(params[:id]) : current_user
   end
+
+  def show
+    #@user = current_user
+    @user = !params[:id].nil? ? User.find(params[:id]) : current_user
+    @uploader = User.pic_edit.image
+    @uploader.success_action_redirect = editmyaccount_path
+  end
+
+
+
+
 
   def update
     @user = !params[:id].nil? ? User.find(params[:id]) : current_user

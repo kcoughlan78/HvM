@@ -9,7 +9,7 @@
     <file path="/Dummy.txt" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1370983041273" ignored="false" />
     <file path="/game.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371058879070" ignored="false" />
     <file path="/production.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371411064037" ignored="false" />
-    <file path="/users_controller.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371466091917" ignored="false" />
+    <file path="/users_controller.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371467022827" ignored="false" />
     <file path="/environment.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371148478483" ignored="false" />
     <file path="/user_mailer.rb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371117711483" ignored="false" />
     <file path="/application.html.erb" changelist="e85bb055-939a-4861-b604-8f364e6ffcec" time="1371403856622" ignored="false" />
@@ -108,7 +108,7 @@
       <file leaf-file-name="users_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="75" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.62007874">
+            <state line="40" column="5" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.734252">
               <folding />
             </state>
           </provider>
@@ -1113,13 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="39" selection-start="689" selection-end="724" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="40" selection-start="454" selection-end="454" vertical-scroll-proportion="-6.25">
@@ -1146,9 +1139,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="39" selection-start="689" selection-end="724" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="75" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.62007874">
+        <state line="40" column="5" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.734252">
           <folding />
         </state>
       </provider>
